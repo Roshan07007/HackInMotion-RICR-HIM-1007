@@ -131,6 +131,7 @@ const JobDetail = () => {
                 <span className="flex items-center gap-1.5">
                   <IndianRupee className="w-4 h-4" /> {job.salaryRange}
                 </span>
+                
               )}
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" /> Posted 2 days ago
