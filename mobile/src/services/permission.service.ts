@@ -96,7 +96,7 @@ class PermissionService {
    */
   async checkPermission(type: AppPermissionType): Promise<PermissionStatus> {
     if (type === "notification") {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
+       
       const { checkNotifications } = require("react-native-permissions");
       const { status } = await checkNotifications();
       return status;
@@ -120,7 +120,7 @@ class PermissionService {
    */
   async requestPermission(type: AppPermissionType): Promise<PermissionStatus> {
     if (type === "notification") {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
+       
       const { requestNotifications } = require("react-native-permissions");
       const { status } = await requestNotifications(["alert", "sound", "badge"]);
       return status;
@@ -169,19 +169,19 @@ class PermissionService {
    * NOTE: This will only return a token on physical devices.
    */
   async registerForPushNotificationsAsync(): Promise<string | null> {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
+     
     const Device = require("expo-device");
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
+     
     const Notifications = require("expo-notifications");
 
     if (!Device.isDevice) {
-      console.log("Must use physical device for Push Notifications");
+
       return null;
     }
 
     const hasPermission = await this.requirePermission("notification");
     if (!hasPermission) {
-      console.log("User denied push notification permissions");
+
       return null;
     }
 

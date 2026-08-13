@@ -8,8 +8,7 @@ import { Colors } from "@/constants/Colors";
 import { Txt } from "@/components/common/Typography";
 
 import Tabs from "@/components/ui/navigation/Tabs";
-import Spinner from "@/components/ui/feedback/Spinner";
-import { HStack, VStack } from "@/components/ui/layout/Stack";
+import { VStack } from "@/components/ui/layout/Stack";
 import JobCard from "@/components/jobs/JobCard";
 import JobCardSkeleton from "@/components/skeletons/JobCardSkeleton";
 import { useJobStore } from "@/store/useJobStore";

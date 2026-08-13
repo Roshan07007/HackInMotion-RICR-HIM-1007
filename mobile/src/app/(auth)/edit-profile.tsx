@@ -47,7 +47,7 @@ export default function EditProfileScreen() {
         setResumeName(result.assets[0].name);
       }
     } catch (err) {
-      console.log(err);
+
     }
   };
 
@@ -103,7 +103,7 @@ export default function EditProfileScreen() {
         toast.error(res.data.message);
       }
 
-      console.log(res.data.data);
+
     } catch (error: any) {
       toast.error(error.response?.data?.message || error.message);
     } finally {

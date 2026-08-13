@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Camera,
   Mail,
@@ -12,7 +11,6 @@ import {
   FileText,
   Target,
   Activity,
-  X,
   Check,
   Loader2,
   User,

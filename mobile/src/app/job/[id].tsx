@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   View,
-  ScrollView,
-  StyleSheet,
   useWindowDimensions,
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -17,7 +15,6 @@ import { toast } from "@/utils/toast";
 import { HStack, VStack } from "@/components/ui/layout/Stack";
 import IconButton from "@/components/ui/buttons/IconButton";
 import Button from "@/components/ui/buttons/Button";
-import Badge from "@/components/ui/data-display/Badge";
 import Spinner from "@/components/ui/feedback/Spinner";
 import CircularProgress from "@/components/ui/feedback/CircularProgress";
 import JobDetailSkeleton from "@/components/skeletons/JobDetailSkeleton";

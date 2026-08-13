@@ -1,7 +1,6 @@
 import React from "react";
 import { useResumeStore } from "../../store/useResumeStore";
 import {
-  ArrowRight,
   ListTodo,
   AlertTriangle,
   Lightbulb,

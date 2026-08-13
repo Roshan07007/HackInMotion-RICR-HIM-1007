@@ -12,12 +12,10 @@ import { HStack, VStack } from "@/components/ui/layout/Stack";
 import Button from "@/components/ui/buttons/Button";
 import IconButton from "@/components/ui/buttons/IconButton";
 import Input from "@/components/ui/inputs/Input";
-import ScreenHeader from "@/components/common/ScreenHeader";
 import { toast } from "@/utils/toast";
 import { aiService } from "@/services/ai.service";
 import { useResumeStore } from "@/store/useResumeStore";
 import { useAuthStore } from "@/store/useAuthStore";
-import CircularProgress from "@/components/ui/feedback/CircularProgress";
 
 // Import new modular components
 import ScoreDashboard from "@/components/resume/ScoreDashboard";

@@ -6,7 +6,7 @@ export interface User {
   name: string;
   email: string;
   phone?: string;
-  role: string;
+  role: "user" | "admin" | "other";
   preferences?: {
     skills?: string[];
     desiredJobs?: string[];
@@ -30,6 +30,7 @@ export interface User {
   linkedin?: string;
   website?: string;
   otherLink?: string;
+  expoPushTokens?: string[];
   createdAt?: string;
   updatedAt?: string;
 }

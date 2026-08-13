@@ -15,7 +15,7 @@ server.listen(PORT, async() => {
   logger.success(`Server is running on port ${PORT}`);
   // try {
   //   const res = await cloudinary.api.ping();
-  //   console.log("Cloudinary api is working ", res);
+
   // } catch (error) {
   //   console.error("Error in connecting cloudinary api", error);
   // }

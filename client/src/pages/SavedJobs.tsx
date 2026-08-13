@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useJobStore } from "../store/useJobStore";
 import JobCard from "../components/jobs/JobCard";
 import Loading from "../components/common/Loading";
-import { Bookmark, CheckCircle, ExternalLink, Briefcase } from "lucide-react";
+import { Bookmark, CheckCircle, Briefcase } from "lucide-react";
 import { useUiStore } from "../store/useUiStore";
 import { setHeader } from "../utils/setHeader";
 import { Link } from "react-router-dom";

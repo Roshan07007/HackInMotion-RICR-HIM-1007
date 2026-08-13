@@ -14,6 +14,12 @@ HireMe is a comprehensive job search and career development platform. It feature
   - Career Mentor Chat
   - Resume Analysis
 
+## Live Deployment Links
+
+- **Mobile App (Android):** [Google Drive (APK)](https://drive.google.com/drive/folders/12ODW8-5sV0yX36FMXbenVKRlBq82Hxj9?usp=sharing)
+- **Web Client:** [Netlify](https://hire-me-jobs.netlify.app)
+- **Backend Server:** [Render](https://hireme-64oc.onrender.com)
+
 ## Setup Instructions
 
 *Note: This section follows Section 8 of the General Instructions.*

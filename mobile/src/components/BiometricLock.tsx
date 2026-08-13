@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { View, AppState, AppStateStatus, StyleSheet, Animated } from "react-native";
+import { View, AppState, AppStateStatus, StyleSheet } from "react-native";
 import { useAuthStore } from "@/store/useAuthStore";
 import { authenticateAsync } from "@/services/biometric.service";
 import { Ionicons } from "@expo/vector-icons";

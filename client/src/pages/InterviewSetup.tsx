@@ -3,10 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { setHeader } from "../utils/setHeader";
 import { api } from "../config/api";
 import toast from "react-hot-toast";
-import { Briefcase, Building, FileText, Bot, Trash2, Clock, CheckCircle2 } from "lucide-react";
+import { Briefcase, Building, FileText, Bot, Trash2, Clock } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
 import { formatDate } from "../utils/formatDate";
-import Loading from "../components/common/Loading";
 import { Tabs } from "../components/common/Tabs";
 
 const InterviewSetup = () => {

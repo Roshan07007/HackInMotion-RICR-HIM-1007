@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useResumeStore } from "../../store/useResumeStore";
-import { AlertCircle, ArrowRight, Wand2, Check, Copy } from "lucide-react";
+import { AlertCircle, ArrowRight, Wand2, Copy } from "lucide-react";
 import toast from "react-hot-toast";
 import { Tabs } from "../common/Tabs";
 

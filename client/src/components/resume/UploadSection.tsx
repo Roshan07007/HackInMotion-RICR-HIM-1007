@@ -1,19 +1,16 @@
 import React, { useState, useRef } from "react";
 import {
   UploadCloud,
-  FileText,
   CheckCircle,
   Briefcase,
   Building2,
   MapPin,
   Search,
-  History,
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { aiService } from "../../services/aiService";
 import { useResumeStore } from "../../store/useResumeStore";
 import toast from "react-hot-toast";
-import { ResumeHistoryModal } from "./ResumeHistoryModal";
 
 const UploadSection = () => {
   const [file, setFile] = useState<File | null>(null);

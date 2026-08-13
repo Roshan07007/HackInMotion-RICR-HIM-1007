@@ -16,8 +16,6 @@ import {
   ListTodo,
   History,
 } from "lucide-react";
-import LottieIcon from "../components/common/LottieIcon";
-import ScanAnimation from "../assets/animations/scan.json";
 import { Tabs } from "../components/common/Tabs";
 import { useUiStore } from "../store/useUiStore";
 import { ResumeHistoryModal } from "../components/resume/ResumeHistoryModal";

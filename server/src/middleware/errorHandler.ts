@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import * as fs from "fs";
 
 export const notFound = (req: Request, res: Response, next: NextFunction) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);
@@ -16,7 +17,7 @@ export const errorHandler = (err: any, req: Request, res: Response, _next: NextF
   }
 
   console.error("Express Error Handler:", err);
-  require("fs").writeFileSync("error.log", err.stack || err.toString());
+  fs.writeFileSync("error.log", err.stack || err.toString());
   const statusCode = err.status || err.statusCode || (res.statusCode === 200 ? 500 : res.statusCode);
   res.status(statusCode).json({
     success: false,

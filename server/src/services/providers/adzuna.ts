@@ -6,7 +6,7 @@ export const fetchAdzunaJobs = async (filters: any) => {
     const appKey = process.env.ADZUNA_Key;
 
     if (!appId || !appKey) {
-      console.log("Adzuna credentials missing, skipping Adzuna fetch");
+
       return [];
     }
 
