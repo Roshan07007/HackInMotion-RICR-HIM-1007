@@ -4,6 +4,7 @@ import JobCard from "../components/jobs/JobCard";
 import Loading from "../components/common/Loading";
 import { Bookmark, CheckCircle, ExternalLink, Briefcase } from "lucide-react";
 import { useUiStore } from "../store/useUiStore";
+import { setHeader } from "../utils/setHeader";
 import { Link } from "react-router-dom";
 import { Tabs } from "../components/common/Tabs";
 
@@ -16,7 +17,7 @@ const TABS = [
 
 const SavedJobs = () => {
   const { savedJobs, appliedJobs, fetchSavedJobs, fetchAppliedJobs, isLoading } = useJobStore();
-  const { setHeaderTitle, setHeaderActions, setBreadcrumbs } = useUiStore();
+  const { setBreadcrumbs } = useUiStore();
 
   const [activeTab, setActiveTab] = useState<TabId>("saved");
 
@@ -31,14 +32,14 @@ const SavedJobs = () => {
 
     return () => {
       setBreadcrumbs(null);
-      setHeaderActions(null);
+      setHeader("Dashboard", null);
     };
   }, []);
 
   // Keep the header tab switcher in sync with active tab
   useEffect(() => {
-    setHeaderTitle(activeTab === "saved" ? "Saved Jobs" : "Applied Jobs");
-    setHeaderActions(
+    setHeader(
+      activeTab === "saved" ? "Saved Jobs" : "Applied Jobs",
       <Tabs
         tabs={TABS}
         activeTab={activeTab}
@@ -48,7 +49,7 @@ const SavedJobs = () => {
         dropdown
       />
     );
-  }, [activeTab, setHeaderTitle, setHeaderActions]);
+  }, [activeTab]);
 
   const savedList = savedJobs.filter((s: any) => s.jobId);
   const appliedList = appliedJobs;

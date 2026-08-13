@@ -208,11 +208,7 @@ const AiMentor = () => {
               <div
                 className={`flex flex-col max-w-[85%] md:max-w-[75%] ${msg.role === "user" ? "items-end" : "items-start"}`}
               >
-                <div
-                  className={`text-xs opacity-50 mb-1 ${msg.role === "user" ? "mr-1" : "ml-1"}`}
-                >
-                  {msg.role === "user" ? "You" : "Career Mentor"}
-                </div>
+                
                 <div
                   className={`p-4 shadow text-sm leading-relaxed ${
                     msg.role === "user"

@@ -89,7 +89,7 @@ const Sidebar = () => {
                     to={item.path}
                     onClick={isMobile ? close : undefined}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 rounded-box px-4 py-3 transition-all h-12 
+                      `flex items-center gap-3 rounded-box px-4 py-3 duration-0  h-12 
                       ${
                         isActive
                           ? "bg-primary text-primary-content"
@@ -104,7 +104,7 @@ const Sidebar = () => {
                     />
 
                     {!collapsed && (
-                      <span className="font-medium transition-all duration-300 whitespace-nowrap">
+                      <span className="font-medium transition-all duration-0 whitespace-nowrap">
                         {item.title}
                       </span>
                     )}

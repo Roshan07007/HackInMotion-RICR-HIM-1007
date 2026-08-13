@@ -154,13 +154,18 @@ export const finalizeVideoInterviewService = async (
   Here is the full transcript of the interview (Q&A):
   ${interview.transcript.map(t => `${t.role.toUpperCase()}: ${t.content}`).join("\n")}
 
-  Generate a comprehensive final evaluation report for this candidate.
+  Generate a comprehensive final evaluation report for this candidate based strictly on their actual answers.
+  IMPORTANT RULES:
+  - If the candidate provides very short, empty, or evasive answers, score them poorly.
+  - If the candidate skips questions or provides no meaningful technical content, the hireability rating MUST be "Reject" or "Weak Hire".
+  - DO NOT blindly copy the example values below. They are for format reference only. Evaluate the transcript realistically.
+
   Return EXACTLY the following JSON format without markdown code blocks:
   {
-    "technicalScore": 85, // 0-100
-    "communicationScore": 90, // 0-100
-    "confidenceScore": 80, // 0-100 based on answer clarity and conciseness
-    "hireabilityRating": "Strong Hire", // Must be one of: "Strong Hire", "Hire", "Weak Hire", "Reject"
+    "technicalScore": <integer 0-100>,
+    "communicationScore": <integer 0-100>,
+    "confidenceScore": <integer 0-100>,
+    "hireabilityRating": "<Strong Hire | Hire | Weak Hire | Reject>",
     "executiveSummary": "A 2-3 sentence summary for the hiring manager.",
     "strengths": ["Clear communication", "Deep React knowledge"],
     "weaknesses": ["Hesitant on system design", "Lacks testing experience"]

@@ -37,7 +37,7 @@ const ResumeAnalyzer = () => {
     { id: "action", label: "Action Plan", icon: <ListTodo size={18} /> },
   ];
 
-  const { setBreadcrumbs, setHeaderActions, setHeaderTitle } = useUiStore();
+  const { setBreadcrumbs } = useUiStore();
 
   useEffect(() => {
     if (analysisResult) {
@@ -55,34 +55,33 @@ const ResumeAnalyzer = () => {
           label: "Analysis Report",
         },
       ]);
-      setHeaderActions(
+      setHeader(
+        "Analysis Report",
         <Tabs
           tabs={tabs}
           activeTab={activeTab}
           onChange={setActiveTab}
           variant="box"
           dropdown={true}
-        />,
+        />
       );
     } else {
       setBreadcrumbs(null);
-      setHeaderActions(
+      setHeader(
+        "Resume Analyzer",
         <button
           onClick={() => setIsHistoryOpen(true)}
           className="btn btn-sm btn-primary btn-soft gap-2 "
         >
           <History className="w-4 h-4" />
           History
-        </button>,
+        </button>
       );
-      setHeaderTitle("Resume Analyzer");
     }
   }, [
     analysisResult,
     activeTab,
     setBreadcrumbs,
-    setHeaderActions,
-    setHeaderTitle,
   ]);
 
   // Clean up store on unmount
@@ -90,10 +89,9 @@ const ResumeAnalyzer = () => {
     return () => {
       reset();
       setBreadcrumbs(null);
-      setHeaderActions(null);
-      setHeaderTitle("Dashboard");
+      setHeader("Dashboard", null);
     };
-  }, [reset, setBreadcrumbs, setHeaderActions, setHeaderTitle]);
+  }, [reset, setBreadcrumbs]);
 
   if (isAnalyzing) {
     return (
