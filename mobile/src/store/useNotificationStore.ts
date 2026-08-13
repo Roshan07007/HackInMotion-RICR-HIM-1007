@@ -96,14 +96,14 @@ export const useNotificationStore = create<NotificationState>((set, get) => ({
 
     const isExpoGo = Constants.appOwnership === 'expo';
     if (isExpoGo && Platform.OS === 'android') {
-      console.log('Skipping push notification registration: not supported in Expo Go on Android (SDK 53+).');
+
       return;
     }
 
     try {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
+       
       const Notifications = require("expo-notifications");
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
+       
       const Device = require("expo-device");
 
       if (Platform.OS === 'android') {
@@ -125,7 +125,7 @@ export const useNotificationStore = create<NotificationState>((set, get) => ({
         }
         
         if (finalStatus !== 'granted') {
-          console.log('Failed to get push token for push notification!');
+
           return;
         }
         
@@ -143,7 +143,7 @@ export const useNotificationStore = create<NotificationState>((set, get) => ({
           console.error("Failed to save push token to server", e);
         }
       } else {
-        console.log('Must use physical device for Push Notifications');
+
       }
     } catch (e) {
       console.warn("Failed to setup push notifications dynamically:", e);

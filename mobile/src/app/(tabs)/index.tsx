@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { Txt } from "@/components/common/Typography";
-import { toast } from "@/utils/toast";
 import { useRouter } from "expo-router";
 
 import { HStack, VStack } from "@/components/ui/layout/Stack";

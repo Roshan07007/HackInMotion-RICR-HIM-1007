@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Mail,
   Lock,
   User,
   Eye,
   EyeOff,
-  ArrowLeft,
   GraduationCap,
 } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";

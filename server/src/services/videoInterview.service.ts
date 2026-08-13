@@ -1,8 +1,7 @@
 import { generateAiResponse, ChatMessage } from "./ai.service.js";
 import VideoInterview from "../models/videoInterview.model.js";
 import { videoInterviewInitSchema, videoInterviewAnswerSchema } from "../validations/ai.validation.js";
-import User from "../models/user.model.js";
-import { uploadSingleToCloudinary, deleteFromCloudinary } from "../utils/cloudinaryUpload.js";
+import { uploadSingleToCloudinary } from "../utils/cloudinaryUpload.js";
 import logger from "../utils/logger.js";
 
 const VIDEO_INTERVIEW_SYSTEM_PROMPT = `

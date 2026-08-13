@@ -4,7 +4,7 @@ import { LogOut, Mic, MicOff, Video, VideoOff, CheckCircle } from "lucide-react"
 import toast from "react-hot-toast";
 import { api } from "../config/api";
 
-// @ts-ignore
+// @ts-expect-error browser speech API
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const VideoInterviewRoom = () => {

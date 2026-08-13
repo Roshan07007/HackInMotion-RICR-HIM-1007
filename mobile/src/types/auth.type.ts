@@ -4,7 +4,7 @@ export interface User {
   name: string;
   email: string;
   phone?: string;
-  role: string;
+  role: "user" | "admin" | "other";
   avatar?: {
     url?: string;
     publicId?: string;
@@ -19,6 +19,16 @@ export interface User {
   website?: string;
   otherLink?: string;
   expoPushTokens?: string[];
+  preferences?: {
+    skills?: string[];
+    desiredJobs?: string[];
+    desiredCompanies?: string[];
+    experienceLevel?: "beginner" | "intermediate" | "expert";
+    aiCommunicationStyle?: "formal" | "casual" | "technical";
+    cameraEnabled?: boolean;
+    microphoneEnabled?: boolean;
+    theme?: "dark" | "light" | "system";
+  };
   createdAt?: string;
   updatedAt?: string;
 }

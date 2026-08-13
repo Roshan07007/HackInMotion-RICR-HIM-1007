@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useUiStore } from "../store/useUiStore";
 import { useAuthStore } from "../store/useAuthStore";
 import { Link, useNavigate } from "react-router-dom";
 import { setHeader } from "../utils/setHeader";

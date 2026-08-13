@@ -163,7 +163,7 @@ export default function DocViewerScreen() {
                 setCurrentPage(page);
               }}
               onError={(error: any) => {
-                console.log(error);
+
                 if (error?.message?.toLowerCase().includes('password')) {
                   setIsPasswordRequired(true);
                   setErrorMsg('Incorrect password. Please try again.');

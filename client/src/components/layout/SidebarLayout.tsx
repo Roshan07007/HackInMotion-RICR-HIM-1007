@@ -5,7 +5,6 @@ import Loading from "../common/Loading";
 import SidebarHeader from "../ui/SidebarHeader";
 import Sidebar from "../ui/Sidebar";
 import { useUiStore } from "../../store/useUiStore";
-import appConfig from "../../config/appConfig";
 import { lastSetHeaderPathname } from "../../utils/setHeader";
 import PageTransition from "../common/PageTransition";
 

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { View, FlatList, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, Keyboard, Animated, Alert } from "react-native";
+import { View, FlatList, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, Animated } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -9,7 +9,6 @@ import { Txt } from "@/components/common/Typography";
 import ScreenHeader from "@/components/common/ScreenHeader";
 import { toast } from "@/utils/toast";
 import { aiService } from "@/services/ai.service";
-import Avatar from "@/components/ui/data-display/Avatar";
 import { useAuthStore } from "@/store/useAuthStore";
 import Markdown from "react-native-markdown-display";
 import ConfirmationToast from "@/components/common/ConfirmationToast";

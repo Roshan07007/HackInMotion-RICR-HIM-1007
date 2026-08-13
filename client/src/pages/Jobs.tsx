@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useJobStore } from "../store/useJobStore";
 import JobCard from "../components/jobs/JobCard";
 import { JobFilter } from "../components/jobs/JobFilter";
 import { Pagination } from "../components/common/Pagination";
 import Loading from "../components/common/Loading";
-import { Sparkles, BookmarkCheck, X, Briefcase } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { useUiStore } from "../store/useUiStore";
 import { useDebounce } from "../hooks/useDebounce";
 import { Link } from "react-router-dom";
@@ -47,7 +47,7 @@ const Jobs = () => {
     filters.experienceLevel,
     filters.page,
     filters.limit,
-  ]); // eslint-disable-line react-hooks/exhaustive-deps
+  ]);
 
   const isJobSaved = (jobId: string) =>
     savedJobs.some((s) => s.jobId?._id === jobId || s.jobId === jobId);

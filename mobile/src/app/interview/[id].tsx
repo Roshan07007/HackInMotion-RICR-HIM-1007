@@ -3,11 +3,9 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
-  Alert,
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
-  TextInput,
   Animated,
   Image,
 } from "react-native";

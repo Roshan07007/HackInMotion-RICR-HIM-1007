@@ -3,7 +3,6 @@ import { useColorScheme } from "nativewind";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Colors } from "../../constants/Colors";
 import { useAuthStore } from "../../store/useAuthStore";
-import { Ionicons } from "@expo/vector-icons";
 import ClassicTabBar from "../../components/ui/ClassicTabBar";
 
 const TabLayout = () => {

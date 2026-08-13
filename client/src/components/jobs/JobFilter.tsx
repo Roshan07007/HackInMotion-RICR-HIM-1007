@@ -1,6 +1,6 @@
 import React from "react";
 import { useJobStore } from "../../store/useJobStore";
-import { Search, MapPin, X } from "lucide-react";
+import { Search, MapPin } from "lucide-react";
 
 export const JobFilter = () => {
   const { filters, setFilters, clearFilters } = useJobStore();

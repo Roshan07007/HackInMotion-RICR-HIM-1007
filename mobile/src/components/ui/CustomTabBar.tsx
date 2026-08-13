@@ -5,7 +5,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useColorScheme } from "nativewind";
 import { Colors } from "../../constants/Colors";
 import { getTabConfig } from "../../config/tabNavigation";
-import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
 import { Txt } from "./../common/Typography";
 

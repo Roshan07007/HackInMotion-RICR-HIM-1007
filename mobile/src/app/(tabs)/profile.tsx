@@ -1,9 +1,8 @@
-import { View, ScrollView, TouchableOpacity } from "react-native";
+import { View, ScrollView, TouchableOpacity , Linking , ToastAndroid, Platform } from "react-native";
 import { useAuthStore } from "../../store/useAuthStore";
 import { useColorScheme } from "nativewind";
 import { Txt } from "../../components/common/Typography";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Linking } from "react-native";
 import Avatar from "@/components/ui/data-display/Avatar";
 import Button from "@/components/ui/buttons/Button";
 import Switch from "@/components/ui/inputs/Switch";
@@ -12,7 +11,6 @@ import { useRouter } from "expo-router";
 import { Colors } from "@/constants/Colors";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomModal from "@/components/ui/BottomModal";
-import { ToastAndroid, Platform } from "react-native";
 import React, { useState } from "react";
 import { toast } from "@/utils/toast";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";

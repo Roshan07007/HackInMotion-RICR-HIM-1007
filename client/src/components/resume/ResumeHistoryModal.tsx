@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { History, ChevronRight, FileText, Trash2 } from "lucide-react";
+import { ChevronRight, FileText, Trash2 } from "lucide-react";
 import { aiService } from "../../services/aiService";
 import { useResumeStore } from "../../store/useResumeStore";
 import toast from "react-hot-toast";

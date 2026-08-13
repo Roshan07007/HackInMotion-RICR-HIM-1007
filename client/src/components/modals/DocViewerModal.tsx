@@ -1,5 +1,4 @@
 import React from "react";
-import { FileText } from "lucide-react";
 import { useResumeStore } from "../../store/useResumeStore";
 import Modal from "../common/Modal";
 

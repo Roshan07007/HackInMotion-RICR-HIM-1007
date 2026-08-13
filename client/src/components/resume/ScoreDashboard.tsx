@@ -15,7 +15,6 @@ import {
 import { Link } from "react-router-dom";
 import { DocViewerModal } from "../modals/DocViewerModal";
 import { CircularProgress } from "../common/CircularProgress";
-import Loading from "../common/Loading";
 
 const ScoreDashboard = () => {
   const { analysisResult } = useResumeStore();

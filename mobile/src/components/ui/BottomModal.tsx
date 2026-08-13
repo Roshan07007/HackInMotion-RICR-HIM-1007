@@ -72,7 +72,7 @@ export default function BottomModal({
   const panGesture = Gesture.Pan()
     .onUpdate((event) => {
       if (event.translationY > 0) {
-        // eslint-disable-next-line react-hooks/immutability
+         
         translateY.value = event.translationY;
       }
     })
@@ -80,7 +80,7 @@ export default function BottomModal({
       if (event.translationY > MODAL_HEIGHT * 0.3 || event.velocityY > 500) {
         runOnJS(onClose)();
       } else {
-        // eslint-disable-next-line react-hooks/immutability
+         
         translateY.value = withTiming(0, {
           duration: 300,
           easing: Easing.out(Easing.ease),

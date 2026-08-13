@@ -3,10 +3,8 @@ import { setHeader } from "../utils/setHeader";
 import { aiService } from "../services/aiService";
 import {
   Send,
-  User as UserIcon,
   Bot,
   MoreHorizontal,
-  Briefcase,
   Trash2,
 } from "lucide-react";
 import toast from "react-hot-toast";

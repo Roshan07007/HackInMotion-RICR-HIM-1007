@@ -132,7 +132,7 @@ export const calculateMatchScoreService = async (jobId: string, userId: string) 
       result.breakdown = { skills: 50, experience: 50, keywords: 50 };
     }
     return result;
-  } catch (error) {
+  } catch {
     console.error("Failed to parse AI response:", aiResponse);
     return {
       overallScore: 0,
@@ -144,7 +144,6 @@ export const calculateMatchScoreService = async (jobId: string, userId: string) 
 };
 
 import AppliedJob from "../models/appliedJob.model.js";
-import { log } from "console";
 
 export const applyToJobService = async (jobId: string, userId: string) => {
   const job = await Job.findById(jobId);

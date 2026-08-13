@@ -6,7 +6,6 @@ import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 import ScrollContainer from "../../components/ui/layout/ScrollContainer";
-import Button from "../../components/ui/buttons/Button";
 import IconButton from "../../components/ui/buttons/IconButton";
 import ScreenHeader from "@/components/common/ScreenHeader";
 import { toast } from "@/utils/toast";
