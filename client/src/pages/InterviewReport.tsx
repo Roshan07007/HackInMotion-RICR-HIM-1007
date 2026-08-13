@@ -101,8 +101,8 @@ const InterviewReport = () => {
 
         {/* Right Column: Strengths/Weaknesses & Transcript */}
         <div className="lg:col-span-2 space-y-6 order-2 md:order-1">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-success/10 border border-success/20 rounded-3xl p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="bg-success/10 border border-success/20 rounded-3xl p-4 sm:p-6">
               <h3 className="font-bold text-success flex items-center gap-2 mb-4">
                 <CheckCircle2 size={18} />
                 Key Strengths
@@ -116,7 +116,7 @@ const InterviewReport = () => {
               </ul>
             </div>
 
-            <div className="bg-error/10 border border-error/20 rounded-3xl p-6">
+            <div className="bg-error/10 border border-error/20 rounded-3xl p-4 sm:p-6">
               <h3 className="font-bold text-error flex items-center gap-2 mb-4">
                 <XCircle size={18} />
                 Areas to Improve
@@ -133,7 +133,7 @@ const InterviewReport = () => {
 
           {/* Video Recording */}
           {videoUrl && (
-            <div className="bg-base-200/50 border border-base-300 rounded-3xl p-6 shadow-sm">
+            <div className="bg-base-200/50 border border-base-300 rounded-3xl p-4 sm:p-6 shadow-sm">
               <h3 className="font-bold flex items-center gap-2 mb-4">
                 <Video size={18} className="text-primary" />
                 Interview Recording
@@ -150,7 +150,7 @@ const InterviewReport = () => {
           )}
 
           {/* Transcript Log */}
-          <div className="bg-base-200/50 border border-base-300 rounded-3xl p-6 shadow-sm">
+          <div className="bg-base-200/50 border border-base-300 rounded-3xl p-4 sm:p-6 shadow-sm">
             <h3 className="font-bold flex items-center gap-2 mb-6">
               <BarChart3 size={18} className="text-primary" />
               Detailed Q&A Transcript
@@ -184,7 +184,7 @@ const InterviewReport = () => {
         </div>
 
         <div className="lg:col-span-1 space-y-6 order-1 md:order-2">
-          <div className="bg-base-200/50 border border-base-300 rounded-3xl p-6 shadow-sm">
+          <div className="bg-base-200/50 border border-base-300 rounded-3xl p-4 sm:p-6 shadow-sm">
             <h2 className="text-lg font-bold mb-1">{jobRole} Interview</h2>
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium text-base-content/60">
@@ -242,7 +242,7 @@ const InterviewReport = () => {
             </div>
           </div>
 
-          <div className="bg-base-200/50 border border-base-300 rounded-3xl p-6 shadow-sm">
+          <div className="bg-base-200/50 border border-base-300 rounded-3xl p-4 sm:p-6 shadow-sm">
             <h3 className="font-bold flex items-center gap-2 mb-4">
               <FileText size={18} className="text-primary" />
               Executive Summary

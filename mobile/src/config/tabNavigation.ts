@@ -15,7 +15,12 @@ export const tabNavigationConfig: TabConfig[] = [
   {
     name: "analyzer",
     title: "AI Scan",
-    baseIcon: "scan",
+    baseIcon: "sparkles",
+  },
+  {
+    name: "interview",
+    title: "Interview",
+    baseIcon: "videocam",
   },
   {
     name: "saved",

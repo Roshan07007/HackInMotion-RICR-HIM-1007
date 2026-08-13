@@ -147,7 +147,7 @@ export default function JobsFeed() {
               onPress={() => router.push("/ai/mentor-chat")}
               className="w-11 h-11 rounded-full items-center justify-center bg-primary/10 border border-primary/20"
             >
-              <Ionicons name="sparkles" size={20} color={colors.primary} />
+              <Ionicons name="chatbubble-outline" size={20} color={colors.primary} />
             </TouchableOpacity>
           </HStack>
 

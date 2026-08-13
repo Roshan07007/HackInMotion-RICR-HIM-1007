@@ -1,0 +1,1563 @@
+--------- beginning of main
+08-14 00:41:33.059  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: exitInfo|anrCrash size is 0|53
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: The log file will be deleted when it's lifetime exceed, cutoffMillis =1784056293059;logFileEntity.timeStampMills = 1783907167105
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: Log upload status is file over time
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: FileUploadCycleEntity{
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  fileId = b2fcb790-94dd-45e3-b01f-37435b6d189a;
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  status = 30003;
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  businessId = 23;
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  taskId = ;
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  timeStamp =1786648293060;
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  createTime =-1;
+08-14 00:41:33.060  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: }
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: Delete the oldest log file <<<anr@b2fcb790-94dd-45e3-b01f-37435b6d189a@CPH2467_11.F.87_2870_202605080013@2026-07-13_07-16-13.zip>>> because of file over time
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: The log file will be deleted when it's lifetime exceed, cutoffMillis =1784056293059;logFileEntity.timeStampMills = 1784001210699
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: Log upload status is file over time
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: FileUploadCycleEntity{
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  fileId = e258c251-6367-406a-adef-108955d3c2de;
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  status = 30003;
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  businessId = 23;
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  taskId = ;
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  timeStamp =1786648293063;
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  createTime =-1;
+08-14 00:41:33.063  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: }
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: Delete the oldest log file <<<anr@e258c251-6367-406a-adef-108955d3c2de@CPH2467_11.F.87_2870_202605080013@2026-07-14_09-23-46.zip>>> because of file over time
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: The log file will be deleted when it's lifetime exceed, cutoffMillis =1784056293059;logFileEntity.timeStampMills = 1784001217612
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: Log upload status is file over time
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: FileUploadCycleEntity{
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  fileId = 9117b076-3cb1-4fdd-8def-7f76ed99e05f;
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  status = 30003;
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  businessId = 23;
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  taskId = ;
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  timeStamp =1786648293066;
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil:  createTime =-1;
+08-14 00:41:33.066  1251 22579 D LogKit.OLC_CrashBox_DcsStatsUtil: }
+08-14 00:41:33.068  1251 22579 D LogKit.OLC_CrashBox_LogFileManager: Delete the oldest log file <<<anr@9117b076-3cb1-4fdd-8def-7f76ed99e05f@CPH2467_11.F.87_2870_202605080013@2026-07-14_09-23-49.zip>>> because of file over time
+--------- beginning of system
+08-14 00:41:33.167  2177  2627 D OplusFeatureHDREnhanceBrightness: checkIsPlayingHDR isPlayingHDR=0 rotation=0 whiteApp=false battery=16
+08-14 00:41:33.184  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:33.218  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:33.218  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:33.218  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:33.218  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:33.218  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:33.248  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:33.248  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1791, identity:qcom-perfd
+08-14 00:41:33.251  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:33.251  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:33.260  1182 22960 I [UAH_CLIENT]: UahRelease, handle:285711
+08-14 00:41:33.445 22296 22962 D ProfileInstaller: Installing profile for io.github.imksh.hireme
+08-14 00:41:33.526  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:33.527  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:33.540  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342176762; tx bytes: 2791622355
+08-14 00:41:33.540  2177  3151 V NetworkPolicy: updateNetworkEnabledNL() return
+08-14 00:41:33.540  2177  3151 V NetworkPolicy: updateNotificationsNL not process
+08-14 00:41:33.542  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:33.545  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:33.547  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:33.547  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:33.548  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:33.548  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:33.548  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:33.548  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:33.553  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:33.553  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:33.554  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:33.554  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:33.559  2177  3998 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:33.560  2177  4918 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:33.575  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:33.575  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:33.594  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:33.595  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:33.596  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648293544, mSettingLocalDateTime 2026-08-14T00:41:00.544
+08-14 00:41:33.597  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:33.597  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1792, identity:qcom-perfd
+08-14 00:41:33.599  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:33.599  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:33.608  1182 22963 I [UAH_CLIENT]: UahRelease, handle:285712
+08-14 00:41:33.611  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648293544, mSettingLocalDateTime 2026-08-14T00:41:00.544
+08-14 00:41:33.613  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:33.613  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:33.664  1275  1655 D VRR [OTI]: handleIdle from 0 to 1
+08-14 00:41:33.665  1275  1655 D VRR [OTI-HW]: isStateReady 1
+08-14 00:41:33.665  1275  1655 D VRR [OTI-HW]: rate range: min {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} cur {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} max {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A}
+08-14 00:41:33.665  1275  1655 W ComposerExtn: DisplayExtnImpl::SetActiveConfig: HWC Display 0 is not registered!
+08-14 00:41:33.666  1275  1655 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 60, event: 0 ,displayid = 4630946896948975233
+08-14 00:41:33.666  1275  1655 D DisplayModeController: setDesiredMode 4630946896948975233 {mode={fps=60.00 Hz, modePtr={id=2, vsyncRate=60.00 Hz, peakRefreshRate=60.00 Hz}}, emitEvent=false, force=false}
+08-14 00:41:33.672  1177 26911 I SDM     : HWDeviceDRM::UpdateMixerAttributes: Mixer WxH 1080x2400-0 for Peripheral
+08-14 00:41:33.673  1177 26911 I SDM     : HWCDisplay::SubmitDisplayConfig: HWC SetActiveConfig [0,4], cur_resolution is (1080, 2400), new_resolution is (1080, 2400)
+08-14 00:41:33.673  1177 26911 I SDM     : HWCDisplay::SubmitDisplayConfig: Active configuration changed to: 4
+08-14 00:41:33.707  1275  1655 D VRR [OTI-HW]: isStateReady 1
+08-14 00:41:33.708  1275  1655 D VRR [OTI-HW]: rate range: min {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} cur {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} max {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A}
+08-14 00:41:33.708  1275  1655 D VRR [OTI-HW]: keep rate.
+08-14 00:41:33.746  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:33.751  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:33.751  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:33.806  2177  6689 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+08-14 00:41:34.103  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:34.103  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:34.105  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:34.105  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:34.147  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:34.147  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:34.234 23253 19889 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+08-14 00:41:34.235 23253 19889 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+08-14 00:41:34.282  1201  1279 E PerformanceService: storage_feature: open /sys/devices/platform/soc/112b0000.ufshci//virtualtlcbuff fail
+08-14 00:41:34.298  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:34.501  2177  3265 D OplusWifiSarManager: wifisarprop msg=11110000001110000:1:0 sar_idx=11110000001110000:1:0
+08-14 00:41:34.528  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:34.915 16579 16619 D bt_shim_hci: [hci_layer.cc:231] transmit_command: Sending command LE_ENERGY_INFO(0xfd59)
+08-14 00:41:34.917  1160  1160 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:34.919  1160  1160 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:34.919  1160  1160 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+08-14 00:41:34.923  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+08-14 00:41:34.923  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+08-14 00:41:34.923  1160  1160 D vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+08-14 00:41:34.924  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:34.924  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:34.926 16579 16625 D bt_shim_hci: [hci_layer.cc:192] OnTransmitPacketCommandComplete: Received cmd complete for LE_ENERGY_INFO(0xfd59)
+08-14 00:41:34.927  2263  2371 D QmiClient: qmiServiceEventCallback recv msg id 1085
+08-14 00:41:34.927  2263  2371 D QmiVsClient: enter - onQmiServiceEventCallback msgId 1085
+08-14 00:41:34.927  2263  2371 D QmiVsClientEvent: qmiVsClientNotifyNecEvent - RADIO_EVENT_NEC_IND
+08-14 00:41:34.927 16579 16619 D bt_btm_pm: [btm_pm.cc:980] BTM_PM_ReadBleScanDutyCycle: LE scan_window:192 scan interval:1920
+08-14 00:41:34.927 16579 16619 D bt_bta_dm: [bta_dm_act.cc:1700] bta_dm_obtain_system_context: active_acl_num 0 sniff_acl_num 0 le_acl_num 0 le_adv_num 0 le_scan_duty 10 inquiry false sco false a2dp false le_audio false ctrl_state 0x20000
+08-14 00:41:34.928  2263  2279 D VsProxy : handleMessage msg is 2403
+08-14 00:41:34.928  2263  2279 D VsProxy : handleNecInd for instance 0
+08-14 00:41:34.928  1328  1452 D SubsysRadioIndication: [PHONE0]radioNecInd 
+08-14 00:41:34.929  1328  1328 D RadioMessenger: handleMessage Request msgid 2220
+08-14 00:41:34.931  2177  3998 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=311551978 mSleepTimeMs=63217366 mIdleTimeMs=77567784 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[3007825, 2442188, 2139701, 2086197, 3242598],mRxTimeMs=153728725}]}
+08-14 00:41:34.932  1328  1328 D RadioMessenger: handleSetSyncWithAp: -1, syncFlag: 1
+08-14 00:41:34.932  1328  1328 D QtiRadioService: setSyncWithAp
+08-14 00:41:34.932  1328  1328 D RadioProxyJ: [PHONE0][21649]> setSyncWithAp syncFlag:1
+08-14 00:41:34.932  1328  1328 D ModemChannel: handleMessage what:102
+08-14 00:41:34.932  2263  2287 D RadioService: setSyncWithAp with instance 0
+08-14 00:41:34.933  1328  1328 D ModemChannel: handleNecEvent
+08-14 00:41:34.933  2263  2287 D VendorService: VendorService::setSyncWithAp
+08-14 00:41:34.933  2263  2279 D QmiVsClient: setSyncWithAp - enter
+08-14 00:41:34.933  2263  2279 E QmiVsClient: sendAsyncRequest QMI_VS_SET_SYNC_WITH_AP_REQ_MSG_V01 ret 0
+08-14 00:41:34.934  2263  2279 D VsProxy : handleMessage msg is 4001
+08-14 00:41:34.934  2263  2279 D RadioProxy: setSyncWithAp : response cb for instance 0
+08-14 00:41:34.934  3815  4125 I ModemAciService: handleMessage:5
+08-14 00:41:34.934  2263  2263 D RadioServiceResponse: RadioServiceResponse::setSyncWithApResponse
+08-14 00:41:34.934  1204  1832 D SubsysCallManager: handleMessage what:102
+08-14 00:41:34.934  1204  1832 D SubsysCallManager: parseMdmInfoData len:392
+08-14 00:41:34.934  1204  1832 D SubsysCallManager: onMdmEvent moduleId:6,eventId:4
+08-14 00:41:34.934  1328  1452 D SubsysRadioResponse: setSyncWithApResponse info.error = 0
+08-14 00:41:34.934  1328  1452 D RadioProxyJ: [PHONE0][21649]< setSyncWithApResponse 
+08-14 00:41:34.935  1328  1328 D MessengerResponseHandler: handleMessage Response msgid 210
+08-14 00:41:34.935  3815  4125 I ModemAciService: sendSettleObj2Statsd over!
+08-14 00:41:34.935  3815  4125 D ModemAciService: sendSettleObj2Amc:info=sleepTimes=0,0, idleTimes = 0,0, rxTimes = 10,10, nrRxTimes = 0,0, rrcConnC = 0,0, saRrcConnC = 0,0, cellUpdateC = 0,0, iRatC = 0,0, csChangedC = 0,0, psChangedC = 0,0, nwSrchC = 0,0, nwSrchT = 0,0, lteRrcConnT = 10,0, sarrct = 0,0, psRegT = 10,10, csRegT = 10,10, psNoRegT = 0,0, csNoRegT = 0,0, saRachC = 0,0, lteHoC = 0,0, saHoC = 0,0, sigGridT = 0,0, lteGridT = 0,0, saGridT = 0,0, ulHiLayerT=0,0, dlHiLayerT=0,0, highTxPower=4,4, highpwro20t=4,4, 
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:highpwro20t value:4 duration:9
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nweaksigt value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nweaksigt value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrchc value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrchc value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrcht value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrcht value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:highpwrt value:4 duration:9
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:dlhilayert value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:dlhilayert value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:csregt value:10 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:csregt value:10 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:csnoregt value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:csnoregt value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:pschangec value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:pschangec value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:ltehoc value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:ltehoc value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nrrrcc value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:nrrrcc value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:psregt value:10 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:psregt value:10 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:sarrct value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:sarrct value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:totalcat value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:totalcat value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:weaksigt value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:weaksigt value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:ulhilayert value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:ulhilayert value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:psnoregt value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:psnoregt value:0 duration:9 pn:1
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:rxt value:10 duration:9
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:5grxt value:0 duration:9
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:idlet value:0 duration:9
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:iratc value:0 duration:9 pn:0
+08-14 00:41:34.936  1204  1936 D PKPI    : [KpiModem] update kpi:iratc value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:rachc value:0 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:rachc value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:sahoc value:0 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:sahoc value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:lterrcc value:0 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:lterrcc value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:lterrct value:10 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:lterrct value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:radiosleept value:0 duration:9
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:cschangec value:0 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:cschangec value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:cellupdatec value:0 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:cellupdatec value:0 duration:9 pn:1
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:eweaksigt value:0 duration:9 pn:0
+08-14 00:41:34.937  1204  1936 D PKPI    : [KpiModem] update kpi:eweaksigt value:0 duration:9 pn:1
+08-14 00:41:34.937  3815  4125 I ModemAciService: UMF LO,DC: OplusModemActivityInfo{ date=08-14 00:41:34.934 modemPowermA[]=[303.58,202.93,404.47] sleepTimeMs=0 idleTimeMs=1 rxTimeMs=9841 5gRxTimeMs=0 txTimeMs[]=[62, 4, 0, 0, 38] 5gTxTimeMsSIM1=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeMsSIM2=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeSum[]=[0, 0] techTimeMs[]=[0, 0, 0, 0, 948, 179, 0, 0, 0] rrcConn10sC[]=[0, 0] rrcConn20sC[]=[0, 0] rrcConnMore20sC[]=[0, 0] rrcConnC[]=[0, 0] csChangedC[]=[0, 0] psChangedC[]=[0, 0] iRatC[]=[0, 0] cellUpdateC[]=[0, 0] nwSrchC[]=[0, 0] nwSrchT[]=[0, 0] lteRrcConnT[]=[10, 0] psRegT[]=[10, 10] csRegT[]=[10, 10] psNoRegT[]=[0, 0] csNoRegT[]=[0, 0] sigGrid0T[]=[0, 0] endcActT[]=[10, 0] saActT[]=[0, 0] gpsTimeMs=0 wlanTimeMs=9945 regReqFbC[]=[0, 0] regReqTransAcqDbC[]=[0, 0] saRrcConn10sC[]=[0, 0] saRrcConn20sC[]=[0, 0] saRrcConnMore20sC[]=[0, 0] saRrcConnC[]=[0, 0] lteHoC[]=[0, 0] saHoC[]=[0, 0] saRrcConnT[]=[0, 0] sensorStationaryC=0 sensorStationaryT=0 modemStationaryC=0 modemStationaryT=0}
+08-14 00:41:34.938  4506 12157 I midasd  : OplusObrainService::notifyEventString eventId:11 strParam:{"5gRxTimeMs":0,"5gTxTimeMs":[],"idleTimeMs":1,"lteRrcC":[0,0],"lteRrcT":[10,0],"nrRrcC":[0,0],"nrRrcT":[0,0],"rxTimeMs":9841,"sleepTimeMs":0,"timestamp":1786648294934,"txTimeMs":[62,4,0,0,38]}
+08-14 00:41:34.939  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTelephonyInfo
+08-14 00:41:34.940  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTrafficTypeInfoForNetworkType networkType 0
+08-14 00:41:34.940  2177  5009 D KernelStatsHelper: getKernelStats start!
+08-14 00:41:34.943  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{3004}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.943  2177  3245 D KernelStatsHelper: get magic :[-1, -1, -1, 77, 65, 71, 73, 67]
+08-14 00:41:34.943  2177  3245 D KernelStatsHelper: magic matched count:373 data_len:19396
+08-14 00:41:34.943  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.943  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.943  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.943  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.944  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.944  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{1636}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:34.944  2177  3245 D KernelStatsHelper: data over! check: true
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening event_count for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening active_count for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening name for wakeup38: Permission denied
+08-14 00:41:34.955   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup38: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening event_count for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening active_count for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening name for wakeup28: Permission denied
+08-14 00:41:34.956   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup28: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening event_count for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening active_count for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening name for wakeup126: Permission denied
+08-14 00:41:34.957   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup126: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening event_count for wakeup24: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup24: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup24: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup24: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup24: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening active_count for wakeup24: Permission denied
+08-14 00:41:34.963   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup24: Permission denied
+08-14 00:41:34.964   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup24: Permission denied
+08-14 00:41:34.964   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup24: Permission denied
+08-14 00:41:34.964   716 25210 E android.system.suspend-service: Error opening name for wakeup24: Permission denied
+08-14 00:41:34.964   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup24: Permission denied
+08-14 00:41:34.965  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening event_count for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening active_count for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening name for wakeup32: Permission denied
+08-14 00:41:34.967   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup32: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening event_count for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening active_count for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup7: Permission denied
+08-14 00:41:34.968   716 25210 E android.system.suspend-service: Error opening name for wakeup7: Permission denied
+08-14 00:41:34.969   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup7: Permission denied
+08-14 00:41:34.972   716 25210 E android.system.suspend-service: Error opening event_count for wakeup10: Permission denied
+08-14 00:41:34.972   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup10: Permission denied
+08-14 00:41:34.972   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening active_count for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening name for wakeup10: Permission denied
+08-14 00:41:34.973   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup10: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening event_count for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening active_count for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening name for wakeup43: Permission denied
+08-14 00:41:34.982   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup43: Permission denied
+08-14 00:41:34.985   716 25210 E android.system.suspend-service: Error opening event_count for wakeup6: Permission denied
+08-14 00:41:34.985   716 25210 E android.system.suspend-service: Error opening max_time_ms for wakeup6: Permission denied
+08-14 00:41:34.985   716 25210 E android.system.suspend-service: Error opening wakeup_count for wakeup6: Permission denied
+08-14 00:41:34.985   716 25210 E android.system.suspend-service: Error opening total_time_ms for wakeup6: Permission denied
+08-14 00:41:34.985   716 25210 E android.system.suspend-service: Error opening expire_count for wakeup6: Permission denied
+08-14 00:41:34.985   716 25210 E android.system.suspend-service: Error opening active_count for wakeup6: Permission denied
+08-14 00:41:34.986   716 25210 E android.system.suspend-service: Error opening last_change_ms for wakeup6: Permission denied
+08-14 00:41:34.986   716 25210 E android.system.suspend-service: Error opening waiting_for_supplier for wakeup6: Permission denied
+08-14 00:41:34.986   716 25210 E android.system.suspend-service: Error opening prevent_suspend_time_ms for wakeup6: Permission denied
+08-14 00:41:34.986   716 25210 E android.system.suspend-service: Error opening name for wakeup6: Permission denied
+08-14 00:41:34.986   716 25210 E android.system.suspend-service: Error opening active_time_ms for wakeup6: Permission denied
+08-14 00:41:34.992  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:35.051  2734  3306 D AppSwitchObserverHelper: packageName: com.android.launcher,io.github.imksh.hireme
+08-14 00:41:35.071  2177  2330 W System  : A resource failed to call HardwareBuffer.close. 
+08-14 00:41:35.245  2177  3313 I ServiceConnector.Impl: unbindJobThread: connection = ServiceConnector@431(Intent { act=android.permission.PermissionControllerService cmp=com.google.android.permissioncontroller/com.android.permissioncontroller.permission.service.PermissionControllerServiceImpl mCallingUid=1000 }, user: 0)[Unbinding...]service = android.permission.IPermissionController$Stub$Proxy@a94911b mBinding = false
+08-14 00:41:35.465 25692 31961 I CardConfig.CardConfigRepository: subscribePackageChange4Ocs, check ocs
+08-14 00:41:35.515  2177  3265 I OplusWifiSarManager: Received Data State Change: 1
+08-14 00:41:35.517  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:35.518  2177  3410 I Osense-BaseDecisionMaker: notifySceneToAthenaPolicy: SCENE_RES_IO_PSI, bundle: Bundle[{ioLevel=3}]
+08-14 00:41:35.518  2177  3410 I Osense-BaseDecisionMaker: OSense not supported scene! SCENE_RES_IO_PSI
+08-14 00:41:35.528  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:35.841  2177  3090 V AlarmManager: sending alarm Alarm{b5a32b8 type 3 origWhen 311552888 whenElapsed 311552888 com.google.android.gms} uid 10108 whenElapsed 311552888 windowLength 0 maxWhenElapsed 311552888 repeatInterval 0 action com.google.android.gms.gcm.ACTION_CHECK_QUEUE component ComponentInfo{com.google.android.gms/com.google.android.gms.gcm.nts.SchedulerInternalReceiver} flags 0x0 procName com.google.android.gms.persistent
+08-14 00:41:35.903 23253 22436 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+08-14 00:41:35.904 23253 22436 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+08-14 00:41:35.907 23738 17639 I PlayGamesServices[GamesSyncAdapter]: Starting sync for d4599a9f
+08-14 00:41:35.908 23738 17640 I PlayGamesServices[GamesSyncAdapter]: Starting sync for 96457dc3
+08-14 00:41:35.909 23738 17639 I PlayGamesServices[GamesSyncAdapter]: Sync duration for d4599a9f: 1
+08-14 00:41:35.911 23738 17640 I PlayGamesServices[GamesSyncAdapter]: Sync duration for 96457dc3: 2
+08-14 00:41:35.911 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.913 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.918 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.918 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.918 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.922 23253 22435 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+08-14 00:41:35.923 23738  9438 W OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+08-14 00:41:35.924  1160 16650 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+08-14 00:41:35.924  1160 16650 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:35.924 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.924 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.925 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.930 23738 30211 I GetServiceValidatorImpl: (REDACTED) onGetService() from Client SDK version [%s], Module version [%s], PGA version [%s], Account [%s], Calling package [%s], Game package [%s]
+08-14 00:41:35.930 23738 30211 I GetGamesServiceReqFacto: (REDACTED) Parsing request with ignored arguments. signInOptionsBundle [%s], isRetryingSignIn [%s], skipWelcomePopup [%s], requireGooglePlus [%s]
+08-14 00:41:35.931 23738 30211 I GetGamesServiceReqFacto: Replacing request for `games` scope with `games_lite`
+08-14 00:41:35.937  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:35.940 23738 22973 I SignInPerformer-5: (REDACTED) Handling request [%s], isFirstPartyCaller [%s]
+08-14 00:41:35.940  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:35.942 23738 22973 I SignInPerformer-5: Successfully brokered first-party unauthenticated GamesService [CONTEXT service_id=1 ]
+08-14 00:41:35.942 23738 22973 I GetGamesServiceV2Op: (REDACTED) Successfully brokered GamesService for request %s
+08-14 00:41:35.950 23253 21391 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+08-14 00:41:35.952  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:35.953 23738 17639 I PlayGamesServices[GamesSyncAdapter]: Starting sync for bdad8345
+08-14 00:41:35.954 23253 21391 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+08-14 00:41:35.954 23738 17639 I PlayGamesServices[GamesSyncAdapter]: Sync duration for bdad8345: 1
+08-14 00:41:35.955 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.961 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.962 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.962 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.981 23253 21391 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+08-14 00:41:35.983 23253 21391 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+08-14 00:41:35.986 23738 17640 I PlayGamesServices[GamesSyncAdapter]: Starting sync for 8b421445
+08-14 00:41:35.988 23738 17640 I PlayGamesServices[GamesSyncAdapter]: Sync duration for 8b421445: 1
+08-14 00:41:35.991 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.997  2177  3844 I OplusHansManager : uid=10380, pkg=io.github.imksh.hireme M enter(), R stay=6
+08-14 00:41:35.998 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.999 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:35.999 23738 17640 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:36.010 23253 22972 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+08-14 00:41:36.011 23738 17639 I PlayGamesServices[GamesSyncAdapter]: Starting sync for ceb3008d
+08-14 00:41:36.012 23253 22972 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+08-14 00:41:36.014 23738 17639 I PlayGamesServices[GamesSyncAdapter]: Sync duration for ceb3008d: 2
+08-14 00:41:36.017 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:36.024 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:36.024 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:36.025 23738 17639 W PlayGamesServices[DataBroker]: No player ID found when refreshing
+08-14 00:41:36.030 23253 22435 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+08-14 00:41:36.075  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:36.227  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->updateNetworkSpeed: isConnected:true,isSwitchOn:true
+08-14 00:41:36.230  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->getTotalByte: totalRxBytes:18012806055,totalTxBytes:5089389991,loopbackTxBytes:128774938,loopbackRxBytes:128774938 ,totalBytes:22844646170
+08-14 00:41:36.244  2177  2530 D Theia.TransparentWindow: handleMessage CHECK_TRANS_WINDOW_ERROR_MSG
+08-14 00:41:36.244  2177  2530 I Theia.TransparentWindow: TransparentWindow: Window{aaa4275 u0 Application Error: io.github.imksh.hireme}
+08-14 00:41:36.530  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:36.552  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:36.563  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342176841; tx bytes: 2791622403
+08-14 00:41:36.565  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:36.567  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:36.570  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:36.570  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:36.570  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:36.570  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:36.570  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:36.572  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:36.584  2177  4918 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:36.585  2177  4918 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:36.603  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:36.603  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:36.625  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648296566, mSettingLocalDateTime 2026-08-14T00:41:00.566
+08-14 00:41:36.648  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648296566, mSettingLocalDateTime 2026-08-14T00:41:00.566
+08-14 00:41:36.652  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:36.652  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:36.753 13740 13740 W adbd    : timeout expired while flushing socket, closing
+08-14 00:41:37.024 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:37.024  2177  3265 I OplusWifiSarManager: Received Data State Change: 0
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:37.025  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:37.025  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: false mData5gOn: true
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:37.025  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:37.025  2177  3265 D OplusWifiSarManager:  state: 11110000001100000 country: IN
+08-14 00:41:37.027  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:37.337  1206  1342 D vendor.oplus.hardware.charger-V6-service: ret_value:130, read content:,370,357,3808,3808,-1143,1500,2200,17,16,1,6,-1,4878,17,1,0,1,1,0,0,4425,0,6,0,6,3,0,0,348,0,1,1,0,0,61,61,61,0,0,0,0,0,0,0,0,0,0
+08-14 00:41:37.337  1206  1342 D vendor.oplus.hardware.charger-V6-service: gmtime: 2026-08-14-00-41-37
+08-14 00:41:37.338  1206  1342 D vendor.oplus.hardware.charger-V6-service: usb_online:1, ac_online:0, wireless_online:-2147483648
+08-14 00:41:37.366  1251 19275 D gaia-FutureGenerator: clearRequestPacket packetId = 1009
+08-14 00:41:37.366  1251 19275 D gaia-FutureGenerator: makeFuture TimeoutException packetId = 1009
+08-14 00:41:37.531  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:37.770  2025 20663 D ShellSubscriberWorkerThread: the first 8 bytes empty, and RestData length > 8 
+08-14 00:41:37.773  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:37.773  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:37.774  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:37.775  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:37.816  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:37.816  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:37.966  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:37.972  1206  1206 D vendor.oplus.hardware.charger-V6-service: get_ui_charge_icon_type 1 3 0 0 1
+08-14 00:41:37.974  1206  1206 D vendor.oplus.hardware.charger-V6-service: oplus_chg_get_cpa_power 7500 charge_online 1 retention_topic 0
+08-14 00:41:37.982  3372  3372 I SystemUi--Statusbar: BatteryControllerExt-->updateBatteryChangeIntent():broadcast=android.intent.action.BATTERY_CHANGED,level=17,scale=100
+08-14 00:41:37.982  3372  3372 I SystemUi--Statusbar: BatteryRepository-->level: 17 -- isSavingMode: false
+08-14 00:41:37.983  3372  3372 I OplusCharge--: OplusChargeAnimImpl-->updateLevel level=17
+08-14 00:41:37.984  3372  3372 I SystemUi--Keyguard: ChargingAnimationImpl-->onBatteryStateChanged mLastTipKey=Fast charging... %s,tipKey=Fast charging... %s,tip=Fast charging... 17%,level=17
+08-14 00:41:37.984  1328  1328 D SubsysBroadcastManager: onReceive action:android.intent.action.BATTERY_CHANGED
+08-14 00:41:37.985  3372  3372 I SystemUi--Keyguard: ChargingAnimationImpl-->dispatchChargeTipChange refreshAnim=false, tipKey=Fast charging... %s, tip=Fast charging... 17%, disChargingMessage=Battery level: 17%
+08-14 00:41:37.985  3372  3372 D OplusKeyguardStyleClock: setDateMessageInfo messageInfo={"refreshAnim":false,"showAnim":false,"extraKey":"Fast charging... %s","extraMessage":"Fast charging... 17%","extraMessageExtraToData":"Battery level: 17%"}
+08-14 00:41:37.985  3372  3372 I DateMessageViewModule: setDateMessageInfo-setExtra,info=DateMessageInfo(time=1786646022322, extraMsgType=2, isSetTips=true, tipsKey=Fast charging... %s, tips=Fast charging... 17%, tipsExtraToData=Battery level: 17%, refreshAnim=false, showAnim=false, extraRandom=1)
+08-14 00:41:37.986  3789  3789 D DeviceStatisticsService: onReceive: action= android.intent.action.BATTERY_CHANGED
+08-14 00:41:37.986  1198  1198 E android.hardware.power.stats-impl.oplus: HandleFactory::read open battery_ui_level(/sys/class/power_supply/battery/capacity) failed! fd: -1 errno: 13
+08-14 00:41:37.986  1198  1198 W android.hardware.power.stats-impl.oplus: PruneException: Unknown binder exception (13) pruned into EX_TRANSACTION_FAILED
+08-14 00:41:37.987  4543  4543 W ostats_pullerd: handleFactory read failed.
+08-14 00:41:37.987  4543  4543 D ostats_pullerd: PullAtomCallback handleBatteryLevel handler for realLevel = 17, uiLevel = -1
+08-14 00:41:37.987  3789  3789 D DeviceInfoHidlClient: isRadioOn()=true
+08-14 00:41:37.987  3789  3789 I DeviceInfoHidlClient: isPowerInfoNeverSent=false batteryLevel=17 batteryLevelIndex=0 chargingMode=2 totalCapacity=3958800 powerSaveMode=false
+08-14 00:41:37.989  4506 12157 I midasd  : OplusObrainService::notifyEventIntString eventId:5 iParam:1 strParam:17
+08-14 00:41:37.990  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTrafficTypeInfoForNetworkType networkType 1
+08-14 00:41:37.990  2177  4918 D KernelStatsHelper: getKernelStats start!
+08-14 00:41:37.990  4506 14549 D midasd  : PowerFactors is null 
+08-14 00:41:37.990  1205  1205 I CameraMidasService: getExplorerInfo The size of ExplorerInfo is 240 ,The size of ExplorerInfo is 0, The memory size of ExplorerInfo is 0
+08-14 00:41:37.990  4506 14551 W midasd  : getUfsPower:209: initUfsNode nodeValue is empty. ret: -1
+08-14 00:41:37.990  4506 14551 W midasd  : deliverUfsMsg:158 getUfsPower failed. ret: -1
+08-14 00:41:37.990  4506 14549 D midasd  : getExplorerInfo is null 
+08-14 00:41:37.991  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{3004}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.991  2177  3245 D KernelStatsHelper: get magic :[-1, -1, -1, 77, 65, 71, 73, 67]
+08-14 00:41:37.991  2177  3245 D KernelStatsHelper: magic matched count:373 data_len:19396
+08-14 00:41:37.991  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.991  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.991  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.991  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.992  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.992  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{1636}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:37.992  2177  3245 D KernelStatsHelper: data over! check: true
+08-14 00:41:37.992  2734  3345 E Battery : ChargeProtectionUtils: mCanlendarTmp.isEmpty()!
+08-14 00:41:37.994  2177  2627 D OplusFeatureEdrEnhanceBrightness: onReceive battery level=17 last=16
+08-14 00:41:37.994  2177  2627 D OplusDisplayBrightnessBroadcastReceiver: onReceive action = android.intent.action.BATTERY_CHANGED , listeners = [com.android.server.display.OplusFeatureHDREnhanceBrightness$PhoneInfoReceiver@c83ca8e, com.android.server.display.OplusFeatureEdrEnhanceBrightness$PhoneInfoReceiver@3a8b2af]
+08-14 00:41:37.997  4506 14545 E midasd  : Read file /sys/class/power_supply/usb/current_now failed.(No data available)
+08-14 00:41:37.997  3372 13225 I KeyguardStyleClockPlugin: WeatherEffectController-->updateNetworkAndLocationState: isNetAble = true;  isLocationAble = true
+08-14 00:41:37.998  3372 13225 I KeyguardStyleClockPlugin: WeatherEffectController-->checkWeatherRemind isInitial = true timeOverGap = false networkAndLocationEnable = true
+08-14 00:41:38.002  2025  2115 I OplusObrain: OplusObrainClientInvoke.nativeGetTelephonyInfo
+08-14 00:41:38.003  2025  2115 I OplusObrain: OplusObrainClientInvoke.nativeGetTrafficTypeInfoForNetworkType networkType 0
+08-14 00:41:38.003  2177  2177 D JobScheduler.BattIdle: mPowerIncrease set true.
+08-14 00:41:38.004  2177  3131 W OplusStorageManagerFeature: mScreenReceiver action:android.intent.action.BATTERY_LEVEL_CHANGED
+08-14 00:41:38.004  2177  3131 I OplusStorageManagerFeature: TmemoryBetterySwitch: level=17 state=2
+08-14 00:41:38.004  2177  3131 I OplusStorageManagerFeature: TmemoryBetterySwitch: action=0 state=2
+08-14 00:41:38.004  2177  2177 D OplusWifiPowerService: onReceive action:android.intent.action.BATTERY_LEVEL_CHANGED
+08-14 00:41:38.010  3372  3372 I KeyguardStyleClockPlugin: WeatherEffectController-->sendWeatherData mCurrentData = WeatherData(weatherId=69, weatherDescription='Partly cloudy', dayTemperature=23, NightTemperature=23, resId=-66583747, cityId=2)
+08-14 00:41:38.010  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:38.010  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:38.010  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:38.010  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:38.010  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:38.011  1206  1206 D chg_exchange_soh_mesg: [GET]ui_soh_data.ui_soh :95 1
+08-14 00:41:38.012  2734  3294 I CardWidget.AppCardWidgetProvider: getShowedCardList:[],[sdk:v2000005]
+08-14 00:41:38.012  2734  3294 E Battery : BatteryCardUtil: widgetCodes is empty !
+08-14 00:41:38.015  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.015  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.016  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.016  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.017  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.017  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.018  1171  1171 I android.hardware.thermal@2.0-service.qti: Sensor Name:skintemp: 41.395. prev severity:0. cur severity:3 New severity:3
+08-14 00:41:38.018  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.018  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.019  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.019  2177  3065 D PackageManager: multi app -> resolveContentProvider change name= settings to user 0 providerInfo=ContentProviderInfo{name=settings className=com.android.providers.settings.SettingsProvider}
+08-14 00:41:38.021  2177  2336 W Settings: Setting notification_bubbles has moved from android.provider.Settings.Global to android.provider.Settings.Secure, returning read-only value.
+08-14 00:41:38.021  2177  2336 W Settings: Setting apply_ramping_ringer has moved from android.provider.Settings.Global to android.provider.Settings.System, returning read-only value.
+08-14 00:41:38.024  2177  2336 W SettingsStatsUtil: Can not parse value to float: +network
+08-14 00:41:38.027  2177  2336 W SettingsStatsUtil: Can not parse value to float: +network
+08-14 00:41:38.092  2800  2800 D BatteryUsageBroadcastReceiver: onReceive:android.intent.action.BATTERY_LEVEL_CHANGED
+08-14 00:41:38.096  2800  2800 D BatteryUsageBroadcastReceiver: fetch data because of event: ACTION_BATTERY_LEVEL_CHANGED
+08-14 00:41:38.169  2800  2863 W Settings_BackgroundHandler: Cannot find pkg: io.github.imksh.hireme on user 0
+08-14 00:41:38.175  2800  2863 W Settings_BackgroundHandler: Cannot find pkg: com.google.android.gms on user 999
+08-14 00:41:38.238  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:38.238  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:38.238  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:38.238  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:38.238  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:38.322  2800  2863 W Settings_BackgroundHandler: Cannot find pkg: com.google.android.gms on user 999
+08-14 00:41:38.334 18075 18081 I artd    : GetBestInfo: /data/app/~~MLorb3hNfqjC-K1TxuSY7w==/io.github.imksh.hireme-X3TbiMgdVziLbIqdc4ulfQ==/base.apk has no usable artifacts
+08-14 00:41:38.485 32531 32561 I AIUnit-b6.e1786584843349: onReceive android.intent.action.BATTERY_CHANGED -> BatteryEvent[batteryPct:17.0, isCharging:true, isLowBattery:true, isPowerSave:false, plugged:2]
+08-14 00:41:38.532  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:38.777  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:38.808 22260 22260 I Finsky:background: [2] Memory trim requested to level 40
+08-14 00:41:38.809 22149 22149 I Finsky  : [2] Memory trim requested to level 40
+08-14 00:41:38.810 22149 22149 I Finsky  : [2] Flushing in-memory image cache
+08-14 00:41:38.882  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:38.882  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:38.884  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:38.884  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:38.925  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:38.925  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:38.968  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:38.972  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:38.985  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:39.026  2177  3265 D OplusWifiSarManager: wifisarprop msg=11110000001100000:1:0 sar_idx=11110000001110000:1:0
+08-14 00:41:39.076  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:39.218  1328  1328 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onSignalStrengthsChanged
+08-14 00:41:39.220  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:2 isSoftSimCard:false slotId:1
+08-14 00:41:39.279  1201  1279 E PerformanceService: storage_feature: open /sys/devices/platform/soc/112b0000.ufshci//virtualtlcbuff fail
+08-14 00:41:39.534  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:39.580  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:39.624  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342177130; tx bytes: 2791622281
+08-14 00:41:39.626  2177  3151 V NetworkPolicy: updateNetworkEnabledNL() return
+08-14 00:41:39.626  2177  3151 V NetworkPolicy: updateNotificationsNL not process
+08-14 00:41:39.630  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:39.630  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:39.632  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:39.636  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:39.640  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:39.642  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:39.643  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:39.643  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:39.661  2177  5009 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:39.664  2177  5009 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:39.689  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:39.689  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:39.735  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648299635, mSettingLocalDateTime 2026-08-14T00:41:00.635
+08-14 00:41:39.748  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648299635, mSettingLocalDateTime 2026-08-14T00:41:00.635
+08-14 00:41:39.753  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:39.753  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:40.038  2177  3265 I OplusWifiSarManager: Received Data State Change: 3
+08-14 00:41:40.038  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:40.039 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:40.039  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:40.039  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: true mData5gOn: true
+08-14 00:41:40.039  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:40.040  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:40.040  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:40.040  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:40.040  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:40.040  2177  3265 D OplusWifiSarManager:  state: 11110000001110000 country: IN
+08-14 00:41:40.041  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:40.231  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->updateNetworkSpeed: isConnected:true,isSwitchOn:true
+08-14 00:41:40.235  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->getTotalByte: totalRxBytes:18012809864,totalTxBytes:5089392731,loopbackTxBytes:128776954,loopbackRxBytes:128776954 ,totalBytes:22844648687
+08-14 00:41:40.534  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:40.713  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:40.713  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:40.716  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:40.716  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:40.759  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:40.759  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:40.910  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:41.003  2177  3844 I OplusHansManager : uid=10380, pkg=io.github.imksh.hireme F enter(), M stay=5
+08-14 00:41:41.013  2177  3844 I OplusHansManager : freeze uid: 10380 io.github.imksh.hireme pids: [22296] scene: LcdOn
+08-14 00:41:41.014  2177  3862 I OplusHansManager : p_BC uid=10380 pkg=io.github.imksh.hireme
+08-14 00:41:41.014  2177  3862 I OplusBinderProxy: proxyBinder uid: 10380 pkg: io.github.imksh.hireme proxy: true calling: OFreezer
+08-14 00:41:41.536  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:41.548  2177  3265 I OplusWifiSarManager: Received Data State Change: 0
+08-14 00:41:41.549 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:41.549  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:41.550  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:41.550  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: false mData5gOn: true
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:41.550  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:41.550  2177  3265 D OplusWifiSarManager:  state: 11110000001100000 country: IN
+08-14 00:41:41.551  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:41.997  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:42.001  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:42.004 22149 22178 I Finsky  : [2613] Initializing the instant apps module.
+08-14 00:41:42.011  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:42.016  9540 13051 D IHansComunication: HANS sendMessageToKernel: threadId = 537704602736, netLinkSetup = 1, type = FROZEN_TRANS, targetUid = 10380, pkgCmd = PKG_CMD_MAX
+08-14 00:41:42.027 22149 22149 I Finsky  : [2] setup::RES: shouldRecoverRestoredPackages: versionCodeSystem 84893030
+08-14 00:41:42.031 22149 22149 I Finsky  : [2] Detected restoreservicev2://recovery not needed, will not run
+08-14 00:41:42.041 22149 22177 W Finsky  : [2612] PreloadClasses: Unable to load [androidx.compose.ui.platform.ViewCompositionStrategy$DisposeOnViewTreeLifecycleDestroyed$installFor$1, androidx.compose.ui.platform.AndroidUiDispatcher$Companion$Main$2, androidx.compose.ui.platform.AndroidCompositionLocals_androidKt$LocalConfiguration$1, androidx.compose.ui.platform.AndroidCompositionLocals_androidKt$LocalContext$1, androidx.compose.ui.platform.AndroidCompositionLocals_androidKt$LocalView$1, androidx.compose.ui.platform.DisposableSaveableStateRegistry_androidKt$DisposableSaveableStateRegistry$saveableStateRegistry$1, androidx.compose.ui.platform.DisposableSaveableStateRegistry_androidKt$DisposableSaveableStateRegistry$1, androidx.compose.ui.platform.InspectableValueKt$NoInspectorInfo$1, androidx.compose.ui.node.ComposeUiNode$Companion$SetModifier$1, androidx.compose.ui.node.ComposeUiNode$Companion$SetLayoutDirection$1, androidx.compose.ui.semantics.SemanticsProperties$ContentDescription$1, androidx.compose.ui.semantics.SemanticsPropertyKey$1, androidx.compose.ui.semantics.SemanticsProperties$PaneTitle$1, androidx.compose.ui.semantics.SemanticsProperties$InvisibleToUser$1, androidx.compose.ui.semantics.SemanticsProperties$IsPopup$1, androidx.compose.ui.semantics.SemanticsProperties$IsDialog$1, androidx.compose.ui.semantics.SemanticsProperties$Role$1, androidx.compose.ui.semantics.SemanticsProperties$TestTag$1, androidx.compose.ui.semantics.SemanticsProperties$Text$1, androidx.compose.ui.platform.ComposeView$Content$1, androidx.compose.ui.platform.CompositionLocalsKt$ProvideCommonCompositionLocals$1, androidx.compose.ui.layout.RootMeasurePolicy$measure$2, androidx.compose.ui.input.pointer.PointerInteropFilter_androidKt$pointerInteropFilter$2, androidx.compose.ui.graphics.painter.Painter$drawLambda$1, androidx.compose.ui.graphics.SimpleGraphicsLayerModifier$layerBlock$1, androidx.compose.ui.input.nestedscroll.NestedScrollDispatcher$calculateNestedScrollScope$1, androidx.compose.animation.TransitionData, androidx.compose.animation.Fade, androidx.compose.ui.layout.SubcomposeLayoutState$setRoot$1, androidx.compose.ui.layout.SubcomposeLayoutState$setMeasurePolicy$1, androidx.compose.ui.graphics.BlockGraphicsLayerModifier$measure$1, androidx.compose.ui.text.platform.AndroidParagraphIntrinsics, androidx.compose.ui.graphics.SimpleGraphicsLayerModifier$measure$1, androidx.compose.ui.layout.SubcomposeLayoutKt$SubcomposeLayout$2, androidx.compose.ui.platform.ViewCompositionStrategy$DisposeOnDetachedFromWindowOrReleasedFromPool$installFor$1, androidx.navigation.NavControllerViewModel, androidx.navigation.NavControllerViewModel$Companion]
+08-14 00:41:42.100 22149 22419 I Finsky  : [2641] registerListener
+08-14 00:41:42.101 22149 22419 I Finsky  : [2641] DSC: reviveDownloads()
+08-14 00:41:42.104 22149 22419 I Finsky  : [2641] Initialized AssetModuleDownloader.
+08-14 00:41:42.109 22260 22451 I Finsky:background: [2607] DS: reviveDownloads()
+08-14 00:41:42.119  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.119  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.119  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.119  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.120  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.121  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.121  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.121  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.121  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.122  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.122  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked,reason:20 isGroup:false
+08-14 00:41:42.122  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.122  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: notifyDelayRemovedLocked sbnList isEmpty
+08-14 00:41:42.130  2177  2336 D ConnectivityService: requestNetwork for uid/pid:10105/22260 activeRequest: null callbackRequest: 33121 [NetworkRequest [ REQUEST id=33122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10105 RequestorUid: 10105 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST
+08-14 00:41:42.135  2177  3153 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=33122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10105 RequestorUid: 10105 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ]
+08-14 00:41:42.135  2177  3153 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=33122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10105 RequestorUid: 10105 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ]
+08-14 00:41:42.136  2177  3153 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=33122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10105 RequestorUid: 10105 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ]
+08-14 00:41:42.136  2177  3153 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=33122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10105 RequestorUid: 10105 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ]
+08-14 00:41:42.138 22260 22483 I Finsky:background: [2622] DS: Network is available [NetworkState{connected=true, wifi=false, metered=true, roaming=false}].
+08-14 00:41:42.138 22260 22483 I Finsky:background: [2622] DS: Updating downloads for network change
+08-14 00:41:42.138  2177  3160 D ConnectivityService: NetReassign [33122 : null → 221] [c 1] [a 1] [i 5]
+08-14 00:41:42.140 22260 23013 I Finsky:background: [2645] DS: downloadState filtering results: {}
+08-14 00:41:42.207  1328  1328 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onSignalStrengthsChanged
+08-14 00:41:42.208  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:2 isSoftSimCard:false slotId:1
+08-14 00:41:42.339  1206  1342 D vendor.oplus.hardware.charger-V6-service: ret_value:130, read content:,370,362,3811,3811,-1119,1500,2200,17,17,1,6,-1,4878,17,1,0,1,1,0,0,4425,0,6,0,6,3,0,0,348,0,1,1,0,0,61,61,61,0,0,0,0,0,0,0,0,0,0
+08-14 00:41:42.339  1206  1342 D vendor.oplus.hardware.charger-V6-service: gmtime: 2026-08-14-00-41-42
+08-14 00:41:42.340  1206  1342 D vendor.oplus.hardware.charger-V6-service: usb_online:1, ac_online:0, wireless_online:-2147483648
+08-14 00:41:42.343  1251 19264 D gaia-GaiaConnectChecker: start connect check++
+08-14 00:41:42.352  1251 22947 D gaia-GaiaConnectChecker: start connect check++
+08-14 00:41:42.537  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:42.648  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:42.676  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342178351; tx bytes: 2791623658
+08-14 00:41:42.678  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:42.678  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:42.680  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:42.681  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:42.685  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:42.686  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:42.686  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:42.686  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:42.703  2177  3998 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:42.705  2177  2336 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:42.715 15616 15616 D sysapi-LongBgTaskQuotaManager: [remove]  count = 1, requestId = -1, hadRequested = false , BaseConditionManager.refreshAppStateAction run
+08-14 00:41:42.717 15616  3062 D sysapi-LongBgTaskQuotaManager: [add]     count = 0, requestId = -1, hadRequested = false , BaseConditionManager.refreshAppState post delayed
+08-14 00:41:42.719 15616  3062 D sysapi-LongBgTaskQuotaManager: [add]     startBackgroundRunning
+08-14 00:41:42.719  2177  2336 W OplusHansManager : OplusHansFreezeManagerService: [startBackgroundRunning] fail: resultCode = 10002, uid = 10242
+08-14 00:41:42.719 15616 15692 D sysapi-LongBgTaskQuotaManager: [requestRunningTaskInfo]  requestId: -1 -> -1, resultCode: 10002
+08-14 00:41:42.723  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:42.723  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:42.746  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648302681, mSettingLocalDateTime 2026-08-14T00:41:00.681
+08-14 00:41:42.763  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648302681, mSettingLocalDateTime 2026-08-14T00:41:00.681
+08-14 00:41:42.771  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:42.771  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:43.051 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:43.051  2177  3265 I OplusWifiSarManager: Received Data State Change: 3
+08-14 00:41:43.051  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:43.052  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:43.052  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: true mData5gOn: true
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:43.052  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:43.052  2177  3265 D OplusWifiSarManager:  state: 11110000001110000 country: IN
+08-14 00:41:43.053  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:43.240  3372  3372 D OplusPrivacyDotViewController: scheduleUpdate: 
+08-14 00:41:43.242  3372  3630 D OplusPrivacyDotViewController: processNextViewState: 
+08-14 00:41:43.242  3372  3630 D OplusPrivacyDotViewController: resolveState ViewState(systemPrivacyEventIsActive=false, shadeExpanded=false, needShow=true, rtl=false, rotation=0, height=12, x=40, y=56, cornerIndex=1, designatedCorner=android.widget.FrameLayout{1a2b76e G.E...... ......I. 0,0-12,12 #7f0a05b9 app:id/icons_container alpha=0.0 viewInfo = }, contentDescription=null, chipAnimationStart=false, preDraw=false) shouldShowDot false
+08-14 00:41:43.242  3372  3630 W SystemUi--Common: OplusSysUiSchedMgr-->schedForPrivacyIconShowing not showing, no need release
+08-14 00:41:43.259  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:43.259  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:43.259  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:43.259  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:43.259  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:43.538  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:43.721  1182  3553 I [UAH_CLIENT]: UahRelease, handle:285576
+08-14 00:41:43.723  1182 22967 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:43.724  1182 22967 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1182 22967, identity:qcom-perfd
+08-14 00:41:43.726  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:43.726  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:43.726  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=41 not supported
+08-14 00:41:43.728  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:43.728  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:43.760  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:43.764  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:43.769  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:43.769  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:43.773  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:43.780  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:43.788  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:43.797  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:43.852  1206  1206 D vendor.oplus.hardware.charger-V6-service: get_ui_charge_icon_type 1 3 0 0 1
+08-14 00:41:43.853  1206  1206 D vendor.oplus.hardware.charger-V6-service: oplus_chg_get_cpa_power 7500 charge_online 1 retention_topic 0
+08-14 00:41:43.864  2177  2627 D OplusDisplayBrightnessBroadcastReceiver: onReceive action = android.intent.action.BATTERY_CHANGED , listeners = [com.android.server.display.OplusFeatureHDREnhanceBrightness$PhoneInfoReceiver@c83ca8e, com.android.server.display.OplusFeatureEdrEnhanceBrightness$PhoneInfoReceiver@3a8b2af]
+08-14 00:41:43.865  1328  1328 D SubsysBroadcastManager: onReceive action:android.intent.action.BATTERY_CHANGED
+08-14 00:41:43.865  3372  3372 I SystemUi--Statusbar: BatteryControllerExt-->updateBatteryChangeIntent():broadcast=android.intent.action.BATTERY_CHANGED,level=17,scale=100
+08-14 00:41:43.865  3372  3372 I SystemUi--Statusbar: BatteryRepository-->level: 17 -- isSavingMode: false
+08-14 00:41:43.869  3789  3789 D DeviceStatisticsService: onReceive: action= android.intent.action.BATTERY_CHANGED
+08-14 00:41:43.870  3789  3789 D DeviceInfoHidlClient: isRadioOn()=true
+08-14 00:41:43.871  3789  3789 I DeviceInfoHidlClient: isPowerInfoNeverSent=false batteryLevel=17 batteryLevelIndex=0 chargingMode=2 totalCapacity=3964700 powerSaveMode=false
+08-14 00:41:43.874  2734  3345 E Battery : ChargeProtectionUtils: mCanlendarTmp.isEmpty()!
+08-14 00:41:43.896  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:43.896  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:43.896  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:43.896  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:43.896  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:43.920  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:44.236  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->updateNetworkSpeed: isConnected:true,isSwitchOn:true
+08-14 00:41:44.238 23253 19889 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+08-14 00:41:44.238 23253 19889 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+08-14 00:41:44.243  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->getTotalByte: totalRxBytes:18012811826,totalTxBytes:5089394549,loopbackTxBytes:128777808,loopbackRxBytes:128777808 ,totalBytes:22844650759
+08-14 00:41:44.287  1201  1279 E PerformanceService: storage_feature: open /sys/devices/platform/soc/112b0000.ufshci//virtualtlcbuff fail
+08-14 00:41:44.366 32531 32561 I AIUnit-b6.e1786584843349: onReceive android.intent.action.BATTERY_CHANGED -> BatteryEvent[batteryPct:17.0, isCharging:true, isLowBattery:true, isPowerSave:false, plugged:2]
+08-14 00:41:44.539  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:44.961  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:44.971  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:45.023  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:45.029  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:45.043  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:45.055  2177  3265 D OplusWifiSarManager: wifisarprop msg=11110000001110000:1:0 sar_idx=11110000001100000:1:0
+08-14 00:41:45.211  1328  1328 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onSignalStrengthsChanged
+08-14 00:41:45.214  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:2 isSoftSimCard:false slotId:1
+08-14 00:41:45.385  2177  3861 I OplusHansManager : unfreeze uid: 10380 io.github.imksh.hireme pids: [22296] reason: W_AsyncBinder scene: LcdOn
+08-14 00:41:45.386  2177  3844 I OplusHansManager : uid=10380, pkg=io.github.imksh.hireme F exit(), F stay=4, reason=W_AsyncBinder
+08-14 00:41:45.386  2177  3862 I OplusHansManager : up_BC uid=10380 pkg=io.github.imksh.hireme
+08-14 00:41:45.386  2177  3862 I OplusBinderProxy: proxyBinder uid: 10380 pkg: io.github.imksh.hireme proxy: false calling: OFreezer
+08-14 00:41:45.389  2177  3160 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-14 00:41:45.392  2177  3160 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-14 00:41:45.392  2177  3160 D InetDiagMessage: Destroyed live tcp sockets for uids={10380} in 8ms
+08-14 00:41:45.393  2177  3160 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-14 00:41:45.395  2177  3160 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-14 00:41:45.395  2177  3160 D InetDiagMessage: Destroyed live tcp sockets for uids={20380} in 3ms
+08-14 00:41:45.396 22296 22510 D HWUI    : RenderThread::destroyRenderingContext: this=0xb40000771f5c6e00
+08-14 00:41:45.396 22296 22510 D HWUI    : SkiaOpenGLPipeline::onContextDestroyed: this=0xb40000774ed11fc0
+08-14 00:41:45.396 22296 22510 D HWUI    : EglManager::destroy: mEglDisplay=0xb40000774ed10bc0, mEglContext=0xb40000771cc60080, mCurrentSurface=0x0
+08-14 00:41:45.540  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:45.700  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:45.751  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342178460; tx bytes: 2791623416
+08-14 00:41:45.751  2177  3151 V NetworkPolicy: updateNetworkEnabledNL() return
+08-14 00:41:45.751  2177  3151 V NetworkPolicy: updateNotificationsNL not process
+08-14 00:41:45.755  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:45.756  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:45.756  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:45.763  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:45.768  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:45.769  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:45.771  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:45.771  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:45.792  2177  5009 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:45.795  2177  3998 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:45.810  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:45.810  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:45.858  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648305762, mSettingLocalDateTime 2026-08-14T00:41:00.762
+08-14 00:41:45.881  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648305762, mSettingLocalDateTime 2026-08-14T00:41:00.762
+08-14 00:41:45.892  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:45.892  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:46.147  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:46.147  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:46.150  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:46.151  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:46.192  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:46.192  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:46.343  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:46.494  1275  1655 D VRR [OTI]: handleIdle from 1 to 0
+08-14 00:41:46.495  1275  1655 D VRR [OTI-HW]: isStateReady 0
+08-14 00:41:46.495  1275  1655 D VRR [OTI-HW]: rate range: min {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} cur {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} max {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A}
+08-14 00:41:46.495  1275  1655 D VRR [OTI-HW]: restore sys rate.
+08-14 00:41:46.495  1275  1655 W ComposerExtn: DisplayExtnImpl::SetActiveConfig: HWC Display 0 is not registered!
+08-14 00:41:46.495  1275  1655 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 120, event: 0 ,displayid = 4630946896948975233
+08-14 00:41:46.495  1275  1655 D DisplayModeController: setDesiredMode 4630946896948975233 {mode={fps=120.00 Hz, modePtr={id=0, vsyncRate=120.00 Hz, peakRefreshRate=120.00 Hz}}, emitEvent=false, force=false}
+08-14 00:41:46.495  2177  3115 D PowerManagerService: userActivityNoUpdateLocked: groupId=0, eventTime=240220517, event=touch, flags=0x0, uid=1000
+08-14 00:41:46.495  2177  3426 I [UAH_CLIENT]: UahEventAcquire, cmdid:37, pkg:none, identity:OplusUAwareInputHelper
+08-14 00:41:46.498  2177  3426 D UAH-UahAdaptHelper: adaptSetNotification identity = OplusUAwareInputHelpersrc = 1000 , type 0 ,p1 = -1 ,p2 = -1 ,p3 = -1 ,p4 =
+08-14 00:41:46.498  2177  3426 I [UAH_CLIENT]: uahRuleCtl, ruleId:1000, status:0
+08-14 00:41:46.503  2177  3291 D OGG_Detector: D:done mCurrStatus: 0
+08-14 00:41:46.504  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.505  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1275 5207, identity:qcom-perfd
+08-14 00:41:46.506  1182  3555 I [UAH_CLIENT]: UahRelease, handle:285713
+08-14 00:41:46.507  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=41 not supported
+08-14 00:41:46.512  1177 26911 I SDM     : HWDeviceDRM::UpdateMixerAttributes: Mixer WxH 1080x2400-0 for Peripheral
+08-14 00:41:46.513  1177 26911 I SDM     : HWCDisplay::SubmitDisplayConfig: HWC SetActiveConfig [4,0], cur_resolution is (1080, 2400), new_resolution is (1080, 2400)
+08-14 00:41:46.513  1177 26911 I SDM     : HWCDisplay::SubmitDisplayConfig: Active configuration changed to: 0
+08-14 00:41:46.515  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.515  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1793, identity:qcom-perfd
+08-14 00:41:46.518  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.518  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.527  1275  1655 D VRR [OTI-HW]: isStateReady 0
+08-14 00:41:46.527  1275  1655 D VRR [OTI-HW]: rate range: min {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} cur {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} max {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A}
+08-14 00:41:46.527  1275  1655 D VRR [OTI-HW]: keep rate.
+08-14 00:41:46.527  1182 23044 I [UAH_CLIENT]: UahRelease, handle:285717
+08-14 00:41:46.529  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.529  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1794, identity:qcom-perfd
+08-14 00:41:46.530  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.530  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.539  1182 23048 I [UAH_CLIENT]: UahRelease, handle:285718
+08-14 00:41:46.541  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:46.592  2177  3115 D PowerManagerService: userActivityNoUpdateLocked: groupId=0, eventTime=240220618, event=touch, flags=0x0, uid=1000
+08-14 00:41:46.638  2177  3291 I OplusScreenDirectManager: remote finished,do nothing
+08-14 00:41:46.638  3372  3434 D OneHandedTouchHandler: onMotionEvent: mIsInOutsideRegion = false, mIsOnStopTransitioning = false, rawY = 1441.5
+08-14 00:41:46.638  2177  3426 D UAH-UahAdaptHelper: adaptSetNotification identity = OplusUAwareInputHelpersrc = 1000 , type 1 ,p1 = -1 ,p2 = -1 ,p3 = -1 ,p4 =
+08-14 00:41:46.638  2177  3426 I [UAH_CLIENT]: uahRuleCtl, ruleId:1000, status:1
+08-14 00:41:46.639  2177  2493 D ViewRootImplExtImpl: the up motion event handled by client, just return
+08-14 00:41:46.642  2177  2493 D OplusScrollToTopManager: Application Error: io.github.imksh.hireme,window dying
+08-14 00:41:46.642  2177  2493 D OplusScrollToTopManager: Application Error: io.github.imksh.hireme,unregisterSystemUIBroadcastReceiver 
+08-14 00:41:46.642  2177  2493 D OplusScrollToTopManager: Application Error: io.github.imksh.hireme, unregisterSystemUIBroadcastReceiver failed java.lang.IllegalArgumentException: Receiver not registered: android.view.OplusScrollToTopManager$2@e0bb977
+08-14 00:41:46.642  2177  2493 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@d379f86
+08-14 00:41:46.642  2177  2493 D CoreBackPreview: Window{aaa4275 u0 Application Error: io.github.imksh.hireme}: Setting back callback null
+08-14 00:41:46.643  2177  2335 I ActivityManager: Killing 22296:io.github.imksh.hireme/u0a380 (adj 900): crash
+08-14 00:41:46.645  2025 20663 D ShellSubscriberWorkerThread: the first 8 bytes empty, and RestData length > 8 
+08-14 00:41:46.646  2177  2493 D HWUI    : RenderProxy::destroy: this=0xb40000772f096a00, mContext=0xb40000754e504f40
+08-14 00:41:46.647  2177  3342 D HWUI    : SkiaOpenGLPipeline::setSurface: this=0xb40000769cd1e240, surface=NULL
+08-14 00:41:46.648  2177  3342 D BufferQueueProducer: [VRI[hireme]#474(BLAST Consumer)474](id:881000003a2,api:1,p:2177,c:2177) disconnect: api 1
+08-14 00:41:46.648  2177  3342 D HWUI    : endAllActiveAnimators on 0xb4000075802dda00 (RippleDrawable) with handle 0xb40000769cdad280
+08-14 00:41:46.649  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:46.650  2177  2493 I InputDispatcher: channel 'aaa4275 Application Error: io.github.imksh.hireme (server)'~ abortBrokenDispatchCycleLocked - notify=false
+08-14 00:41:46.650  2177  2493 W InputManager-JNI: Input channel object 'aaa4275 Application Error: io.github.imksh.hireme (client)' was disposed without first being removed with the input manager!
+08-14 00:41:46.652  2177  2493 D WindowManager: setFrameRateStart invalid typeId return!
+08-14 00:41:46.653  2177  2493 D WindowManager: NFW_findFocusedWindowIfNeeded:Window{e184d u0 com.android.launcher/com.android.launcher.Launcher} mCurrentFocus:Window{aaa4275 u0 Application Error: io.github.imksh.hireme EXITING}
+08-14 00:41:46.654  2177  2493 V WindowManager: Changing focus from Window{aaa4275 u0 Application Error: io.github.imksh.hireme EXITING} to Window{e184d u0 com.android.launcher/com.android.launcher.Launcher},diplayid=0
+08-14 00:41:46.656  2177  2335 D BLASTBufferQueue: [VRI[hireme]#474](f:0,a:1) destructor()
+08-14 00:41:46.656  2177  2335 D BufferQueueConsumer: [VRI[hireme]#474(BLAST Consumer)474](id:881000003a2,api:0,p:-1,c:2177) disconnect
+08-14 00:41:46.656  2177  2493 D WindowManager: setFrameRateStart invalid typeId return!
+08-14 00:41:46.658  2177  2493 D WindowManager: setFrameRateStart invalid typeId return!
+08-14 00:41:46.659  2177  2493 D Theia.NoFocusWindow: FocusWindowErrorScene cancelCheckFreezeScreen
+08-14 00:41:46.659  2177  2493 W TheiaWindowMonitor: [check] focusedWindow is null or enable is false
+08-14 00:41:46.660  2177  2501 D callGcSupression: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+08-14 00:41:46.660  2177  2501 D SurfaceAnimationRunner: onAnimationStart:Surface(name=Surface(name=aaa4275 Application Error: io.github.imksh.hireme)/@0x62a13f - animation-leash of window_animation)/@0x68a69e4
+08-14 00:41:46.664  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.664  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1791, identity:qcom-perfd
+08-14 00:41:46.666  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.666  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.667  2177  2493 D DisplayManagerService: Drop pending events for gone uid 10380
+08-14 00:41:46.669  2177  2335 I InputDispatcher: updateFocusedWindow,  on display 0, reason: NO_WINDOW, result:   FocusedWindows: <none>
+08-14 00:41:46.670  1204 14146 E PackageUidManager: pkgs is empty for uid 10380
+08-14 00:41:46.671  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.671  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1792, identity:qcom-perfd
+08-14 00:41:46.672  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.672  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.673  2177  2499 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+08-14 00:41:46.675  1182 23052 I [UAH_CLIENT]: UahRelease, handle:285719
+08-14 00:41:46.677  2177  2501 D callGcSupression: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+08-14 00:41:46.677  2177  2501 D SurfaceAnimationRunner: onAnimationStart:Surface(name=Dim Layer for - WindowedMagnification:0:64)/@0x5fe5bd1
+08-14 00:41:46.679  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.679  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1793, identity:qcom-perfd
+08-14 00:41:46.680  2177  3942 I OplusHansManager : onUidGone(), 10380 io.github.imksh.hireme exit SM
+08-14 00:41:46.680  2177  3942 I OplusHansManager : onUidGone(),  keep: 10380 io.github.imksh.hireme alarm
+08-14 00:41:46.680  2177  3844 I OplusHansManager : uid=10380, pkg=io.github.imksh.hireme M exit SM
+08-14 00:41:46.680  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.680  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.681  1275  1540 I ClientCache: removeProcess: Cache owner=0xb400007563264080
+08-14 00:41:46.681  2177  2336 I ActivityManager: Death received, pid = 0, processName = io.github.imksh.hireme for thread android.os.BinderProxy@378a6b1
+08-14 00:41:46.682  1275  1554 I SurfaceFlinger: [SF client] REMOVE (0xb40000756cdffc80) for (2177:system_server)
+08-14 00:41:46.682  2177  3541 V ActivityManager: Got obituary of 22296:io.github.imksh.hireme
+08-14 00:41:46.682  2177  2499 W ActivityManager: setHasOverlayUi called on unknown pid: 22296
+08-14 00:41:46.683  1182 23054 I [UAH_CLIENT]: UahRelease, handle:285720
+08-14 00:41:46.683 13740 13740 I adbd    : Remote process closed the socket (on MSG_PEEK)
+08-14 00:41:46.683  2177  3844 I OplusHansManager : uid=10380, pkg=io.github.imksh.hireme M exit(), M stay=1
+08-14 00:41:46.684  2177  3844 I OplusHansManager : uid=10380, pkg=io.github.imksh.hireme R exit(), R stay=0
+08-14 00:41:46.684  1275  1540 I SurfaceFlinger: [SF client] REMOVE (0xb40000755eacdf00) for (22296:io.github.imksh.hireme)
+08-14 00:41:46.684  1008  1008 I Zygote  : Process 22296 exited due to signal 9 (Killed)
+08-14 00:41:46.685  2177  2554 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10380/pid_22296
+08-14 00:41:46.685  1254 19426 D OplusAtlas.OplusAtlasEventDispatch: setEvent:atlas_event_on_process_died info:pid:22296,uid:10380
+08-14 00:41:46.686  1254  1840 D OplusAtlas.OplusMessageHandler: handleMessage: Msg { when=0 what=1 obj=com.oplus.atlas.OplusAtlasEvent@189e300 target=com.oplus.atlas.OplusMessageHandler$MyHandler }
+08-14 00:41:46.686  1254  2106 D OplusAtlas.OplusMessageHandler: handleMessage: Msg { when=0 what=1 obj=com.oplus.atlas.OplusAtlasEvent@189e300 target=com.oplus.atlas.OplusMessageHandler$MyHandler }
+08-14 00:41:46.686  1204  1822 I ProcessManager: onProcessDied pid:22296, uid:10380
+08-14 00:41:46.687  1204  1822 D AppSceneEventManager: handleMessage: 101
+08-14 00:41:46.687  1204  1822 I DispatcherPolicy: onBaseEvent EventId=22	INPUT_PROCESS_DIED	TimeStamp =1786648306687	Intent =null	Content =null	Pid =22296	PkgName =io.github.imksh.hireme
+08-14 00:41:46.687  3372  3485 I PluginSeedling--Base: SeedlingPluginService-->onStateChange: Bundle[{pkgName=io.github.imksh.hireme, pid=22296, uid=10380, state=onProcessDied}]
+08-14 00:41:46.687  1204  1822 I GamingScene: onInputEvent : INPUT_PROCESS_DIED
+08-14 00:41:46.688  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.688  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1794, identity:qcom-perfd
+08-14 00:41:46.689  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.689  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.690  1182 23056 I [UAH_CLIENT]: UahRelease, handle:285722
+08-14 00:41:46.690  1275  1673 D SurfaceFlinger: updateWinowInfo=1, setFocusedWindow timestamp=240220701492268, windowName=e184d com.android.launcher/com.android.launcher.Launcher
+08-14 00:41:46.690  2177  4918 I InputDispatcher: NFW_setFocusedWindow, e184d com.android.launcher/com.android.launcher.Launcher on display 0, same as the previous:0
+08-14 00:41:46.690  2177  4918 I InputDispatcher: updateFocusedWindow, e184d com.android.launcher/com.android.launcher.Launcher on display 0, reason: setFocusedWindow, result:   FocusedWindows:
+08-14 00:41:46.690  2177  4918 I InputDispatcher:     displayId=0, name='e184d com.android.launcher/com.android.launcher.Launcher'
+08-14 00:41:46.691  3589  3589 D VRI[Launcher]: onFocusEvent true
+08-14 00:41:46.696  3589  3589 E KeyGuardDismissedService[u0]: handleMessage unlock, launcher dismissState!=STATE_LOCK, do nothing, return!
+08-14 00:41:46.696  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.696  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1791, identity:qcom-perfd
+08-14 00:41:46.696  2177  3126 I ImeTracker: com.android.launcher:fc4b4434: onRequestHide at ORIGIN_SERVER reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR fromUser false
+08-14 00:41:46.696  2177  3126 I ImeTracker: com.android.launcher:fc4b4434: onCancelled at PHASE_SERVER_SHOULD_HIDE
+08-14 00:41:46.698  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.698  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.699  1182 23058 I [UAH_CLIENT]: UahRelease, handle:285723
+08-14 00:41:46.703  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:46.703  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:46.703  6416  6416 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2307 
+08-14 00:41:46.704  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:46.704  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:46.704  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.704  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1792, identity:qcom-perfd
+08-14 00:41:46.704  6416 17962 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():129 repeatCheckTimes = 0, locked = false
+08-14 00:41:46.705  6416  6416 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1491 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=Bundle[{com.oplus.im.WINDOW_MODE=1, com.oplus.im.SCENES=0}], hintText=null, hintLocales=[]}}, false)
+08-14 00:41:46.705  6416  6416 I LatinIMEBase: LatinIMEBase.updateInputViewCoverNavigation():318 Update input view padding, isNavbarOverInputWindow=false, bottom inset=48
+08-14 00:41:46.706  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.706  6416 18076 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():129 repeatCheckTimes = 1, locked = false
+08-14 00:41:46.706  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.707  2177  2335 W PackageConfigPersister: App-specific configuration not found for packageName: com.android.launcher and userId: 0
+08-14 00:41:46.707  1182 23060 I [UAH_CLIENT]: UahRelease, handle:285724
+08-14 00:41:46.712  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.712  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1793, identity:qcom-perfd
+08-14 00:41:46.713  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.713  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.715  1182 23062 I [UAH_CLIENT]: UahRelease, handle:285725
+08-14 00:41:46.722  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.722  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1794, identity:qcom-perfd
+08-14 00:41:46.723  1182 23064 I [UAH_CLIENT]: UahRelease, handle:285726
+08-14 00:41:46.723  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.724  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.731  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.731  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1791, identity:qcom-perfd
+08-14 00:41:46.733  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.734  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.734  1182 23066 I [UAH_CLIENT]: UahRelease, handle:285727
+08-14 00:41:46.740  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.740  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1792, identity:qcom-perfd
+08-14 00:41:46.743  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.743  1182 23068 I [UAH_CLIENT]: UahRelease, handle:285728
+08-14 00:41:46.743  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.750  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.750  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1793, identity:qcom-perfd
+08-14 00:41:46.751  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.752  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.753  1182 23070 I [UAH_CLIENT]: UahRelease, handle:285729
+08-14 00:41:46.757  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.758  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1794, identity:qcom-perfd
+08-14 00:41:46.759  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.760  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.760  2177  2501 D callGcDesupression: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+08-14 00:41:46.760  2177  2501 D SurfaceAnimationRunner: onAnimationEnd:Surface(name=Surface(name=aaa4275 Application Error: io.github.imksh.hireme)/@0x62a13f - animation-leash of window_animation)/@0x68a69e4
+08-14 00:41:46.762  1182 23072 I [UAH_CLIENT]: UahRelease, handle:285730
+08-14 00:41:46.766  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:46.766  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1791, identity:qcom-perfd
+08-14 00:41:46.768  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:46.769  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:46.769  2177  2500 I WindowManager: Window{aaa4275 u0 Application Error: io.github.imksh.hireme} state from HAS_DRAWN to NO_SURFACE; reason: destroySurface
+08-14 00:41:46.769  1182 23074 I [UAH_CLIENT]: UahRelease, handle:285731
+08-14 00:41:46.778  2177  2501 D callGcDesupression: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[])' on a null object reference
+08-14 00:41:46.778  2177  2501 D SurfaceAnimationRunner: onAnimationEnd:Surface(name=Dim Layer for - WindowedMagnification:0:64)/@0x5fe5bd1
+08-14 00:41:46.778  1182 23076 I [UAH_CLIENT]: UahRelease, handle:285732
+08-14 00:41:46.779  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:46.779  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:46.930  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:47.091 23738 23738 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.potokens.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService mCallingUid=10105 }
+08-14 00:41:47.341  1206  1342 D vendor.oplus.hardware.charger-V6-service: ret_value:130, read content:,370,362,3811,3811,-1116,1500,2200,17,17,1,6,-1,4875,17,1,0,1,1,0,0,4425,0,6,0,6,3,0,0,348,0,1,1,0,0,61,61,61,0,0,0,0,0,0,0,0,0,0
+08-14 00:41:47.341  1206  1342 D vendor.oplus.hardware.charger-V6-service: gmtime: 2026-08-14-00-41-47
+08-14 00:41:47.342  1206  1342 D vendor.oplus.hardware.charger-V6-service: usb_online:1, ac_online:0, wireless_online:-2147483648
+08-14 00:41:47.526  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:47.526  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1792, identity:qcom-perfd
+08-14 00:41:47.529  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:47.530  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:47.540  1182 23078 I [UAH_CLIENT]: UahRelease, handle:285733
+08-14 00:41:47.542  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:47.584 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:47.584  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:47.584  2177  3265 I OplusWifiSarManager: Received Data State Change: 0
+08-14 00:41:47.584  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:47.585  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:47.585  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: false mData5gOn: true
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:47.585  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:47.585  2177  3265 D OplusWifiSarManager:  state: 11110000001100000 country: IN
+08-14 00:41:47.699  3589  4097 D OplusScrollToTopManager: com.android.launcher/com.android.launcher.Launcher,This com.android.internal.policy.DecorView{849ae0b V.E...... R....... 0,0-1080,2400 aid=0 alpha=1.0 viewInfo = }[Launcher] change focus to true
+08-14 00:41:48.061  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:48.070  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:48.081  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:48.166  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:48.171  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:48.178  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:48.186  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:48.190  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:48.192  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:48.244  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->updateNetworkSpeed: isConnected:true,isSwitchOn:true
+08-14 00:41:48.248  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->getTotalByte: totalRxBytes:18012815933,totalTxBytes:5089397647,loopbackTxBytes:128780702,loopbackRxBytes:128780702 ,totalBytes:22844652176
+08-14 00:41:48.278  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:48.278  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:48.278  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:48.278  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:48.278  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:48.543  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:48.558  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:48.558  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:48.561  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:48.561  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:48.604  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:48.604  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:48.755  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:48.771  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:48.842  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342191809; tx bytes: 2792025206
+08-14 00:41:48.844  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:48.845  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:48.847  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:48.847  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:48.848  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:48.848  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:48.850  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:48.851  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:48.860  2177  6633 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:48.862  2177  6633 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:48.867  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:48.867  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:48.891  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648308845, mSettingLocalDateTime 2026-08-14T00:41:00.845
+08-14 00:41:48.908  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648308845, mSettingLocalDateTime 2026-08-14T00:41:00.845
+08-14 00:41:48.912  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:48.912  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:48.977  1206  1206 D vendor.oplus.hardware.charger-V6-service: get_ui_charge_icon_type 1 3 0 0 1
+08-14 00:41:48.978  1206  1206 D vendor.oplus.hardware.charger-V6-service: oplus_chg_get_cpa_power 7500 charge_online 1 retention_topic 0
+08-14 00:41:48.987  3372  3372 I SystemUi--Statusbar: BatteryControllerExt-->updateBatteryChangeIntent():broadcast=android.intent.action.BATTERY_CHANGED,level=17,scale=100
+08-14 00:41:48.987  3372  3372 I SystemUi--Statusbar: BatteryRepository-->level: 17 -- isSavingMode: false
+08-14 00:41:48.989  2177  2627 D OplusDisplayBrightnessBroadcastReceiver: onReceive action = android.intent.action.BATTERY_CHANGED , listeners = [com.android.server.display.OplusFeatureHDREnhanceBrightness$PhoneInfoReceiver@c83ca8e, com.android.server.display.OplusFeatureEdrEnhanceBrightness$PhoneInfoReceiver@3a8b2af]
+08-14 00:41:48.990  1328  1328 D SubsysBroadcastManager: onReceive action:android.intent.action.BATTERY_CHANGED
+08-14 00:41:48.991  3789  3789 D DeviceStatisticsService: onReceive: action= android.intent.action.BATTERY_CHANGED
+08-14 00:41:48.993  3789  3789 D DeviceInfoHidlClient: isRadioOn()=true
+08-14 00:41:48.994  3789  3789 I DeviceInfoHidlClient: isPowerInfoNeverSent=false batteryLevel=17 batteryLevelIndex=0 chargingMode=2 totalCapacity=3976400 powerSaveMode=false
+08-14 00:41:48.995  2734  3345 E Battery : ChargeProtectionUtils: mCanlendarTmp.isEmpty()!
+08-14 00:41:49.013  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:49.013  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:49.013  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:49.013  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:49.013  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:49.091 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:49.091  2177  3265 I OplusWifiSarManager: Received Data State Change: 3
+08-14 00:41:49.091  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:49.092  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:49.092  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: true mData5gOn: true
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:49.092  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:49.092  2177  3265 D OplusWifiSarManager:  state: 11110000001110000 country: IN
+08-14 00:41:49.092  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:49.096  2263  2371 D QmiClient: qmiServiceEventCallback recv msg id 1085
+08-14 00:41:49.096  2263  2371 D QmiVsClient: enter - onQmiServiceEventCallback msgId 1085
+08-14 00:41:49.096  2263  2371 D QmiVsClientEvent: qmiVsClientNotifyNecEvent - RADIO_EVENT_NEC_IND
+08-14 00:41:49.096  2263  2279 D VsProxy : handleMessage msg is 2403
+08-14 00:41:49.097  2263  2279 D VsProxy : handleNecInd for instance 0
+08-14 00:41:49.097  1328  1328 D RadioMessenger: handleMessage Request msgid 2220
+08-14 00:41:49.098  3765  3765 E PhoneInterfaceManager: queryModemActivityInfo: invalid response
+08-14 00:41:49.098  1328 22218 D SubsysRadioIndication: [PHONE0]radioNecInd 
+08-14 00:41:49.098  3765  3765 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=311551978 mSleepTimeMs=63217366 mIdleTimeMs=77567784 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[3007825, 2442188, 2139701, 2086197, 3242598],mRxTimeMs=153728725}]}
+08-14 00:41:49.098  3765  3765 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=311566145 mSleepTimeMs=63217366 mIdleTimeMs=77567784 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[3007884, 2442203, 2139743, 2086246, 3242757],mRxTimeMs=153742571}]}
+08-14 00:41:49.100  1328  1328 D RadioMessenger: handleSetSyncWithAp: -1, syncFlag: 1
+08-14 00:41:49.100  1328  1328 D QtiRadioService: setSyncWithAp
+08-14 00:41:49.100  1328  1328 D RadioProxyJ: [PHONE0][21650]> setSyncWithAp syncFlag:1
+08-14 00:41:49.100  1328  1328 D ModemChannel: handleMessage what:102
+08-14 00:41:49.100  2263  2287 D RadioService: setSyncWithAp with instance 0
+08-14 00:41:49.100  1328  1328 D ModemChannel: handleNecEvent
+08-14 00:41:49.100  2263  2287 D VendorService: VendorService::setSyncWithAp
+08-14 00:41:49.100  2263  2279 D QmiVsClient: setSyncWithAp - enter
+08-14 00:41:49.101  2263  2279 E QmiVsClient: sendAsyncRequest QMI_VS_SET_SYNC_WITH_AP_REQ_MSG_V01 ret 0
+08-14 00:41:49.101  2263  2279 D VsProxy : handleMessage msg is 4001
+08-14 00:41:49.101  2263  2279 D RadioProxy: setSyncWithAp : response cb for instance 0
+08-14 00:41:49.101  2263  2263 D RadioServiceResponse: RadioServiceResponse::setSyncWithApResponse
+08-14 00:41:49.101  3815  4125 I ModemAciService: handleMessage:5
+08-14 00:41:49.102  1328 22218 D SubsysRadioResponse: setSyncWithApResponse info.error = 0
+08-14 00:41:49.102  1328 22218 D RadioProxyJ: [PHONE0][21650]< setSyncWithApResponse 
+08-14 00:41:49.102  1204  1832 D SubsysCallManager: handleMessage what:102
+08-14 00:41:49.102  1204  1832 D SubsysCallManager: parseMdmInfoData len:392
+08-14 00:41:49.102  1204  1832 D SubsysCallManager: onMdmEvent moduleId:6,eventId:4
+08-14 00:41:49.102  1328  1328 D MessengerResponseHandler: handleMessage Response msgid 210
+08-14 00:41:49.102  3815  4125 I ModemAciService: sendSettleObj2Statsd over!
+08-14 00:41:49.103  3815  4125 D ModemAciService: sendSettleObj2Amc:info=sleepTimes=0,0, idleTimes = 0,0, rxTimes = 14,14, nrRxTimes = 0,0, rrcConnC = 0,0, saRrcConnC = 0,0, cellUpdateC = 0,0, iRatC = 0,0, csChangedC = 0,0, psChangedC = 0,0, nwSrchC = 0,0, nwSrchT = 0,0, lteRrcConnT = 15,0, sarrct = 0,0, psRegT = 15,15, csRegT = 15,15, psNoRegT = 0,0, csNoRegT = 0,0, saRachC = 0,0, lteHoC = 0,0, saHoC = 0,0, sigGridT = 0,0, lteGridT = 0,0, saGridT = 0,0, ulHiLayerT=0,0, dlHiLayerT=0,0, highTxPower=9,9, highpwro20t=7,7, 
+08-14 00:41:49.103  4506 12157 I midasd  : OplusObrainService::notifyEventString eventId:11 strParam:{"5gRxTimeMs":0,"5gTxTimeMs":[],"idleTimeMs":0,"lteRrcC":[0,0],"lteRrcT":[15,0],"nrRrcC":[0,0],"nrRrcT":[0,0],"rxTimeMs":13846,"sleepTimeMs":0,"timestamp":1786648309102,"txTimeMs":[59,15,42,49,159]}
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:highpwro20t value:7 duration:14
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:nweaksigt value:0 duration:14 pn:0
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:nweaksigt value:0 duration:14 pn:1
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrchc value:0 duration:14 pn:0
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrchc value:0 duration:14 pn:1
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrcht value:0 duration:14 pn:0
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:nwsrcht value:0 duration:14 pn:1
+08-14 00:41:49.103  1204  1936 D PKPI    : [KpiModem] update kpi:highpwrt value:9 duration:14
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:dlhilayert value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:dlhilayert value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:csregt value:15 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:csregt value:15 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:csnoregt value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:csnoregt value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:pschangec value:0 duration:14 pn:0
+08-14 00:41:49.104  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTelephonyInfo
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:pschangec value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:ltehoc value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:ltehoc value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:nrrrcc value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:nrrrcc value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:psregt value:15 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:psregt value:15 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:sarrct value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:sarrct value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:totalcat value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:totalcat value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:weaksigt value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:weaksigt value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:ulhilayert value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:ulhilayert value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:psnoregt value:0 duration:14 pn:0
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:psnoregt value:0 duration:14 pn:1
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:rxt value:14 duration:14
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:5grxt value:0 duration:14
+08-14 00:41:49.104  1204  1936 D PKPI    : [KpiModem] update kpi:idlet value:0 duration:14
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:iratc value:0 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:iratc value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:rachc value:0 duration:14 pn:0
+08-14 00:41:49.105  3815  4125 I ModemAciService: UMF LO,DC: OplusModemActivityInfo{ date=08-14 00:41:49.102 modemPowermA[]=[319.89,213.39,426.47] sleepTimeMs=0 idleTimeMs=0 rxTimeMs=13846 5gRxTimeMs=0 txTimeMs[]=[59, 15, 42, 49, 159] 5gTxTimeMsSIM1=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeMsSIM2=[0, 0, 0, 0, 0, 0, 0, 0] 5gTxTimeSum[]=[0, 0] techTimeMs[]=[0, 0, 0, 0, 1961, 244, 0, 0, 0] rrcConn10sC[]=[0, 0] rrcConn20sC[]=[0, 0] rrcConnMore20sC[]=[0, 0] rrcConnC[]=[0, 0] csChangedC[]=[0, 0] psChangedC[]=[0, 0] iRatC[]=[0, 0] cellUpdateC[]=[0, 0] nwSrchC[]=[0, 0] nwSrchT[]=[0, 0] lteRrcConnT[]=[15, 0] psRegT[]=[15, 15] csRegT[]=[15, 15] psNoRegT[]=[0, 0] csNoRegT[]=[0, 0] sigGrid0T[]=[0, 0] endcActT[]=[15, 0] saActT[]=[0, 0] gpsTimeMs=0 wlanTimeMs=14169 regReqFbC[]=[0, 0] regReqTransAcqDbC[]=[0, 0] saRrcConn10sC[]=[0, 0] saRrcConn20sC[]=[0, 0] saRrcConnMore20sC[]=[0, 0] saRrcConnC[]=[0, 0] lteHoC[]=[0, 0] saHoC[]=[0, 0] saRrcConnT[]=[0, 0] sensorStationaryC=0 sensorStationaryT=0 modemStationaryC=0 modemStationaryT=0}
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:rachc value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:sahoc value:0 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:sahoc value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:lterrcc value:0 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:lterrcc value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:lterrct value:15 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:lterrct value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:radiosleept value:0 duration:14
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:cschangec value:0 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:cschangec value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:cellupdatec value:0 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:cellupdatec value:0 duration:14 pn:1
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:eweaksigt value:0 duration:14 pn:0
+08-14 00:41:49.105  1204  1936 D PKPI    : [KpiModem] update kpi:eweaksigt value:0 duration:14 pn:1
+08-14 00:41:49.105  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTrafficTypeInfoForNetworkType networkType 0
+08-14 00:41:49.107  2177  2948 D KernelStatsHelper: getKernelStats start!
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{3004}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.109  2177  3245 D KernelStatsHelper: get magic :[-1, -1, -1, 77, 65, 71, 73, 67]
+08-14 00:41:49.109  2177  3245 D KernelStatsHelper: magic matched count:373 data_len:19396
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.109  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{1636}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:49.110  2177  3245 D KernelStatsHelper: data over! check: true
+08-14 00:41:49.280  1201  1279 E PerformanceService: storage_feature: open /sys/devices/platform/soc/112b0000.ufshci//virtualtlcbuff fail
+08-14 00:41:49.492 32531 32562 I AIUnit-b6.e1786584843349: onReceive android.intent.action.BATTERY_CHANGED -> BatteryEvent[batteryPct:17.0, isCharging:true, isLowBattery:true, isPowerSave:false, plugged:2]
+08-14 00:41:49.498  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:49.544  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:49.774  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:49.774  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:49.777  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:49.777  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:49.818  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:49.818  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:49.827  1182  1182 I [UAH_CLIENT]: UahPlatformResAcquire
+08-14 00:41:49.827  1182  1182 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1177 1793, identity:qcom-perfd
+08-14 00:41:49.830  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=0 not supported
+08-14 00:41:49.831  1182  1463 E ANDR-PERF-RESOURCEQS: Resource with major=15, minor=1 not supported
+08-14 00:41:49.840  1182 23083 I [UAH_CLIENT]: UahRelease, handle:285734
+08-14 00:41:49.969  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:50.140  1275  1655 D VRR [OTI]: handleIdle from 0 to 1
+08-14 00:41:50.140  1275  1655 D VRR [OTI-HW]: isStateReady 1
+08-14 00:41:50.140  1275  1655 D VRR [OTI-HW]: rate range: min {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} cur {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} max {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A}
+08-14 00:41:50.141  1275  1655 W ComposerExtn: DisplayExtnImpl::SetActiveConfig: HWC Display 0 is not registered!
+08-14 00:41:50.141  1275  1655 D SurfaceFlinger: VRR [SurfaceFlinger] setDesiredActiveMode: 60, event: 0 ,displayid = 4630946896948975233
+08-14 00:41:50.141  1275  1655 D DisplayModeController: setDesiredMode 4630946896948975233 {mode={fps=60.00 Hz, modePtr={id=2, vsyncRate=60.00 Hz, peakRefreshRate=60.00 Hz}}, emitEvent=false, force=false}
+08-14 00:41:50.148  1177 26911 I SDM     : HWDeviceDRM::UpdateMixerAttributes: Mixer WxH 1080x2400-0 for Peripheral
+08-14 00:41:50.149  1177 26911 I SDM     : HWCDisplay::SubmitDisplayConfig: HWC SetActiveConfig [0,4], cur_resolution is (1080, 2400), new_resolution is (1080, 2400)
+08-14 00:41:50.149  1177 26911 I SDM     : HWCDisplay::SubmitDisplayConfig: Active configuration changed to: 4
+08-14 00:41:50.168  1275  1655 D VRR [OTI-HW]: isStateReady 1
+08-14 00:41:50.168  1275  1655 D VRR [OTI-HW]: rate range: min {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} cur {id=2, hwcId=4, resolution=1080x2400, vsyncRate=60.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A} max {id=0, hwcId=0, resolution=1080x2400, vsyncRate=120.00 Hz, dpi=391.89x390.77, group=0, vrrConfig=N/A}
+08-14 00:41:50.168  1275  1655 D VRR [OTI-HW]: keep rate.
+08-14 00:41:50.546  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:50.598 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:50.598  2177  3265 I OplusWifiSarManager: Received Data State Change: 0
+08-14 00:41:50.598  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:50.599  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:50.599  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: false mData5gOn: true
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:50.599  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:50.599  2177  3265 D OplusWifiSarManager:  state: 11110000001100000 country: IN
+08-14 00:41:50.600  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:50.931  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:50.932  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:50.935  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:50.935  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:50.995  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:50.996  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:51.089  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:51.094  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:51.104  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:51.147  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:51.501  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:51.501  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:51.503  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:51.503  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:51.545  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:51.545  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:51.547  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:51.696  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:51.858  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:51.878  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342199078; tx bytes: 2792128798
+08-14 00:41:51.894  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:51.897  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:51.898  2177  3151 V NetworkPolicy: updateNetworkEnabledNL() return
+08-14 00:41:51.898  2177  3151 V NetworkPolicy: updateNotificationsNL not process
+08-14 00:41:51.900  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:51.901  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:51.902  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:51.902  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:51.904  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:51.907  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:51.919  2177  6633 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:51.921  2177  6633 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:51.927  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:51.928  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:51.955  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648311896, mSettingLocalDateTime 2026-08-14T00:41:00.896
+08-14 00:41:51.970  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648311896, mSettingLocalDateTime 2026-08-14T00:41:00.896
+08-14 00:41:51.978  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:51.978  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:52.091  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:52.092  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:52.094  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:52.094  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:52.107 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:52.108  2177  3265 I OplusWifiSarManager: Received Data State Change: 3
+08-14 00:41:52.108  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:52.108  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:52.108  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:52.108  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:52.108  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:52.108  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:52.108  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: true mData5gOn: true
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:52.109  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:52.109  2177  3265 D OplusWifiSarManager:  state: 11110000001110000 country: IN
+08-14 00:41:52.111  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:52.135  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:52.135  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:52.249  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->updateNetworkSpeed: isConnected:true,isSwitchOn:true
+08-14 00:41:52.253  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->getTotalByte: totalRxBytes:18012837355,totalTxBytes:5089902618,loopbackTxBytes:128780702,loopbackRxBytes:128780702 ,totalBytes:22845178569
+08-14 00:41:52.286  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:52.343  1206  1342 D vendor.oplus.hardware.charger-V6-service: ret_value:130, read content:,371,363,3811,3811,-1075,1500,2200,17,17,1,6,-1,4875,17,1,0,1,1,0,0,4425,0,6,0,6,3,0,0,348,0,1,1,0,0,61,61,61,0,0,0,0,0,0,0,0,0,0
+08-14 00:41:52.343  1206  1342 D vendor.oplus.hardware.charger-V6-service: gmtime: 2026-08-14-00-41-52
+08-14 00:41:52.344  1251 19264 D gaia-GaiaConnectChecker: start connect check++
+08-14 00:41:52.344  1206  1342 D vendor.oplus.hardware.charger-V6-service: usb_online:1, ac_online:0, wireless_online:-2147483648
+08-14 00:41:52.351  1251 22947 D gaia-GaiaConnectChecker: start connect check++
+08-14 00:41:52.548  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:52.670  2177  2530 D Theia.TransparentWindow: handleMessage CHECK_TRANS_WINDOW_ERROR_MSG
+08-14 00:41:52.730 15616 15616 D sysapi-LongBgTaskQuotaManager: [remove]  count = 1, requestId = -1, hadRequested = false , BaseConditionManager.refreshAppStateAction run
+08-14 00:41:52.733 15616  3062 D sysapi-LongBgTaskQuotaManager: [add]     count = 0, requestId = -1, hadRequested = false , BaseConditionManager.refreshAppState post delayed
+08-14 00:41:52.734 15616  3062 D sysapi-LongBgTaskQuotaManager: [add]     startBackgroundRunning
+08-14 00:41:52.735  2177  6633 W OplusHansManager : OplusHansFreezeManagerService: [startBackgroundRunning] fail: resultCode = 10002, uid = 10242
+08-14 00:41:52.735 15616 15692 D sysapi-LongBgTaskQuotaManager: [requestRunningTaskInfo]  requestId: -1 -> -1, resultCode: 10002
+08-14 00:41:52.928  1171  1171 I android.hardware.thermal@2.0-service.qti: Sensor Name:skintemp: 41.395. prev severity:0. cur severity:3 New severity:3
+08-14 00:41:52.936  1171  1171 I android.hardware.thermal@2.0-service.qti: Sensor Name:skintemp: 41.395. prev severity:0. cur severity:3 New severity:3
+08-14 00:41:52.944  1171  1171 I android.hardware.thermal@2.0-service.qti: Sensor Name:skintemp: 41.395. prev severity:0. cur severity:3 New severity:3
+08-14 00:41:52.952  1171  1171 I android.hardware.thermal@2.0-service.qti: Sensor Name:skintemp: 41.395. prev severity:0. cur severity:3 New severity:3
+08-14 00:41:52.955  4506 12157 I midasd  : OplusObrainService::notifyEventInt eventId:21 iParam:0
+08-14 00:41:52.958  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTelephonyInfo
+08-14 00:41:52.960  2025  3032 I OplusObrain: OplusObrainClientInvoke.nativeGetTrafficTypeInfoForNetworkType networkType 0
+08-14 00:41:52.961  2177  2948 D KernelStatsHelper: getKernelStats start!
+08-14 00:41:52.962  4506 14545 E midasd  : Read file /sys/class/power_supply/usb/current_now failed.(No data available)
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{3004}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.963  2177  3245 D KernelStatsHelper: get magic :[-1, -1, -1, 77, 65, 71, 73, 67]
+08-14 00:41:52.963  2177  3245 D KernelStatsHelper: magic matched count:373 data_len:19396
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{2988}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.963  2177  3245 D OplusNetlinkSocket: handleNetlinkRecvKernelMessage:nlmsghdr:StructNlMsgHdr{ nlmsg_len{1636}, nlmsg_type{33()}, nlmsg_flags{0()}, nlmsg_seq{0}, nlmsg_pid{142675117} }
+08-14 00:41:52.964  2177  3245 D KernelStatsHelper: data over! check: true
+08-14 00:41:53.302  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:53.302  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:53.302  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:53.302  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:53.302  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:53.549  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:53.617 16579 18324 I OplusBluetoothSarManager: Bluetooth not in tx mode, don't do sar back off!
+08-14 00:41:53.617  2177  3265 I OplusWifiSarManager: Received Data State Change: 0
+08-14 00:41:53.617  2177  3265 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+08-14 00:41:53.618  2177  3265 D OplusWifiSarManager: set wifi_dbs_enable to false
+08-14 00:41:53.618  2177  3265 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sar sensor state:
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 0, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 1, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 2, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 3, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 4, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 5, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 6, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 7, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 8, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 9, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 10, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 11, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 12, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 13, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 14, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 15, state: null
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: project: 22872, country: IN
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor state: earpiece: 0, sensor: null, isScreenOn: true
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: false mData5gOn: true
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: false
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: not support wsa
+08-14 00:41:53.618  2177  3265 I OplusWifiSarManager: sensor index: 13, max: 16
+08-14 00:41:53.618  2177  3265 D OplusWifiSarManager:  state: 11110000001100000 country: IN
+08-14 00:41:53.621  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:0
+08-14 00:41:53.962  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:53.962  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:53.965  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:53.965  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:54.008  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:54.009  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:54.117  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:54.120  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:54.130  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:54.160  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:54.220  1328  1328 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onSignalStrengthsChanged
+08-14 00:41:54.223  3372  3568 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:2 isSoftSimCard:false slotId:1
+08-14 00:41:54.240 23253 19889 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+08-14 00:41:54.240 23253 19889 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+08-14 00:41:54.282  1201  1279 E PerformanceService: storage_feature: open /sys/devices/platform/soc/112b0000.ufshci//virtualtlcbuff fail
+08-14 00:41:54.532  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:54.532  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:54.535  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:54.535  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:54.550  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:54.577  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:54.577  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:54.705  1007 20745 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+08-14 00:41:54.728  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:54.867  1206  1206 D vendor.oplus.hardware.charger-V6-service: get_ui_charge_icon_type 1 3 0 0 1
+08-14 00:41:54.868  1206  1206 D vendor.oplus.hardware.charger-V6-service: oplus_chg_get_cpa_power 7500 charge_online 1 retention_topic 0
+08-14 00:41:54.877  3372  3372 I SystemUi--Statusbar: BatteryControllerExt-->updateBatteryChangeIntent():broadcast=android.intent.action.BATTERY_CHANGED,level=17,scale=100
+08-14 00:41:54.878  3372  3372 I SystemUi--Statusbar: BatteryRepository-->level: 17 -- isSavingMode: false
+08-14 00:41:54.879  2177  2627 D OplusDisplayBrightnessBroadcastReceiver: onReceive action = android.intent.action.BATTERY_CHANGED , listeners = [com.android.server.display.OplusFeatureHDREnhanceBrightness$PhoneInfoReceiver@c83ca8e, com.android.server.display.OplusFeatureEdrEnhanceBrightness$PhoneInfoReceiver@3a8b2af]
+08-14 00:41:54.880  1328  1328 D SubsysBroadcastManager: onReceive action:android.intent.action.BATTERY_CHANGED
+08-14 00:41:54.883  3789  3789 D DeviceStatisticsService: onReceive: action= android.intent.action.BATTERY_CHANGED
+08-14 00:41:54.885  3789  3789 D DeviceInfoHidlClient: isRadioOn()=true
+08-14 00:41:54.885  3789  3789 I DeviceInfoHidlClient: isPowerInfoNeverSent=false batteryLevel=17 batteryLevelIndex=0 chargingMode=2 totalCapacity=3988200 powerSaveMode=false
+08-14 00:41:54.885  2734  3345 E Battery : ChargeProtectionUtils: mCanlendarTmp.isEmpty()!
+08-14 00:41:54.903  1206  1206 D vendor.oplus.hardware.charger-V6-service: getChargerControl:sub_current=100
+08-14 00:41:54.903  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_voltage=3800
+08-14 00:41:54.903  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_soc=-1
+08-14 00:41:54.903  1206  1206 D vendor.oplus.hardware.charger-V6-service: sub_temperature=250
+08-14 00:41:54.903  1206  1206 D vendor.oplus.hardware.charger-V6-service: main_soc=17
+08-14 00:41:54.927  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:54.928  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:54.929  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:54.932  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 0; entry: 0; rx bytes: 3342199024; tx bytes: 2792128701
+08-14 00:41:54.933  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:54.933  1204  1830 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+08-14 00:41:54.934  2177  3265 D OplusTetheringStatistician: get tethering traffic from mobile data, slotIndex: 1; entry: 0; rx bytes: 72; tx bytes: 51961
+08-14 00:41:54.935  1204  1830 V MonthTrafficAlert: getWarningNotification subId:2 numWarningNotificaion:0
+08-14 00:41:54.936  2177  3265 D OplusTetheringNotification: showTrafficConsumptionNotification, id = 1, mNetworkDataType = 2, title = 1 device is connected to your mobile data hotspot.
+08-14 00:41:54.937  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:54.940  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:54.940  2177  3265 D NotificationService--NotificationRecord: isSupportRearLight , isRearLight = false mLedRM = false isMultilLed = false
+08-14 00:41:54.940  2177  3265 I OplusStatusBarManagerServiceEnhance:  getTopIsFullscreen mTopIsFullscreen: false
+08-14 00:41:54.941  2177  2177 D NotificationService--OplusNotificationManagerServiceExtImpl: isForwardToAssistants: false, case : Is in mMcsNotInterceptPkgList or is isSystemApp
+08-14 00:41:54.941  2177  2177 D NotificationService: This application enqueue notifications is not need postDelayed
+08-14 00:41:54.954  2177  2335 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:54.956  2177  2948 D NotificationService--OplusNavigationManager: Notification--isSuppressedByDriveMode--userId:-1,mode:false
+08-14 00:41:54.970  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:54.970  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:55.016  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648314936, mSettingLocalDateTime 2026-08-14T00:41:00.936
+08-14 00:41:55.028  3372  3372 D OplusNotificationDateTimeView: setTime mSettingTimeMillis 1786648314936, mSettingLocalDateTime 2026-08-14T00:41:00.936
+08-14 00:41:55.037  3372  3372 E LockScreenNotificationDispatcherImp: updateNotificationListOnKg size:0
+08-14 00:41:55.037  3372  3372 I SystemUi--Notification: LockScreenNotificationDispatcherImp-->updateNotificationListOnKg resultCode: 0
+08-14 00:41:55.383 32531 32562 I AIUnit-b6.e1786584843349: onReceive android.intent.action.BATTERY_CHANGED -> BatteryEvent[batteryPct:17.0, isCharging:true, isLowBattery:true, isPowerSave:false, plugged:2]
+08-14 00:41:55.552  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:55.620  2177  3265 D OplusWifiSarManager: wifisarprop msg=11110000001100000:1:0 sar_idx=11110000001110000:1:0
+08-14 00:41:56.048  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:56.048  2759  2767 E Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+08-14 00:41:56.257  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->updateNetworkSpeed: isConnected:true,isSwitchOn:true
+08-14 00:41:56.261  3372  3483 I SystemUi--Statusbar: OplusNetworkSpeedControllExImpl-->getTotalByte: totalRxBytes:18012837355,totalTxBytes:5089902618,loopbackTxBytes:128780702,loopbackRxBytes:128780702 ,totalBytes:22845178569
+08-14 00:41:56.553  1206  1432 D BatteryChargeControl: bcc get no support from charging protocol
+08-14 00:41:56.923  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+08-14 00:41:56.923  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+08-14 00:41:56.924  1160 16646 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+08-14 00:41:56.925  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+08-14 00:41:56.991  1160 16646 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+08-14 00:41:56.991  1160 16646 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+08-14 00:41:57.142  1160 16630 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+08-14 00:41:57.142  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:57.146  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:57.157  1204  2193 D TelephonyImpl: getRealNrState start:0
+08-14 00:41:57.321 13740 13740 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d' '-T' '1500''
+08-14 00:41:57.344  1206  1342 D vendor.oplus.hardware.charger-V6-service: ret_value:130, read content:,371,362,3804,3804,-1081,1500,2200,17,17,1,6,-1,4875,17,1,0,1,1,0,0,4425,0,6,0,6,3,0,0,348,0,1,1,0,0,61,61,61,0,0,0,0,0,0,0,0,0,0
+08-14 00:41:57.345  1206  1342 D vendor.oplus.hardware.charger-V6-service: gmtime: 2026-08-14-00-41-57
+08-14 00:41:57.345  1206  1342 D vendor.oplus.hardware.charger-V6-service: usb_online:1, ac_online:0, wireless_online:-2147483648

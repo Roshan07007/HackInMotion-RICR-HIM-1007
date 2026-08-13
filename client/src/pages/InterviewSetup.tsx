@@ -145,7 +145,7 @@ const InterviewSetup = () => {
     <div className=" mx-auto px-2 md:px-4 py-4 animate-in fade-in zoom-in-95 duration-300">
 
       {activeTab === "new" ? (
-        <div className="bg-base-200/50 border border-base-300 rounded-xl p-6 shadow">
+        <div className="bg-base-200/50 border border-base-300 rounded-xl p-4 md:p-6 shadow">
           <div className="flex items-center gap-4 mb-4 pb-4 border-b border-base-300">
             <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary shrink-0">
               <Bot size={24} />
@@ -159,7 +159,7 @@ const InterviewSetup = () => {
           </div>
 
           <form onSubmit={handleStartInterview} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <div className="form-control w-full">
                 <label className="label">
                   <span className="label-text font-semibold flex items-center gap-2">
@@ -257,7 +257,7 @@ const InterviewSetup = () => {
           </form>
         </div>
       ) : (
-        <div className="bg-base-200/50 border border-base-300 rounded-xl p-6 md:p-8 shadow-sm">
+        <div className="bg-base-200/50 border border-base-300 rounded-xl p-4 md:p-8 shadow-sm">
           <div className="flex justify-between items-center mb-6 pb-4 border-b border-base-300">
             <h2 className="text-xl font-bold flex items-center gap-2">
               <Clock size={20} className="text-primary" /> Past Interviews
@@ -293,7 +293,7 @@ const InterviewSetup = () => {
                     </p>
                   </div>
                   
-                  <div className="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto">
+                  <div className="flex items-center justify-between md:justify-end gap-3 md:gap-6 w-full md:w-auto mt-2 md:mt-0 pt-2 md:pt-0 border-t border-base-200 md:border-t-0">
                     {item.status === "evaluated" ? (
                       <div className="flex flex-col items-start md:items-end">
                         <span className="text-xs text-base-content/50 mb-1">Recommendation</span>
