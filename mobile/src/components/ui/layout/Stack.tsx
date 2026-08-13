@@ -10,7 +10,7 @@ export interface StackProps extends ViewProps {
 
 export default function Stack({
   direction = "column",
-  spacing = 8,
+  spacing = 2,
   align = "stretch",
   justify = "flex-start",
   children,

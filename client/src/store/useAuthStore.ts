@@ -21,6 +21,15 @@ export interface User {
     url?: string;
     publicId?: string;
   };
+  resume?: {
+    url?: string;
+    publicId?: string;
+  };
+  bio?: string;
+  github?: string;
+  linkedin?: string;
+  website?: string;
+  otherLink?: string;
   createdAt?: string;
   updatedAt?: string;
 }

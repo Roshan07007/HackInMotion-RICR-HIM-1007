@@ -8,6 +8,15 @@ export interface IUser extends Document {
     publicId?: string;
     url?: string;
   };
+  resume?: {
+    publicId?: string;
+    url?: string;
+  };
+  bio?: string;
+  github?: string;
+  linkedin?: string;
+  website?: string;
+  otherLink?: string;
   password?: string;
   role: "user" | "admin" | "other";
   expoPushTokens: [string];
@@ -50,6 +59,35 @@ const userSchema = new mongoose.Schema<IUser>(
       url: {
         type: String,
       },
+    },
+    resume: {
+      publicId: {
+        type: String,
+      },
+      url: {
+        type: String,
+      },
+    },
+    bio: {
+      type: String,
+      trim: true,
+      maxLength: 1000,
+    },
+    github: {
+      type: String,
+      trim: true,
+    },
+    linkedin: {
+      type: String,
+      trim: true,
+    },
+    website: {
+      type: String,
+      trim: true,
+    },
+    otherLink: {
+      type: String,
+      trim: true,
     },
     password: {
       type: String,

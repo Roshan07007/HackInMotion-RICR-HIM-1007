@@ -157,7 +157,7 @@ export const updateMe = async (
   next: NextFunction,
 ) => {
   try {
-    const { name, phone, preferences } = req.body;
+    const { name, phone, preferences, bio, github, linkedin, website, otherLink } = req.body;
     let parsedPreferences;
     
     // Check if preferences is sent as string (multipart/form-data)
@@ -171,11 +171,22 @@ export const updateMe = async (
       parsedPreferences = preferences;
     }
 
+    // Extract files if available
+    const files = req.files as { [fieldname: string]: Express.Multer.File[] } | undefined;
+    const avatarFile = files?.['avatar']?.[0];
+    const resumeFile = files?.['resume']?.[0];
+
     const user = await authService.updateProfile(req.user._id, {
       name,
       phone,
+      bio,
+      github,
+      linkedin,
+      website,
+      otherLink,
       preferences: parsedPreferences,
-      file: req.file,
+      avatarFile,
+      resumeFile,
     });
     const safeUser: any = user.toObject();
     delete safeUser.password;

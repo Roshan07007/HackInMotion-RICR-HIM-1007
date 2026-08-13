@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, ScrollView, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { useAuthStore } from "../../store/useAuthStore";
 import { Txt } from "../../components/common/Typography";
 import { router } from "expo-router";

@@ -8,9 +8,10 @@ export interface CircularProgressProps {
   progress: number;
   size?: number;
   strokeWidth?: number;
+  color?: string;
 }
 
-export default function CircularProgress({ progress, size = 60, strokeWidth = 6 }: CircularProgressProps) {
+export default function CircularProgress({ progress, size = 60, strokeWidth = 6, color }: CircularProgressProps) {
   const { colorScheme } = useColorScheme();
   const theme = Colors[colorScheme ?? "light"];
   
@@ -21,7 +22,7 @@ export default function CircularProgress({ progress, size = 60, strokeWidth = 6 
         height: size,
         borderRadius: size / 2,
         borderWidth: strokeWidth,
-        borderColor: theme.primary,
+        borderColor: color || theme.primary,
         borderTopColor: theme.base300,
         alignItems: "center",
         justifyContent: "center",

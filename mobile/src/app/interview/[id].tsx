@@ -28,6 +28,7 @@ import { HStack } from "@/components/ui/layout/Stack";
 import Button from "@/components/ui/buttons/Button";
 import { toast } from "@/utils/toast";
 import { api } from "@/config/api";
+import ConfirmationToast from "@/components/common/ConfirmationToast";
 
 export default function MobileInterviewRoomScreen() {
   const { id } = useLocalSearchParams();
@@ -47,6 +48,7 @@ export default function MobileInterviewRoomScreen() {
   const [isAiSpeaking, setIsAiSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [transcriptInput, setTranscriptInput] = useState("");
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   // Refs for real-time video call feel & recording
   const transcriptRef = useRef("");
@@ -297,22 +299,13 @@ export default function MobileInterviewRoomScreen() {
   };
 
   const handleExit = () => {
-    Alert.alert(
-      "Exit Interview",
-      "Are you sure you want to leave? Your progress so far is saved.",
-      [
-        { text: "Cancel", style: "cancel" },
-        {
-          text: "Leave",
-          style: "destructive",
-          onPress: () => {
-            Speech.stop();
-            ExpoSpeechRecognitionModule.stop();
-            router.back();
-          },
-        },
-      ]
-    );
+    setShowConfirmation(true);
+  };
+
+  const confirmExit = () => {
+    Speech.stop();
+    ExpoSpeechRecognitionModule.stop();
+    router.back();
   };
 
   const toggleMic = async () => {
@@ -606,6 +599,15 @@ export default function MobileInterviewRoomScreen() {
           </HStack>
         </View>
       </View>
+      
+      {showConfirmation && (
+        <ConfirmationToast
+          name="Exit Interview"
+          message="Are you sure you want to leave? Your progress so far is saved."
+          fun={confirmExit}
+          setShow={setShowConfirmation}
+        />
+      )}
     </KeyboardAvoidingView>
   );
 }

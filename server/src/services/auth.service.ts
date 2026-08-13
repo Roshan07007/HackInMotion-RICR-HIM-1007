@@ -123,7 +123,7 @@ export const resetPassword = async (user: any, newPassword: any) => {
 };
 export const updateProfile = async (
   userId: any,
-  { name, phone, file, preferences }: any,
+  { name, phone, bio, github, linkedin, website, otherLink, avatarFile, resumeFile, preferences }: any,
 ) => {
   const user = await User.findById(userId);
   if (!user) {
@@ -131,8 +131,14 @@ export const updateProfile = async (
     err.status = 404;
     throw err;
   }
-  if (name) user.name = name;
+  if (name !== undefined) user.name = name;
   if (phone !== undefined) user.phone = phone;
+  if (bio !== undefined) user.bio = bio;
+  if (github !== undefined) user.github = github;
+  if (linkedin !== undefined) user.linkedin = linkedin;
+  if (website !== undefined) user.website = website;
+  if (otherLink !== undefined) user.otherLink = otherLink;
+  
   if (preferences) {
     user.preferences = {
       ...user.preferences,
@@ -140,8 +146,8 @@ export const updateProfile = async (
     };
   }
   
-  if (file) {
-    const uploadResult = await uploadSingleToCloudinary(file, {
+  if (avatarFile) {
+    const uploadResult = await uploadSingleToCloudinary(avatarFile, {
       folder: "codelab/avatars",
     });
     if (user.avatar && user.avatar.publicId) {
@@ -151,6 +157,20 @@ export const updateProfile = async (
     }
     user.avatar = { url: uploadResult.url, publicId: uploadResult.publicId };
   }
+
+  if (resumeFile) {
+    const uploadResult = await uploadSingleToCloudinary(resumeFile, {
+      folder: "codelab/resumes",
+      resource_type: "auto",
+    });
+    if (user.resume && user.resume.publicId) {
+      await deleteFromCloudinary(user.resume.publicId).catch((err) =>
+        logger.error("Old resume delete error", err),
+      );
+    }
+    user.resume = { url: uploadResult.url, publicId: uploadResult.publicId };
+  }
+  
   await user.save();
   return user;
 };

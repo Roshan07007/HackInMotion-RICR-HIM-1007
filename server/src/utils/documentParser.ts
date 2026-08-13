@@ -1,6 +1,9 @@
-import { PDFParse } from "pdf-parse";
 import mammoth from "mammoth";
 import logger from "./logger.js";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const pdfParseModule = require("pdf-parse");
+const PDFParse = pdfParseModule.PDFParse || pdfParseModule;
 
 export const parseDocument = async (file: Express.Multer.File): Promise<string> => {
   try {

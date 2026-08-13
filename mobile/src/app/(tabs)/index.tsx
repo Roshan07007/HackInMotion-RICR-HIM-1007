@@ -1,5 +1,5 @@
 import { View, FlatList, RefreshControl, TouchableOpacity } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { Txt } from "@/components/common/Typography";
@@ -8,7 +8,6 @@ import { useRouter } from "expo-router";
 
 import { HStack, VStack } from "@/components/ui/layout/Stack";
 import IconButton from "@/components/ui/buttons/IconButton";
-import Avatar from "@/components/ui/data-display/Avatar";
 import SearchBar from "@/components/ui/inputs/SearchBar";
 import Spinner from "@/components/ui/feedback/Spinner";
 import BottomModal from "@/components/ui/BottomModal";
@@ -64,10 +63,19 @@ export default function JobsFeed() {
     setRefreshing(false);
   };
 
+  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const handleSearch = (text: string) => {
     setSearchQuery(text);
-    setFilters({ q: text, page: 1 });
-    fetchJobs({ q: text, page: 1 });
+
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
+    searchTimeoutRef.current = setTimeout(() => {
+      setFilters({ q: text, page: 1 });
+      fetchJobs({ q: text, page: 1 });
+    }, 500);
   };
 
   const applyFilters = () => {
@@ -137,17 +145,21 @@ export default function JobsFeed() {
           <HStack justify="space-between" align="center" className="mb-4">
             <VStack>
               <Txt variant="2xl" className="font-extrabold tracking-tight">
-                Discover Jobs
+                HireMe
               </Txt>
-              <Txt variant="base" className="opacity-70 mt-1">
+              <Txt variant="caption" className="">
                 Find your next dream job
               </Txt>
             </VStack>
-            <TouchableOpacity 
+            <TouchableOpacity
               onPress={() => router.push("/ai/mentor-chat")}
               className="w-11 h-11 rounded-full items-center justify-center bg-primary/10 border border-primary/20"
             >
-              <Ionicons name="chatbubble-outline" size={20} color={colors.primary} />
+              <Ionicons
+                name="chatbubble-outline"
+                size={20}
+                color={colors.primary}
+              />
             </TouchableOpacity>
           </HStack>
 
@@ -155,8 +167,7 @@ export default function JobsFeed() {
             <View style={{ flex: 1 }}>
               <SearchBar
                 value={searchQuery}
-                onChangeText={setSearchQuery}
-                onSubmitEditing={(e) => handleSearch(e.nativeEvent.text)}
+                onChangeText={handleSearch}
                 placeholder="Search jobs..."
               />
             </View>
@@ -177,7 +188,7 @@ export default function JobsFeed() {
       </View>
 
       {/* Job Feed */}
-      {(!hasFetched || (isLoading && jobs.length === 0 && !refreshing)) ? (
+      {!hasFetched || (isLoading && jobs.length === 0 && !refreshing) ? (
         <View style={{ flex: 1, padding: 16 }}>
           {[1, 2, 3, 4].map((i) => (
             <JobCardSkeleton key={i} />
@@ -211,7 +222,7 @@ export default function JobsFeed() {
           onEndReachedThreshold={0.5}
           ListFooterComponent={
             isLoading && jobs.length > 0 ? (
-              <View style={{ paddingVertical: 20 }}>
+              <View style={{ paddingVertical: 20, alignItems: "center" }}>
                 <Spinner size="sm" />
               </View>
             ) : null

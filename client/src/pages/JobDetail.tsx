@@ -19,6 +19,7 @@ import {
 import Loading from "../components/common/Loading";
 import { CircularProgress } from "../components/common/CircularProgress";
 import toast from "react-hot-toast";
+import { FaSpinner } from "react-icons/fa6";
 
 const JobDetail = () => {
   const { id } = useParams();
@@ -70,6 +71,7 @@ const JobDetail = () => {
     try {
       setIsScoring(true);
       const res = await jobService.calculateMatchScore(id!);
+
       setMatchScore(res.data);
     } catch (error: any) {
       toast.error(
@@ -131,7 +133,6 @@ const JobDetail = () => {
                 <span className="flex items-center gap-1.5">
                   <IndianRupee className="w-4 h-4" /> {job.salaryRange}
                 </span>
-                
               )}
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" /> Posted 2 days ago
@@ -248,7 +249,11 @@ const JobDetail = () => {
                     disabled={isScoring}
                     className="btn btn-primary w-full"
                   >
-                    {isScoring ? <Loading className="w-6 h-6" /> : "Calculate Match"}
+                    {isScoring ? (
+                      <FaSpinner className="animate-spin" />
+                    ) : (
+                      "Calculate Match"
+                    )}
                   </button>
                 </div>
               ) : (
@@ -311,6 +316,28 @@ const JobDetail = () => {
                             ),
                           )}
                         </div>
+                      </div>
+                    )}
+
+                  {matchScore.recommendations &&
+                    matchScore.recommendations.length > 0 && (
+                      <div className="bg-base-200/50 rounded-lg p-4 text-sm mt-4">
+                        <p className="font-semibold mb-2 text-primary">
+                          Recommendations
+                        </p>
+                        <ul className="space-y-2">
+                          {matchScore.recommendations.map(
+                            (rec: string, i: number) => (
+                              <li
+                                key={i}
+                                className="flex items-start gap-2 text-base-content/80"
+                              >
+                                <span className="mt-1 text-primary">•</span>
+                                <span>{rec}</span>
+                              </li>
+                            ),
+                          )}
+                        </ul>
                       </div>
                     )}
 

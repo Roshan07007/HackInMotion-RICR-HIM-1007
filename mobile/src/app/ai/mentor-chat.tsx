@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { View, FlatList, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, Keyboard, Animated } from "react-native";
+import { View, FlatList, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, Keyboard, Animated, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -12,6 +12,7 @@ import { aiService } from "@/services/ai.service";
 import Avatar from "@/components/ui/data-display/Avatar";
 import { useAuthStore } from "@/store/useAuthStore";
 import Markdown from "react-native-markdown-display";
+import ConfirmationToast from "@/components/common/ConfirmationToast";
 
 interface Message {
   _id: string;
@@ -72,6 +73,49 @@ const TypingIndicator = () => {
   );
 };
 
+const MessageItem = React.memo(({ item, colors }: { item: Message, colors: any }) => {
+  const isUser = item.role === "user";
+  return (
+    <View style={{
+      flexDirection: isUser ? "row-reverse" : "row",
+      marginBottom: 20,
+      alignItems: "flex-end",
+      paddingHorizontal: 16,
+    }}>
+      <View style={{
+        maxWidth: "85%",
+        backgroundColor: isUser ? colors.primary : colors.base200,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
+        borderRadius: 20,
+        borderBottomRightRadius: isUser ? 4 : 20,
+        borderBottomLeftRadius: isUser ? 20 : 4,
+        borderWidth: isUser ? 0 : 1,
+        borderColor: colors.base300,
+      }}>
+        {isUser ? (
+          <Txt variant="base" style={{ color: "#fff" }}>
+            {item.content}
+          </Txt>
+        ) : (
+          <Markdown
+            style={{
+              body: { color: colors.baseContent, fontSize: 16 },
+              paragraph: { marginTop: 0, marginBottom: 8 },
+              strong: { color: colors.baseContent, fontWeight: 'bold' },
+              em: { color: colors.baseContent, fontStyle: 'italic' },
+              code_inline: { backgroundColor: colors.base300, color: colors.baseContent, borderRadius: 4, padding: 4 },
+              list_item: { marginBottom: 4 },
+            }}
+          >
+            {item.content}
+          </Markdown>
+        )}
+      </View>
+    </View>
+  );
+});
+
 export default function MentorChatScreen() {
   const insets = useSafeAreaInsets();
   const { colorScheme } = useColorScheme();
@@ -83,12 +127,23 @@ export default function MentorChatScreen() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
+  const [showConfirmation, setShowConfirmation] = useState(false);
   const flatListRef = useRef<FlatList>(null);
 
   useEffect(() => {
     loadCachedHistory();
     fetchHistory();
   }, []);
+
+  const handleClearHistory = () => {
+    setShowConfirmation(true);
+  };
+
+  const executeClearHistory = async () => {
+    setMessages([]);
+    await AsyncStorage.removeItem(CACHE_KEY);
+    toast.success("Success", "Chat history cleared");
+  };
 
   const loadCachedHistory = async () => {
     try {
@@ -169,58 +224,22 @@ export default function MentorChatScreen() {
     }
   };
 
-  const renderMessage = ({ item }: { item: Message }) => {
-    const isUser = item.role === "user";
-    return (
-      <View style={{
-        flexDirection: isUser ? "row-reverse" : "row",
-        marginBottom: 20,
-        alignItems: "flex-end",
-        paddingHorizontal: 16,
-      }}>
-        <View style={{
-          maxWidth: "85%",
-          backgroundColor: isUser ? colors.primary : colors.base200,
-          paddingHorizontal: 16,
-          paddingVertical: 12,
-          borderRadius: 20,
-          borderBottomRightRadius: isUser ? 4 : 20,
-          borderBottomLeftRadius: isUser ? 20 : 4,
-          borderWidth: isUser ? 0 : 1,
-          borderColor: colors.base300,
-        }}>
-          {isUser ? (
-            <Txt variant="base" style={{ color: "#fff" }}>
-              {item.content}
-            </Txt>
-          ) : (
-            <Markdown
-              style={{
-                body: { color: colors.baseContent, fontSize: 16 },
-                paragraph: { marginTop: 0, marginBottom: 8 },
-                strong: { color: colors.baseContent, fontWeight: 'bold' },
-                em: { color: colors.baseContent, fontStyle: 'italic' },
-                code_inline: { backgroundColor: colors.base300, color: colors.baseContent, borderRadius: 4, padding: 4 },
-                list_item: { marginBottom: 4 },
-              }}
-            >
-              {item.content}
-            </Markdown>
-          )}
-        </View>
-      </View>
-    );
-  };
-
-  const renderItemWrapper = ({ item, index }: any) => {
-    return renderMessage({ item });
+  const renderItemWrapper = ({ item }: any) => {
+    return <MessageItem item={item} colors={colors} />;
   };
 
   const headerHeightOffset = Platform.OS === "ios" ? 90 : insets.top - 30;
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.base100 }}>
-      <ScreenHeader title="Career Mentor" />
+      <ScreenHeader 
+        title="Career Mentor" 
+        actions={
+          <TouchableOpacity onPress={handleClearHistory} style={{ padding: 4 }}>
+             <MaterialIcons name="delete-outline" size={24} color={colors.error} />
+          </TouchableOpacity>
+        } 
+      />
 
       <KeyboardAvoidingView
         style={{ flex: 1 }}
@@ -314,6 +333,15 @@ export default function MentorChatScreen() {
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
+      
+      {showConfirmation && (
+        <ConfirmationToast
+          name="Clear Chat History"
+          message="Are you sure you want to clear your mentor chat history?"
+          fun={executeClearHistory}
+          setShow={setShowConfirmation}
+        />
+      )}
     </View>
   );
 }
