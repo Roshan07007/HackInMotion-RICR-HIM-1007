@@ -42,6 +42,13 @@
     "plugins": [
       "expo-router",
       [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow HireMe to access the microphone for mock interviews.",
+          "speechRecognitionPermission": "Allow HireMe to securely recognize your speech for interviews."
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/logo/logoWithBg.png",
@@ -68,7 +75,8 @@
             "BluetoothPeripheral"
           ]
         }
-      ]
+      ],
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true,

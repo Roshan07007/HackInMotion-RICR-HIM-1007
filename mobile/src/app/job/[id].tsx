@@ -20,6 +20,7 @@ import Button from "@/components/ui/buttons/Button";
 import Badge from "@/components/ui/data-display/Badge";
 import Spinner from "@/components/ui/feedback/Spinner";
 import CircularProgress from "@/components/ui/feedback/CircularProgress";
+import JobDetailSkeleton from "@/components/skeletons/JobDetailSkeleton";
 
 import { useJobStore } from "@/store/useJobStore";
 import { jobService } from "@/services/job.service";
@@ -97,18 +98,7 @@ export default function JobDetail() {
   );
 
   if (isLoading || !job) {
-    return (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: colors.base100,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Spinner size="lg" />
-      </View>
-    );
+    return <JobDetailSkeleton />;
   }
 
   return (
@@ -323,7 +313,7 @@ export default function JobDetail() {
         <Button
           label={isApplied ? "Applied Successfully" : "Apply Now"}
           variant={isApplied ? "success" : "primary"}
-          icon={isApplied ? "check-circle" : "send"}
+          leftIcon={isApplied ? "check-circle" : "send"}
           onPress={handleApply}
           disabled={isApplied}
         />

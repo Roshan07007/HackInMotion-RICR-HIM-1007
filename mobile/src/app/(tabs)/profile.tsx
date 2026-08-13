@@ -11,9 +11,20 @@ import { HStack, VStack } from "@/components/ui/layout/Stack";
 import { useRouter } from "expo-router";
 import { Colors } from "@/constants/Colors";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import BottomModal from "@/components/ui/BottomModal";
+import { ToastAndroid, Platform } from "react-native";
+import React, { useState } from "react";
+import { toast } from "@/utils/toast";
+
+const LOCK_DURATIONS = [
+  { label: "Immediately", value: 0 },
+  { label: "After 1 minute", value: 1 },
+  { label: "After 5 minutes", value: 5 },
+  { label: "After 15 minutes", value: 15 },
+];
 
 export default function Profile() {
-  const { user, logout } = useAuthStore();
+  const { user, logout, isBiometricEnabled, setBiometricEnabled, lockDuration, setLockDuration } = useAuthStore();
   const { colorScheme, setColorScheme } = useColorScheme();
   const isDark = colorScheme === "dark";
   const colors = Colors[isDark ? "dark" : "light"];
@@ -28,6 +39,21 @@ export default function Profile() {
 
   const handleLogout = async () => {
     await logout();
+  };
+
+  const [lockDurationModalOpen, setLockDurationModalOpen] = useState(false);
+
+  const toggleBiometric = async (value: boolean) => {
+    try {
+      await setBiometricEnabled(value);
+      if (Platform.OS === 'android') {
+        ToastAndroid.show(`App Lock ${value ? 'Enabled' : 'Disabled'}`, ToastAndroid.SHORT);
+      } else {
+        toast.success(`App Lock ${value ? 'Enabled' : 'Disabled'}`);
+      }
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (
@@ -139,17 +165,107 @@ export default function Profile() {
               </HStack>
               <Switch checked={isDark} onChange={handleToggleTheme} />
             </HStack>
+
+            <View style={{ height: 1, backgroundColor: colors.base300, opacity: 0.5, marginVertical: 12 }} />
+
+            <HStack align="center" justify="space-between" className="py-2">
+              <HStack align="center" spacing={12}>
+                <View className="w-10 h-10 rounded-full bg-base-300 items-center justify-center">
+                  <Ionicons 
+                    name="lock-closed" 
+                    size={20} 
+                    color={colors.baseContent} 
+                  />
+                </View>
+                <Txt variant="base" className="font-semibold">App Lock</Txt>
+              </HStack>
+              <Switch checked={isBiometricEnabled} onChange={toggleBiometric} />
+            </HStack>
+
+            {isBiometricEnabled && (
+              <>
+                <View style={{ height: 1, backgroundColor: colors.base300, opacity: 0.5, marginVertical: 12 }} />
+                <TouchableOpacity onPress={() => setLockDurationModalOpen(true)}>
+                  <HStack align="center" justify="space-between" className="py-2">
+                    <HStack align="center" spacing={12}>
+                      <View className="w-10 h-10 rounded-full bg-base-300 items-center justify-center">
+                        <Ionicons 
+                          name="time-outline" 
+                          size={20} 
+                          color={colors.baseContent} 
+                        />
+                      </View>
+                      <VStack>
+                        <Txt variant="base" className="font-semibold">Lock After</Txt>
+                        <Txt variant="caption" className="opacity-60">{LOCK_DURATIONS.find(d => d.value === lockDuration)?.label}</Txt>
+                      </VStack>
+                    </HStack>
+                    <Ionicons name="chevron-forward" size={20} color={colors.baseContent} style={{ opacity: 0.5 }} />
+                  </HStack>
+                </TouchableOpacity>
+              </>
+            )}
           </View>
 
           <Button
             label="Log Out"
             variant="error"
-            icon="logout"
+            leftIcon="log-out"
             onPress={handleLogout}
             style={{ marginTop: 8 }}
           />
         </View>
       </ScrollView>
+
+      {/* Lock Duration Modal */}
+      <BottomModal
+        isOpen={lockDurationModalOpen}
+        onClose={() => setLockDurationModalOpen(false)}
+        heightPercent={0.55}
+      >
+        <View className="px-5 pt-2 pb-4">
+          <Txt variant="lg" className="font-bold mb-4">Lock After</Txt>
+          {LOCK_DURATIONS.map((option, idx) => (
+            <TouchableOpacity
+              key={option.value}
+              onPress={async () => {
+                await setLockDuration(option.value);
+                setLockDurationModalOpen(false);
+                if (Platform.OS === 'android') {
+                  ToastAndroid.show(`Lock set to: ${option.label}`, ToastAndroid.SHORT);
+                } else {
+                  toast.success(`Lock set to: ${option.label}`);
+                }
+              }}
+              className="flex-row items-center justify-between py-4 px-2"
+              style={{ borderBottomWidth: idx < LOCK_DURATIONS.length - 1 ? 1 : 0, borderBottomColor: colors.base300 }}
+            >
+              <View className="flex-row items-center gap-3">
+                <View
+                  style={{ backgroundColor: lockDuration === option.value ? colors.primary + '20' : 'transparent' }}
+                  className="w-9 h-9 rounded-full items-center justify-center"
+                >
+                  <Ionicons
+                    name={option.value === 0 ? "flash" : "timer-outline"}
+                    size={20}
+                    color={lockDuration === option.value ? colors.primary : colors.baseContent}
+                  />
+                </View>
+                <Txt
+                  variant="base"
+                  className="font-semibold"
+                  style={{ color: lockDuration === option.value ? colors.primary : colors.baseContent }}
+                >
+                  {option.label}
+                </Txt>
+              </View>
+              {lockDuration === option.value && (
+                <Ionicons name="checkmark-circle" size={22} color={colors.primary} />
+              )}
+            </TouchableOpacity>
+          ))}
+        </View>
+      </BottomModal>
     </View>
   );
 }

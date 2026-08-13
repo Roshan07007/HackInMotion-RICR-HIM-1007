@@ -6,6 +6,7 @@ import { useColorScheme } from "nativewind";
 import { Colors } from "../constants/Colors";
 import "./global.css";
 import Loading from "@/components/common/Loading";
+import BiometricLock from "@/components/BiometricLock";
 
 import { PaperProvider } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -79,20 +80,22 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <PaperProvider>
-        <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
-        <Stack
-          screenOptions={{
-            headerShown: false,
-            contentStyle: { backgroundColor: colors.base100 },
-          }}
-        >
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen
-            name="(auth)"
-            options={{ headerShown: false, animation: "fade" }}
-          />
-        </Stack>
-        <Toast />
+        <BiometricLock>
+          <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: { backgroundColor: colors.base100 },
+            }}
+          >
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="(auth)"
+              options={{ headerShown: false, animation: "fade" }}
+            />
+          </Stack>
+          <Toast />
+        </BiometricLock>
       </PaperProvider>
     </GestureHandlerRootView>
   );

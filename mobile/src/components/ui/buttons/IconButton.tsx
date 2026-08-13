@@ -1,5 +1,5 @@
-import React from "react";
-import { TouchableOpacity, ActivityIndicator, TouchableOpacityProps } from "react-native";
+import React, { useRef } from "react";
+import { TouchableOpacity, ActivityIndicator, TouchableOpacityProps, Animated } from "react-native";
 import { useColorScheme } from "nativewind";
 import { Colors } from "../../../constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
@@ -55,31 +55,56 @@ export default function IconButton({
   const sStyles = getSizeStyles();
   const isDisabled = disabled || isLoading;
 
+  const scaleAnim = useRef(new Animated.Value(1)).current;
+
+  const handlePressIn = (e: any) => {
+    Animated.spring(scaleAnim, {
+      toValue: 0.9,
+      useNativeDriver: true,
+      speed: 50,
+      bounciness: 10,
+    }).start();
+    if (props.onPressIn) props.onPressIn(e);
+  };
+
+  const handlePressOut = (e: any) => {
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      useNativeDriver: true,
+      speed: 50,
+      bounciness: 10,
+    }).start();
+    if (props.onPressOut) props.onPressOut(e);
+  };
+
   return (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      disabled={isDisabled}
-      style={[
-        {
-          backgroundColor: vStyles.bg,
-          width: sStyles.size,
-          height: sStyles.size,
-          borderRadius: sStyles.size / 2,
-          alignItems: "center",
-          justifyContent: "center",
-          opacity: isDisabled ? 0.6 : 1,
-          borderWidth: variant === "outline" ? 1 : 0,
-          borderColor: vStyles.border,
-        },
-        style,
-      ]}
-      {...props}
-    >
-      {isLoading ? (
-        <ActivityIndicator color={color || vStyles.iconColor} size="small" />
-      ) : (
-        <Ionicons name={icon} size={sStyles.iconSize} color={color || vStyles.iconColor} />
-      )}
-    </TouchableOpacity>
+    <Animated.View style={[{ transform: [{ scale: scaleAnim }] }, style]}>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={isDisabled}
+        onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
+        style={[
+          {
+            backgroundColor: vStyles.bg,
+            width: sStyles.size,
+            height: sStyles.size,
+            borderRadius: sStyles.size / 2,
+            alignItems: "center",
+            justifyContent: "center",
+            opacity: isDisabled ? 0.6 : 1,
+            borderWidth: variant === "outline" ? 1 : 0,
+            borderColor: vStyles.border,
+          },
+        ]}
+        {...props}
+      >
+        {isLoading ? (
+          <ActivityIndicator color={color || vStyles.iconColor} size="small" />
+        ) : (
+          <Ionicons name={icon} size={sStyles.iconSize} color={color || vStyles.iconColor} />
+        )}
+      </TouchableOpacity>
+    </Animated.View>
   );
 }

@@ -26,6 +26,7 @@ const TabLayout = () => {
     >
       <Tabs.Screen name="index" options={{ title: "Home" }} />
       <Tabs.Screen name="analyzer" options={{ title: "AI Scan" }} />
+      <Tabs.Screen name="interview" options={{ title: "Interview" }} />
       <Tabs.Screen name="saved" options={{ title: "Saved" }} />
       <Tabs.Screen name="profile" options={{ title: "Profile" }} />
     </Tabs>

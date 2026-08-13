@@ -91,12 +91,17 @@ export const useJobStore = create<JobState>((set, get) => ({
   },
 
   applyToJob: async (jobId: string) => {
+    const prevApplied = get().appliedJobs;
+    // Optimistic Update
+    set({ appliedJobs: [...prevApplied, { jobId }] });
+    
     try {
       set({ isSaving: true });
       const res = await jobService.applyJob(jobId);
       toast.success(res.data.message);
-      get().fetchAppliedJobs();
+      get().fetchAppliedJobs(); // Sync real data in background
     } catch (error: any) {
+      set({ appliedJobs: prevApplied }); // Revert on failure
       console.error("Failed to apply:", error);
       toast.error(error.response?.data?.error || "Failed to apply");
       throw error;
@@ -108,8 +113,15 @@ export const useJobStore = create<JobState>((set, get) => ({
 
 
   toggleSaveJob: async (jobId: string, isSaved: boolean) => {
+    const prevSaved = get().savedJobs;
+    // Optimistic update
+    if (isSaved) {
+      set({ savedJobs: prevSaved.filter((s) => (s.jobId?._id || s.jobId) !== jobId) });
+    } else {
+      set({ savedJobs: [...prevSaved, { jobId }] });
+    }
+
     try {
-      set({ isSaving: true });
       if (isSaved) {
         await jobService.removeSavedJob(jobId);
         toast.success("Job removed from saved");
@@ -118,14 +130,13 @@ export const useJobStore = create<JobState>((set, get) => ({
         toast.success("Job saved successfully");
       }
       
-      // Update local state if needed (refetch saved jobs)
+      // Update local state in background
       get().fetchSavedJobs();
     } catch (error) {
+      set({ savedJobs: prevSaved }); // Revert on failure
       console.error("Failed to toggle save job:", error);
       toast.error("Failed to save/unsave job");
       throw error;
-    } finally {
-      set({ isSaving: false });
     }
   },
 

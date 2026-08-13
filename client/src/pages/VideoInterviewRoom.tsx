@@ -321,25 +321,25 @@ const VideoInterviewRoom = () => {
       {/* Main Content */}
       <div className="flex-1 min-h-0 flex flex-col p-4 md:p-6 mx-auto w-full gap-4 md:gap-6">
         
-        {/* Split Screen Video Area */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 flex-1 min-h-0">
+        {/* Split Screen / PiP Video Area */}
+        <div className="relative flex-1 min-h-0 flex md:flex-row gap-4 md:gap-6 w-full">
           
-          {/* AI Interviewer (Left) */}
-          <div className="flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden relative border-2 border-primary/80 shadow-lg shadow-primary/20 flex items-center justify-center">
-            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-[#3a3a3a]">
+          {/* AI Interviewer (Full on Mobile, Left on Desktop) */}
+          <div className="absolute md:relative inset-0 md:inset-auto w-full h-full md:w-auto md:flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden border-2 border-primary/80 shadow-lg shadow-primary/20 flex items-center justify-center z-0">
+            <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-[#3a3a3a]">
               <img 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" 
                 alt="AI Interviewer" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-4 left-4 bg-[#1f1f1f] px-4 py-1.5 rounded-full text-sm font-medium">
+            <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-[#1f1f1f]/80 backdrop-blur px-3 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
               Interviewer (IRA)
             </div>
           </div>
 
-          {/* Candidate Video (Right) */}
-          <div className="flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden relative border border-gray-700">
+          {/* Candidate Video (PiP on Mobile, Right on Desktop) */}
+          <div className="absolute md:relative bottom-4 right-4 md:bottom-auto md:right-auto w-1/3 max-w-[120px] sm:max-w-[160px] aspect-[3/4] md:aspect-auto md:w-full md:h-full md:flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-700 shadow-2xl md:shadow-none z-10 transition-all duration-300">
             <video 
               ref={videoRef} 
               autoPlay 
@@ -349,12 +349,12 @@ const VideoInterviewRoom = () => {
               style={{ transform: "scaleX(-1)" }}
             />
             {/* Rec Badge */}
-            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full text-sm font-medium flex items-center gap-2 border border-gray-600">
-              <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></div>
+            <div className="absolute top-2 right-2 md:top-4 md:right-4 bg-black/60 backdrop-blur-md px-2 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-sm font-medium flex items-center gap-1.5 border border-gray-600">
+              <div className="w-1.5 h-1.5 md:w-2.5 md:h-2.5 rounded-full bg-red-500 animate-pulse"></div>
               Rec
             </div>
             {/* Name Badge */}
-            <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">
+            <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-black/60 backdrop-blur-md px-2 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-sm font-medium border border-gray-600">
               Candidate
             </div>
           </div>
@@ -384,56 +384,56 @@ const VideoInterviewRoom = () => {
         <div className="flex justify-center flex-wrap gap-2 md:gap-4 shrink-0 pb-2 md:pb-0">
           <button 
             onClick={toggleMic}
-            className={`p-3 md:p-4 rounded-full ${isMicOn ? 'bg-gray-700 hover:bg-gray-600' : 'bg-red-500/20 text-red-500 hover:bg-red-500/30 border border-red-500/50'}`}
+            className={`p-2.5 md:p-4 rounded-full ${isMicOn ? 'bg-gray-700 hover:bg-gray-600' : 'bg-red-500/20 text-red-500 hover:bg-red-500/30 border border-red-500/50'}`}
           >
-            {isMicOn ? <Mic size={20} className="md:w-6 md:h-6" /> : <MicOff size={20} className="md:w-6 md:h-6" />}
+            {isMicOn ? <Mic size={18} className="md:w-6 md:h-6" /> : <MicOff size={18} className="md:w-6 md:h-6" />}
           </button>
           <button 
             onClick={toggleVideo}
-            className={`p-3 md:p-4 rounded-full ${isVideoOn ? 'bg-gray-700 hover:bg-gray-600' : 'bg-red-500/20 text-red-500 hover:bg-red-500/30 border border-red-500/50'}`}
+            className={`p-2.5 md:p-4 rounded-full ${isVideoOn ? 'bg-gray-700 hover:bg-gray-600' : 'bg-red-500/20 text-red-500 hover:bg-red-500/30 border border-red-500/50'}`}
           >
-            {isVideoOn ? <Video size={20} className="md:w-6 md:h-6" /> : <VideoOff size={20} className="md:w-6 md:h-6" />}
+            {isVideoOn ? <Video size={18} className="md:w-6 md:h-6" /> : <VideoOff size={18} className="md:w-6 md:h-6" />}
           </button>
           {/* Toggle Mic Button */}
           <button
             onClick={toggleListening}
-            className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-bold transition flex items-center gap-1 md:gap-2 text-sm md:text-base ${isListening ? 'bg-red-500/20 text-red-500 border border-red-500 hover:bg-red-500/30' : 'bg-primary/20 text-primary border border-primary hover:bg-primary/30'}`}
+            className={`px-3 md:px-6 py-2 md:py-3 rounded-full font-bold transition flex items-center gap-1.5 md:gap-2 text-xs md:text-base ${isListening ? 'bg-red-500/20 text-red-500 border border-red-500 hover:bg-red-500/30' : 'bg-primary/20 text-primary border border-primary hover:bg-primary/30'}`}
             disabled={isSubmitting || loading}
           >
             {isListening ? (
               <>
-                <div className="w-2 h-2 rounded-full bg-red-500 animate-ping"></div>
-                Stop Recording
+                <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500 animate-ping shrink-0"></div>
+                <span>Stop<span className="hidden sm:inline"> Recording</span></span>
               </>
             ) : (
-              "Start Speaking"
+              <span>Speak<span className="hidden sm:inline"> Now</span></span>
             )}
           </button>
           
           {/* Submit Answer Button */}
           <button
             onClick={() => handleSubmitAnswer(transcript)}
-            className="px-4 md:px-6 py-2 md:py-3 rounded-full font-bold transition flex items-center gap-2 bg-primary text-primary-content hover:opacity-90 disabled:opacity-50 text-sm md:text-base"
+            className="px-3 md:px-6 py-2 md:py-3 rounded-full font-bold transition flex items-center gap-1.5 md:gap-2 bg-primary text-primary-content hover:opacity-90 disabled:opacity-50 text-xs md:text-base"
             disabled={isSubmitting || loading || !transcript}
           >
             {isSubmitting ? (
               <span className="loading loading-spinner loading-sm"></span>
             ) : (
-              "Submit Answer"
+              <span>Submit<span className="hidden sm:inline"> Answer</span></span>
             )}
           </button>
 
           {/* End Interview Button */}
           <button
             onClick={handleEndInterview}
-            className="px-4 md:px-6 py-2 md:py-3 rounded-full font-bold transition flex items-center gap-1 md:gap-2 bg-success text-success-content hover:opacity-90 ml-auto disabled:opacity-50 text-sm md:text-base"
+            className="px-3 md:px-6 py-2 md:py-3 rounded-full font-bold transition flex items-center gap-1.5 md:gap-2 bg-success text-success-content hover:opacity-90 md:ml-auto disabled:opacity-50 text-xs md:text-base"
             disabled={isEnding || isSubmitting || loading}
           >
             {isEnding ? (
               <span className="loading loading-spinner loading-sm"></span>
             ) : (
               <>
-                <CheckCircle size={18} /> Finish
+                <CheckCircle size={16} className="md:w-4 md:h-4" /> <span>Finish</span>
               </>
             )}
           </button>

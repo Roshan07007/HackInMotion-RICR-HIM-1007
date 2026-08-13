@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { View, FlatList, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, Keyboard } from "react-native";
+import { View, FlatList, TextInput, KeyboardAvoidingView, Platform, TouchableOpacity, Keyboard, Animated } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useColorScheme } from "nativewind";
@@ -19,6 +20,58 @@ interface Message {
   createdAt: string;
 }
 
+const CACHE_KEY = "@mentor_chat_messages";
+
+const TypingIndicator = () => {
+  const dot1 = useRef(new Animated.Value(0)).current;
+  const dot2 = useRef(new Animated.Value(0)).current;
+  const dot3 = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    const a1 = Animated.loop(
+      Animated.sequence([
+        Animated.timing(dot1, { toValue: 1, duration: 400, delay: 0, useNativeDriver: true }),
+        Animated.timing(dot1, { toValue: 0, duration: 400, useNativeDriver: true }),
+      ])
+    );
+    const a2 = Animated.loop(
+      Animated.sequence([
+        Animated.timing(dot2, { toValue: 1, duration: 400, delay: 200, useNativeDriver: true }),
+        Animated.timing(dot2, { toValue: 0, duration: 400, useNativeDriver: true }),
+      ])
+    );
+    const a3 = Animated.loop(
+      Animated.sequence([
+        Animated.timing(dot3, { toValue: 1, duration: 400, delay: 400, useNativeDriver: true }),
+        Animated.timing(dot3, { toValue: 0, duration: 400, useNativeDriver: true }),
+      ])
+    );
+    
+    a1.start();
+    a2.start();
+    a3.start();
+
+    return () => {
+      a1.stop();
+      a2.stop();
+      a3.stop();
+    };
+  }, []);
+
+  const getStyle = (dot: Animated.Value) => ({
+    opacity: dot.interpolate({ inputRange: [0, 1], outputRange: [0.3, 1] }),
+    transform: [{ translateY: dot.interpolate({ inputRange: [0, 1], outputRange: [0, -4] }) }]
+  });
+
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', padding: 8, paddingHorizontal: 16 }}>
+      <Animated.View style={[{ width: 8, height: 8, borderRadius: 4, backgroundColor: '#888', marginHorizontal: 3 }, getStyle(dot1)]} />
+      <Animated.View style={[{ width: 8, height: 8, borderRadius: 4, backgroundColor: '#888', marginHorizontal: 3 }, getStyle(dot2)]} />
+      <Animated.View style={[{ width: 8, height: 8, borderRadius: 4, backgroundColor: '#888', marginHorizontal: 3 }, getStyle(dot3)]} />
+    </View>
+  );
+};
+
 export default function MentorChatScreen() {
   const insets = useSafeAreaInsets();
   const { colorScheme } = useColorScheme();
@@ -33,17 +86,45 @@ export default function MentorChatScreen() {
   const flatListRef = useRef<FlatList>(null);
 
   useEffect(() => {
+    loadCachedHistory();
     fetchHistory();
   }, []);
+
+  const loadCachedHistory = async () => {
+    try {
+      const cached = await AsyncStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed)) {
+          setMessages(parsed);
+        }
+        setInitialLoad(false);
+      }
+    } catch (e) {
+      console.error("Failed to load cached messages", e);
+    }
+  };
+
+  const saveCache = async (msgs: Message[]) => {
+    if (!Array.isArray(msgs)) return;
+    try {
+      const last20 = msgs.slice(-20);
+      await AsyncStorage.setItem(CACHE_KEY, JSON.stringify(last20));
+    } catch (e) {
+      console.error("Failed to save cached messages", e);
+    }
+  };
 
   const fetchHistory = async () => {
     try {
       const res = await aiService.getCareerChat();
       if (res.data?.success && res.data.data?.messages) {
-        setMessages(res.data.data.messages);
+        const serverMessages = res.data.data.messages;
+        setMessages(serverMessages);
+        saveCache(serverMessages);
       }
     } catch (error) {
-      toast.error("Error", "Failed to load chat history");
+      // toast.error("Error", "Failed to load chat history");
     } finally {
       setInitialLoad(false);
     }
@@ -59,7 +140,9 @@ export default function MentorChatScreen() {
       createdAt: new Date().toISOString(),
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
+    saveCache(newMessages);
     setInput("");
     setLoading(true);
 
@@ -72,12 +155,15 @@ export default function MentorChatScreen() {
           content: res.data.data.reply,
           createdAt: new Date().toISOString(),
         };
-        setMessages((prev) => [...prev, aiMessage]);
+        const finalMessages = [...newMessages, aiMessage];
+        setMessages(finalMessages);
+        saveCache(finalMessages);
       }
     } catch (error: any) {
       toast.error("Error", error.response?.data?.message || "Failed to send message");
-      // Remove the optimistic message if it failed
-      setMessages((prev) => prev.filter((m) => m._id !== userMessage._id));
+      const reverted = messages;
+      setMessages(reverted);
+      saveCache(reverted);
     } finally {
       setLoading(false);
     }
@@ -148,6 +234,15 @@ export default function MentorChatScreen() {
           renderItem={renderItemWrapper}
           contentContainerStyle={{ paddingVertical: 20 }}
           inverted={true}
+          ListHeaderComponent={
+            loading ? (
+              <View style={{ marginBottom: 20, alignSelf: 'flex-start', marginLeft: 16 }}>
+                <View style={{ backgroundColor: colors.base200, padding: 8, borderRadius: 20, borderBottomLeftRadius: 4 }}>
+                  <TypingIndicator />
+                </View>
+              </View>
+            ) : null
+          }
           ListEmptyComponent={
             !initialLoad ? (
               <View className="items-center justify-center mt-20 px-8" style={{ transform: [{ scaleY: -1 }] }}>
