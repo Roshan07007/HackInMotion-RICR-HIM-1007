@@ -23,10 +23,13 @@ export interface UiState {
   toggleSidebar: () => void;
   openSidebar: () => void;
   close: () => void;
+  isModalOpen: boolean;
+  setModalOpen: (open: boolean) => void;
 }
 
 export const useUiStore = create<UiState>((set, get) => ({
   open: false,
+  isModalOpen: false,
   collapsed: false,
   isMobileMenuOpened: false,
   headerTitle: "Dashboard",
@@ -79,5 +82,10 @@ export const useUiStore = create<UiState>((set, get) => ({
   close: () =>
     set({
       open: false,
+    }),
+
+  setModalOpen: (open: boolean) =>
+    set({
+      isModalOpen: open,
     }),
 }));

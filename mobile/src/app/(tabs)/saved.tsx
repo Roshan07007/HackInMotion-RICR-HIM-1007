@@ -58,7 +58,6 @@ export default function SavedJobsScreen() {
           activeTab={activeTab}
           onChange={setActiveTab}
           variant="button"
-          size="md"
         />
       </View>
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Camera,
@@ -17,6 +18,8 @@ import {
   User,
 } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
+import Modal from "../components/common/Modal";
+import { DocViewerModal } from "../components/modals/DocViewerModal";
 import { getInitials } from "../utils/getInitials";
 import toast from "react-hot-toast";
 import { useUiStore } from "../store/useUiStore";
@@ -27,6 +30,11 @@ import { useUiStore } from "../store/useUiStore";
 interface EditForm {
   name: string;
   phone: string;
+  bio: string;
+  github: string;
+  linkedin: string;
+  website: string;
+  otherLink: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -43,8 +51,15 @@ const Profile = () => {
 
   // Edit modal
   const [isEditing, setIsEditing] = useState(false);
-  const [form, setForm] = useState<EditForm>({ name: "", phone: "" });
+  const [isDocViewerOpen, setIsDocViewerOpen] = useState(false);
+  const [form, setForm] = useState<EditForm>({ 
+    name: "", phone: "", bio: "", github: "", linkedin: "", website: "", otherLink: "" 
+  });
   const [isSaving, setIsSaving] = useState(false);
+
+  // Resume Upload
+  const resumeInputRef = useRef<HTMLInputElement>(null);
+  const [isUploadingResume, setIsUploadingResume] = useState(false);
 
   useEffect(() => {
     setHeaderTitle("Profile");
@@ -88,7 +103,15 @@ const Profile = () => {
   };
 
   const openEdit = () => {
-    setForm({ name: user.name, phone: user.phone || "" });
+    setForm({ 
+      name: user.name, 
+      phone: user.phone || "",
+      bio: user.bio || "",
+      github: user.github || "",
+      linkedin: user.linkedin || "",
+      website: user.website || "",
+      otherLink: user.otherLink || ""
+    });
     setIsEditing(true);
   };
 
@@ -101,11 +124,21 @@ const Profile = () => {
     optimisticUpdate({
       name: form.name.trim(),
       phone: form.phone.trim() || undefined,
+      bio: form.bio.trim() || undefined,
+      github: form.github.trim() || undefined,
+      linkedin: form.linkedin.trim() || undefined,
+      website: form.website.trim() || undefined,
+      otherLink: form.otherLink.trim() || undefined,
     });
     setIsSaving(true);
     const ok = await updateProfile({
       name: form.name.trim(),
       phone: form.phone.trim() || undefined,
+      bio: form.bio.trim() || undefined,
+      github: form.github.trim() || undefined,
+      linkedin: form.linkedin.trim() || undefined,
+      website: form.website.trim() || undefined,
+      otherLink: form.otherLink.trim() || undefined,
     });
     setIsSaving(false);
     if (ok) {
@@ -113,6 +146,26 @@ const Profile = () => {
       setIsEditing(false);
     } else {
       toast.error("Failed to update profile");
+    }
+  };
+
+  const handleResumeChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsUploadingResume(true);
+    try {
+      const formData = new FormData();
+      formData.append("resume", file);
+      const ok = await updateProfile(formData);
+      if (ok) {
+        toast.success("Resume uploaded successfully!");
+      } else {
+        toast.error("Failed to upload resume");
+      }
+    } finally {
+      setIsUploadingResume(false);
+      if (resumeInputRef.current) resumeInputRef.current.value = "";
     }
   };
 
@@ -131,6 +184,13 @@ const Profile = () => {
         accept="image/*"
         className="hidden"
         onChange={handleAvatarChange}
+      />
+      <input
+        ref={resumeInputRef}
+        type="file"
+        accept="application/pdf,.doc,.docx"
+        className="hidden"
+        onChange={handleResumeChange}
       />
 
       {/* ---- Header Banner & Avatar ---- */}
@@ -250,6 +310,49 @@ const Profile = () => {
                   }
                 />
               </div>
+              
+              {user.bio && (
+                <div className="mt-6">
+                  <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+                    Bio
+                  </label>
+                  <div className="text-base-content bg-base-200 px-4 py-3 rounded-xl border border-base-content/5">
+                    {user.bio}
+                  </div>
+                </div>
+              )}
+
+              {/* Social Links */}
+              <div className="mt-6">
+                <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+                  Links & Socials
+                </label>
+                <div className="flex flex-wrap gap-3">
+                  {user.github && (
+                    <a href={user.github} target="_blank" rel="noreferrer" className="btn btn-sm btn-outline gap-2">
+                      <Target className="w-4 h-4" /> GitHub
+                    </a>
+                  )}
+                  {user.linkedin && (
+                    <a href={user.linkedin} target="_blank" rel="noreferrer" className="btn btn-sm btn-outline gap-2">
+                      <Target className="w-4 h-4" /> LinkedIn
+                    </a>
+                  )}
+                  {user.website && (
+                    <a href={user.website} target="_blank" rel="noreferrer" className="btn btn-sm btn-outline gap-2">
+                      <Target className="w-4 h-4" /> Website
+                    </a>
+                  )}
+                  {user.otherLink && (
+                    <a href={user.otherLink} target="_blank" rel="noreferrer" className="btn btn-sm btn-outline gap-2">
+                      <Target className="w-4 h-4" /> Other Link
+                    </a>
+                  )}
+                  {!user.github && !user.linkedin && !user.website && !user.otherLink && (
+                    <span className="text-sm text-base-content/50">No links added yet.</span>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -291,149 +394,229 @@ const Profile = () => {
             </div>
           </div>
 
-         
+          <div className="bg-base-100 rounded-3xl p-6 border border-base-content/5 shadow">
+            <h2 className="text-lg font-bold text-base-content mb-4 flex items-center gap-2">
+              <FileText className="w-5 h-5 text-primary" /> Default Resume
+            </h2>
+            <div className="space-y-4">
+              {user.resume?.url ? (
+                <div className="flex items-center justify-between">
+                  <button 
+                    onClick={() => setIsDocViewerOpen(true)} 
+                    className="text-primary hover:underline font-medium flex items-center gap-2"
+                  >
+                    <FileText className="w-4 h-4" /> View Current Resume
+                  </button>
+                  <button onClick={() => resumeInputRef.current?.click()} className="btn btn-sm btn-outline" disabled={isUploadingResume}>
+                    {isUploadingResume ? <Loader2 className="w-4 h-4 animate-spin" /> : <Edit3 className="w-4 h-4" />} Update
+                  </button>
+                </div>
+              ) : (
+                <div className="text-center py-4">
+                  <p className="text-sm text-base-content/60 mb-3">No default resume uploaded.</p>
+                  <button onClick={() => resumeInputRef.current?.click()} className="btn btn-primary btn-sm" disabled={isUploadingResume}>
+                    {isUploadingResume ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <FileText className="w-4 h-4 mr-2" />} 
+                    Upload Resume
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
         </motion.div>
       </div>
 
       {/* ---- Edit Profile Modal ---- */}
-      <AnimatePresence>
-        {isEditing && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-base-300/60 backdrop-blur-sm"
+      <Modal
+        open={isEditing}
+        onClose={() => setIsEditing(false)}
+        title="Edit Profile"
+        size="2xl"
+        footer={
+          <div className="flex gap-3 w-full">
+            <button
               onClick={() => setIsEditing(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="relative bg-base-100 rounded-3xl shadow-2xl w-full max-w-md p-8 z-10"
+              className="btn btn-ghost flex-1 rounded-xl"
+              disabled={isSaving}
             >
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold">Edit Profile</h3>
-                <button
-                  onClick={() => setIsEditing(false)}
-                  className="btn btn-sm btn-circle btn-ghost"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-
-              {/* Avatar section inside modal */}
-              <div className="flex items-center gap-4 mb-6 p-4 bg-base-200/50 rounded-2xl border border-base-content/5">
-                <div
-                  className="relative w-16 h-16 rounded-full bg-base-300 flex items-center justify-center overflow-hidden cursor-pointer shrink-0 group"
-                  onClick={handleAvatarClick}
-                >
-                  {displayAvatar ? (
-                    <img
-                      src={displayAvatar}
-                      alt={user.name}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <span className="text-xl font-bold select-none">
-                      {getInitials(user.name)}
-                    </span>
-                  )}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-full">
-                    {isUploadingAvatar ? (
-                      <Loader2 className="w-5 h-5 text-white animate-spin" />
-                    ) : (
-                      <Camera className="w-5 h-5 text-white" />
-                    )}
-                  </div>
-                </div>
-                <div>
-                  <p className="font-medium text-sm">Profile Picture</p>
-                  <button
-                    type="button"
-                    onClick={handleAvatarClick}
-                    disabled={isUploadingAvatar}
-                    className="text-primary text-sm hover:underline mt-0.5 disabled:opacity-50"
-                  >
-                    {isUploadingAvatar ? "Uploading…" : "Change photo"}
-                  </button>
-                </div>
-              </div>
-
-              {/* Form fields */}
-              <div className="space-y-4">
-                <div>
-                  <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    className="input input-bordered w-full rounded-xl"
-                    value={form.name}
-                    onChange={(e) =>
-                      setForm((f) => ({ ...f, name: e.target.value }))
-                    }
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    className="input input-bordered w-full rounded-xl"
-                    value={form.phone}
-                    onChange={(e) =>
-                      setForm((f) => ({ ...f, phone: e.target.value }))
-                    }
-                    placeholder="+91 99999 99999"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="input input-bordered w-full rounded-xl opacity-60 cursor-not-allowed"
-                    value={user.email}
-                    disabled
-                  />
-                  <p className="text-xs text-base-content/40 mt-1">
-                    Email cannot be changed.
-                  </p>
-                </div>
-              </div>
-
-              {/* Footer actions */}
-              <div className="flex gap-3 mt-8">
-                <button
-                  onClick={() => setIsEditing(false)}
-                  className="btn btn-ghost flex-1 rounded-xl"
-                  disabled={isSaving}
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleSave}
-                  disabled={isSaving || !form.name.trim()}
-                  className="btn btn-primary flex-1 rounded-xl gap-2"
-                >
-                  {isSaving ? (
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                  ) : (
-                    <Check className="w-4 h-4" />
-                  )}
-                  {isSaving ? "Saving…" : "Save Changes"}
-                </button>
-              </div>
-            </motion.div>
+              Cancel
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={isSaving || !form.name.trim()}
+              className="btn btn-primary flex-1 rounded-xl gap-2"
+            >
+              {isSaving ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <Check className="w-4 h-4" />
+              )}
+              {isSaving ? "Saving…" : "Save Changes"}
+            </button>
           </div>
-        )}
-      </AnimatePresence>
+        }
+      >
+        {/* Avatar section inside modal */}
+        <div className="flex items-center gap-4 mb-6 p-4 bg-base-200/50 rounded-2xl border border-base-content/5">
+          <div
+            className="relative w-16 h-16 rounded-full bg-base-300 flex items-center justify-center overflow-hidden cursor-pointer shrink-0 group"
+            onClick={handleAvatarClick}
+          >
+            {displayAvatar ? (
+              <img
+                src={displayAvatar}
+                alt={user.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <span className="text-xl font-bold select-none">
+                {getInitials(user.name)}
+              </span>
+            )}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-full">
+              {isUploadingAvatar ? (
+                <Loader2 className="w-5 h-5 text-white animate-spin" />
+              ) : (
+                <Camera className="w-5 h-5 text-white" />
+              )}
+            </div>
+          </div>
+          <div>
+            <p className="font-medium text-sm">Profile Picture</p>
+            <button
+              type="button"
+              onClick={handleAvatarClick}
+              disabled={isUploadingAvatar}
+              className="text-primary text-sm hover:underline mt-0.5 disabled:opacity-50"
+            >
+              {isUploadingAvatar ? "Uploading…" : "Change photo"}
+            </button>
+          </div>
+        </div>
+
+        {/* Form fields */}
+        <div className="space-y-4">
+          <div>
+            <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+              Full Name
+            </label>
+            <input
+              type="text"
+              className="input input-bordered w-full rounded-xl"
+              value={form.name}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, name: e.target.value }))
+              }
+              placeholder="Your full name"
+            />
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              className="input input-bordered w-full rounded-xl"
+              value={form.phone}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, phone: e.target.value }))
+              }
+              placeholder="+91 99999 99999"
+            />
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+              Email Address
+            </label>
+            <input
+              type="email"
+              className="input input-bordered w-full rounded-xl opacity-60 cursor-not-allowed"
+              value={user.email}
+              disabled
+            />
+            <p className="text-xs text-base-content/40 mt-1">
+              Email cannot be changed.
+            </p>
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+              Bio
+            </label>
+            <textarea
+              className="textarea textarea-bordered w-full rounded-xl h-24"
+              value={form.bio}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, bio: e.target.value }))
+              }
+              placeholder="Tell us about yourself..."
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+                GitHub
+              </label>
+              <input
+                type="url"
+                className="input input-bordered w-full rounded-xl"
+                value={form.github}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, github: e.target.value }))
+                }
+                placeholder="https://github.com/..."
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+                LinkedIn
+              </label>
+              <input
+                type="url"
+                className="input input-bordered w-full rounded-xl"
+                value={form.linkedin}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, linkedin: e.target.value }))
+                }
+                placeholder="https://linkedin.com/..."
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+                Website
+              </label>
+              <input
+                type="url"
+                className="input input-bordered w-full rounded-xl"
+                value={form.website}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, website: e.target.value }))
+                }
+                placeholder="https://..."
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold text-base-content/50 uppercase tracking-wider mb-2 block">
+                Other Link
+              </label>
+              <input
+                type="url"
+                className="input input-bordered w-full rounded-xl"
+                value={form.otherLink}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, otherLink: e.target.value }))
+                }
+                placeholder="https://..."
+              />
+            </div>
+          </div>
+        </div>
+      </Modal>
+
+      {/* ---- Document Viewer Modal ---- */}
+      <DocViewerModal 
+        isOpen={isDocViewerOpen}
+        onClose={() => setIsDocViewerOpen(false)}
+        documentUrl={user.resume?.url}
+      />
     </div>
   );
 };

@@ -11,6 +11,8 @@ import { HStack, VStack } from "@/components/ui/layout/Stack";
 import Button from "@/components/ui/buttons/Button";
 import Input from "@/components/ui/inputs/Input";
 import ScrollContainer from "@/components/ui/layout/ScrollContainer";
+import Tabs from "@/components/ui/navigation/Tabs";
+import ConfirmationToast from "@/components/common/ConfirmationToast";
 import { toast } from "@/utils/toast";
 import { useAuthStore } from "@/store/useAuthStore";
 import { api } from "@/config/api";
@@ -41,6 +43,10 @@ export default function InterviewSetupScreen() {
   // History State
   const [history, setHistory] = useState<any[]>([]);
   const [loadingHistory, setLoadingHistory] = useState(false);
+  
+  // Confirmation state
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const fetchHistory = async () => {
     setLoadingHistory(true);
@@ -93,22 +99,21 @@ export default function InterviewSetupScreen() {
   };
 
   const handleDelete = (id: string) => {
-    Alert.alert("Delete Record", "Are you sure you want to delete this interview record?", [
-      { text: "Cancel", style: "cancel" },
-      {
-        text: "Delete",
-        style: "destructive",
-        onPress: async () => {
-          try {
-            await api.delete(`/video-interview/${id}`);
-            toast.success("Success", "Deleted successfully");
-            setHistory((prev) => prev.filter((item) => item._id !== id));
-          } catch (error) {
-            toast.error("Error", "Failed to delete interview");
-          }
-        },
-      },
-    ]);
+    setSelectedId(id);
+    setShowConfirmation(true);
+  };
+
+  const confirmDelete = async () => {
+    if (!selectedId) return;
+    try {
+      await api.delete(`/video-interview/${selectedId}`);
+      toast.success("Success", "Deleted successfully");
+      setHistory((prev) => prev.filter((item) => item._id !== selectedId));
+    } catch (error) {
+      toast.error("Error", "Failed to delete interview");
+    } finally {
+      setSelectedId(null);
+    }
   };
 
   const formatDate = (dateString: string) => {
@@ -279,51 +284,34 @@ export default function InterviewSetupScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.base100 }}>
-      {/* Header */}
-      <View className="z-50 bg-base-100 pb-2">
-        <View style={{ paddingTop: insets.top > 0 ? insets.top + 10 : 20 }} className="px-6 pb-2">
-          <Txt variant="2xl" className="font-extrabold tracking-tight">
-            Mock Interviews
-          </Txt>
-        </View>
-      </View>
-
-      {/* Tabs */}
-      <View className="bg-base-100 border-b border-base-300/50 px-2">
-        <HStack>
-          {TABS.map((tab) => {
-            const isActive = activeTab === tab.id;
-            return (
-              <TouchableOpacity
-                key={tab.id}
-                onPress={() => setActiveTab(tab.id)}
-                className="flex-1 py-3 items-center flex-row justify-center"
-                style={{
-                  borderBottomWidth: 2,
-                  borderBottomColor: isActive ? colors.primary : "transparent",
-                }}
-              >
-                <Ionicons
-                  name={tab.icon as any}
-                  size={18}
-                  color={isActive ? colors.primary : colors.baseContent + "60"}
-                  style={{ marginRight: 6 }}
-                />
-                <Txt
-                  variant="sm"
-                  className="font-bold"
-                  style={{ color: isActive ? colors.primary : colors.baseContent + "90" }}
-                >
-                  {tab.label}
-                </Txt>
-              </TouchableOpacity>
-            );
-          })}
-        </HStack>
+      {/* Header & Tabs */}
+      <View
+        style={{ paddingTop: insets.top > 0 ? insets.top + 10 : 20 }}
+        className="px-6 bg-base-100 border-b border-base-300/30 pb-4 z-10"
+      >
+        <Txt variant="2xl" className="font-extrabold tracking-tight mb-4">
+          Mock Interviews
+        </Txt>
+        
+        <Tabs
+          tabs={TABS}
+          activeTab={activeTab}
+          onChange={setActiveTab}
+          variant="button"
+        />
       </View>
 
       {/* Content */}
       <View style={{ flex: 1 }}>{activeTab === "new" ? renderNewInterview() : renderHistory()}</View>
+      
+      {showConfirmation && (
+        <ConfirmationToast
+          name="Delete Record"
+          message="Are you sure you want to delete this interview record?"
+          fun={confirmDelete}
+          setShow={setShowConfirmation}
+        />
+      )}
     </View>
   );
 }

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { createPortal } from "react-dom";
+import React from "react";
 import { AlertCircle, Trash2, Info } from "lucide-react";
-
+import Modal from "./Modal";
 export type ConfirmModalType = "danger" | "warning" | "info";
 
 interface ConfirmModalProps {
@@ -27,19 +26,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
   cancelText = "Cancel",
   isLoading = false,
 }) => {
-  // Prevent body scroll when open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
 
-  if (!isOpen) return null;
 
   const getTypeStyles = () => {
     switch (type) {
@@ -72,61 +59,55 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
 
   const styles = getTypeStyles();
 
-  return createPortal(
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-0">
-      {/* Backdrop */}
-      <div 
-        className="fixed inset-0 bg-neutral/80 backdrop-blur-md animate-in fade-in duration-300 transition-all"
-        onClick={() => { if (!isLoading) onClose(); }}
-      />
-      
-      {/* Modal Box */}
-      <div className={`relative bg-base-100/95 backdrop-blur-xl rounded-[24px] p-8 w-full max-w-sm sm:max-w-md border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-in zoom-in-95 slide-in-from-bottom-4 duration-300 ease-out overflow-hidden`}>
-        
-        {/* Subtle top gradient line based on type */}
-        <div className={`absolute top-0 left-0 w-full h-1 ${styles.btn.split(' ')[0]} ${styles.btn.split(' ')[1]}`}></div>
+  return (
+    <Modal
+      open={isOpen}
+      onClose={onClose}
+      hideHeader
+      size="sm"
+      className={`p-8 !max-w-md ${styles.border}`}
+    >
+      <div className={`absolute top-0 left-0 w-full h-1 ${styles.btn.split(' ')[0]} ${styles.btn.split(' ')[1]}`}></div>
 
-        <div className="flex flex-col items-center text-center">
-          {/* Icon with glowing effect */}
-          <div className="relative mb-5">
-            <div className={`absolute inset-0 rounded-full blur-xl animate-pulse-glow ${styles.iconGlow}`}></div>
-            <div className={`relative w-14 h-14 rounded-full flex items-center justify-center border ${styles.iconBg} shadow-inner`}>
-              {styles.icon}
-            </div>
-          </div>
-
-          <h3 className="font-bold text-2xl mb-3 text-base-content tracking-tight">
-            {title}
-          </h3>
-          
-          <div className="text-base-content/70 mb-8 leading-relaxed text-sm px-2">
-            {message}
+      <div className="flex flex-col items-center text-center">
+        {/* Icon with glowing effect */}
+        <div className="relative mb-5">
+          <div className={`absolute inset-0 rounded-full blur-xl animate-pulse-glow ${styles.iconGlow}`}></div>
+          <div className={`relative w-14 h-14 rounded-full flex items-center justify-center border ${styles.iconBg} shadow-inner`}>
+            {styles.icon}
           </div>
         </div>
+
+        <h3 className="font-bold text-2xl mb-3 text-base-content tracking-tight">
+          {title}
+        </h3>
         
-        <div className="flex items-center justify-center gap-4 w-full">
-          <button 
-            type="button" 
-            className="btn btn-ghost rounded-xl px-6 flex-1  hover:-translate-y-0.5 transition-all duration-300" 
-            onClick={() => {
-              if (!isLoading) onClose();
-            }} 
-            disabled={isLoading}
-          >
-            {cancelText}
-          </button>
-          <button
-            type="button"
-            className={`btn rounded-xl px-6 flex-1 ${styles.btn}`}
-            onClick={onConfirm}
-            disabled={isLoading}
-          >
-            {isLoading ? <span className="loading loading-spinner loading-sm"></span> : confirmText}
-          </button>
+        <div className="text-base-content/70 mb-8 leading-relaxed text-sm px-2">
+          {message}
         </div>
       </div>
-    </div>,
-    document.body
+      
+      <div className="flex items-center justify-center gap-4 w-full">
+        <button 
+          type="button" 
+          className="btn btn-ghost rounded-xl px-6 flex-1 hover:-translate-y-0.5 transition-all duration-300" 
+          onClick={() => {
+            if (!isLoading) onClose();
+          }} 
+          disabled={isLoading}
+        >
+          {cancelText}
+        </button>
+        <button
+          type="button"
+          className={`btn rounded-xl px-6 flex-1 ${styles.btn}`}
+          onClick={onConfirm}
+          disabled={isLoading}
+        >
+          {isLoading ? <span className="loading loading-spinner loading-sm"></span> : confirmText}
+        </button>
+      </div>
+    </Modal>
   );
 };
 

@@ -1,16 +1,30 @@
 import { useEffect, ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { IoClose } from "react-icons/io5";
+import { useUiStore } from "../../store/useUiStore";
 
 export interface ModalProps {
   open: boolean;
   onClose: () => void;
-  title: string;
+  title?: string;
   children: ReactNode;
-  size?: "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+  size?:
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "2xl"
+    | "3xl"
+    | "4xl"
+    | "5xl"
+    | "6xl"
+    | "7xl"
+    | "full";
   closeOnBackdrop?: boolean;
   closeOnEsc?: boolean;
   showCloseButton?: boolean;
+  hideHeader?: boolean;
+  className?: string;
   footer?: ReactNode;
 }
 
@@ -32,12 +46,25 @@ const Modal = ({
   closeOnBackdrop = true,
   closeOnEsc = true,
   showCloseButton = true,
+  hideHeader = false,
+  className = "",
   footer,
 }: ModalProps) => {
+  const setModalOpen = useUiStore((state) => state.setModalOpen);
+
+  useEffect(() => {
+    if (open) {
+      setModalOpen(true);
+      return () => {
+        setModalOpen(false);
+      };
+    }
+  }, [open, setModalOpen]);
+
   useEffect(() => {
     if (!open || !closeOnEsc) return;
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose?.();
       }
@@ -45,8 +72,9 @@ const Modal = ({
 
     document.addEventListener("keydown", handleKeyDown);
 
-    return () =>
+    return () => {
       document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [open, closeOnEsc, onClose]);
 
   if (!open) return null;
@@ -63,6 +91,7 @@ const Modal = ({
       <div
         className={`
           relative
+          flex flex-col overflow-hidden max-h-[90vh]
           w-full
           ${sizes[size]}
           rounded-2xl
@@ -70,30 +99,36 @@ const Modal = ({
           shadow-2xl
           border border-base-300
           animate-in zoom-in-95 fade-in duration-200
+          ${className}
         `}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-base-300 px-6 py-4">
-          <h2 className="text-lg font-bold">{title}</h2>
+        {!hideHeader && (title || showCloseButton) && (
+          <div className="flex items-center justify-between border-b border-base-300 px-6 py-4 shrink-0">
+            {title && <h2 className="text-lg font-bold">{title}</h2>}
 
-          {showCloseButton && (
-            <button
-              className="btn btn-circle btn-sm btn-ghost"
-              onClick={onClose}
-            >
-              <IoClose size={20} />
-            </button>
-          )}
-        </div>
+            {showCloseButton && (
+              <button
+                className="btn btn-circle btn-sm btn-ghost"
+                onClick={onClose}
+              >
+                <IoClose size={20} />
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Body */}
-        <div className="max-h-[70vh] overflow-y-auto p-6">
+        <div
+          className="flex-1 min-h-0 overflow-y-auto p-6"
+          data-lenis-prevent="true"
+        >
           {children}
         </div>
 
         {/* Footer */}
         {footer && (
-          <div className="border-t border-base-300 px-6 py-4">
+          <div className="border-t border-base-300 px-6 py-4 shrink-0">
             {footer}
           </div>
         )}

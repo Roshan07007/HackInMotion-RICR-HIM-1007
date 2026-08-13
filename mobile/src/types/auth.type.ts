@@ -9,6 +9,16 @@ export interface User {
     url?: string;
     publicId?: string;
   };
+  resume?: {
+    publicId?: string;
+    url?: string;
+  };
+  bio?: string;
+  github?: string;
+  linkedin?: string;
+  website?: string;
+  otherLink?: string;
+  expoPushTokens?: string[];
   createdAt?: string;
   updatedAt?: string;
 }

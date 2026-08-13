@@ -20,7 +20,15 @@ router.post("/signup", authLimiter, signup);
 router.post("/login", authLimiter, login);
 router.post("/logout", logout);
 router.get("/me", protect, getMe);
-router.put("/me", protect, upload.single("avatar"), updateMe);
+router.put(
+  "/me",
+  protect,
+  upload.fields([
+    { name: "avatar", maxCount: 1 },
+    { name: "resume", maxCount: 1 },
+  ]),
+  updateMe
+);
 router.post("/push-token", protect, savePushToken);
 
 export default router;

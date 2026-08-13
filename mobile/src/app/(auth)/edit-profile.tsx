@@ -13,6 +13,7 @@ import Button from "../../components/ui/buttons/Button";
 import ScreenHeader from "@/components/common/ScreenHeader";
 import { toast } from "@/utils/toast";
 import { authService } from "@/services/auth.service";
+import * as DocumentPicker from "expo-document-picker";
 
 export default function EditProfileScreen() {
   const { user, error, setUser, clearError } = useAuthStore();
@@ -26,8 +27,29 @@ export default function EditProfileScreen() {
 
   const [name, setName] = useState(user?.name || "");
   const [phone, setPhone] = useState(user?.phone || "");
+  const [bio, setBio] = useState(user?.bio || "");
+  const [github, setGithub] = useState(user?.github || "");
+  const [linkedin, setLinkedin] = useState(user?.linkedin || "");
+  const [website, setWebsite] = useState(user?.website || "");
+  const [otherLink, setOtherLink] = useState(user?.otherLink || "");
   const [avatarUri, setAvatarUri] = useState<string | null>(null);
+  const [resumeUri, setResumeUri] = useState<string | null>(null);
+  const [resumeName, setResumeName] = useState<string | null>(null);
   const [isImagePickerOpen, setIsImagePickerOpen] = useState(false);
+
+  const handlePickResume = async () => {
+    try {
+      const result = await DocumentPicker.getDocumentAsync({
+        type: ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+      });
+      if (result.canceled === false) {
+        setResumeUri(result.assets[0].uri);
+        setResumeName(result.assets[0].name);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleSave = async () => {
     const formData = new FormData();
@@ -35,6 +57,11 @@ export default function EditProfileScreen() {
       setLoading(true);
       if (name !== user?.name) formData.append("name", name);
       if (phone !== user?.phone) formData.append("phone", phone);
+      if (bio !== user?.bio) formData.append("bio", bio);
+      if (github !== user?.github) formData.append("github", github);
+      if (linkedin !== user?.linkedin) formData.append("linkedin", linkedin);
+      if (website !== user?.website) formData.append("website", website);
+      if (otherLink !== user?.otherLink) formData.append("otherLink", otherLink);
 
       if (avatarUri) {
         const filename = avatarUri.split("/").pop() || "avatar.jpg";
@@ -44,6 +71,16 @@ export default function EditProfileScreen() {
         formData.append("avatar", {
           uri: avatarUri,
           name: filename,
+          type,
+        } as any);
+      }
+
+      if (resumeUri && resumeName) {
+        const match = /\.(\w+)$/.exec(resumeName);
+        const type = match ? `application/${match[1]}` : `application/pdf`;
+        formData.append("resume", {
+          uri: resumeUri,
+          name: resumeName,
           type,
         } as any);
       }
@@ -131,6 +168,76 @@ export default function EditProfileScreen() {
             onChangeText={setPhone}
             keyboardType="phone-pad"
           />
+
+          <View className="mt-2">
+            <Txt variant="sm" className="font-semibold text-base-content/60 uppercase tracking-wider mb-2 ml-1">
+              About
+            </Txt>
+            <Input
+              placeholder="Tell us about yourself..."
+              value={bio}
+              onChangeText={setBio}
+              multiline
+              numberOfLines={4}
+              style={{ minHeight: 100, textAlignVertical: "top", paddingTop: 12 }}
+            />
+          </View>
+
+          <View className="mt-2">
+            <Txt variant="sm" className="font-semibold text-base-content/60 uppercase tracking-wider mb-2 ml-1">
+              Social Links
+            </Txt>
+            <View className="gap-3">
+              <Input
+                leftIcon="logo-github"
+                placeholder="GitHub Profile URL"
+                value={github}
+                onChangeText={setGithub}
+                autoCapitalize="none"
+              />
+              <Input
+                leftIcon="logo-linkedin"
+                placeholder="LinkedIn Profile URL"
+                value={linkedin}
+                onChangeText={setLinkedin}
+                autoCapitalize="none"
+              />
+              <Input
+                leftIcon="globe-outline"
+                placeholder="Personal Website URL"
+                value={website}
+                onChangeText={setWebsite}
+                autoCapitalize="none"
+              />
+              <Input
+                leftIcon="link"
+                placeholder="Other Link URL"
+                value={otherLink}
+                onChangeText={setOtherLink}
+                autoCapitalize="none"
+              />
+            </View>
+          </View>
+
+          <View className="mt-2 mb-4">
+            <Txt variant="sm" className="font-semibold text-base-content/60 uppercase tracking-wider mb-2 ml-1">
+              Resume
+            </Txt>
+            <View className="flex-row items-center justify-between bg-base-200 border border-base-content/10 rounded-2xl p-4">
+              <View className="flex-row items-center gap-3 flex-1 mr-4">
+                <Ionicons name="document-text" size={24} color="#6366F1" />
+                <Txt variant="base" className="font-medium" numberOfLines={1}>
+                  {resumeName || (user?.resume?.url ? "Current Resume Uploaded" : "No resume uploaded")}
+                </Txt>
+              </View>
+              <Button
+                variant="outline"
+                size="sm"
+                label={resumeName || user?.resume?.url ? "Change" : "Upload"}
+                onPress={handlePickResume}
+              />
+            </View>
+          </View>
 
           <View className="mt-4">
             <Button

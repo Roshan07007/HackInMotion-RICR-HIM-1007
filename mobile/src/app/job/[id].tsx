@@ -25,6 +25,7 @@ import JobDetailSkeleton from "@/components/skeletons/JobDetailSkeleton";
 import { useJobStore } from "@/store/useJobStore";
 import { jobService } from "@/services/job.service";
 import ScreenHeader from "@/components/common/ScreenHeader";
+import ScrollContainer from "@/components/ui/layout/ScrollContainer";
 
 export default function JobDetail() {
   const { id } = useLocalSearchParams();
@@ -116,7 +117,9 @@ export default function JobDetail() {
         }
       />
 
-      <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 100 }}>
+      <ScrollContainer
+        contentContainerStyle={{ padding: 20, paddingBottom: 100 }}
+      >
         {/* Job Header Info */}
         <VStack className="mb-6">
           <Txt variant="3xl" className="font-extrabold mb-2">
@@ -217,32 +220,183 @@ export default function JobDetail() {
               </Txt>
             </HStack>
           ) : matchScore ? (
-            <HStack align="center" spacing={16}>
-              <CircularProgress
-                progress={matchScore.score}
-                size={80}
-                strokeWidth={8}
-                color={
-                  matchScore.score >= 80
-                    ? colors.success
-                    : matchScore.score >= 60
-                      ? colors.warning
-                      : colors.error
-                }
-              />
-              <VStack style={{ flex: 1 }}>
-                <Txt variant="base" className="font-semibold mb-1">
-                  {matchScore.score >= 80
-                    ? "Great Match!"
-                    : matchScore.score >= 60
-                      ? "Good Match"
-                      : "Needs Improvement"}
+            <VStack>
+              <HStack align="center" spacing={16} className="mb-4">
+                <CircularProgress
+                  progress={matchScore.overallScore}
+                  size={80}
+                  strokeWidth={8}
+                  color={
+                    matchScore.overallScore >= 80
+                      ? colors.success
+                      : matchScore.overallScore >= 60
+                        ? colors.warning
+                        : colors.error
+                  }
+                />
+                <VStack style={{ flex: 1 }}>
+                  <Txt variant="base" className="font-semibold mb-1">
+                    {matchScore.overallScore >= 80
+                      ? "Great Match!"
+                      : matchScore.overallScore >= 60
+                        ? "Good Match"
+                        : "Needs Improvement"}
+                  </Txt>
+                  <Txt variant="caption" className="opacity-70 leading-snug">
+                    {matchScore.overallScore >= 80
+                      ? "Your profile strongly aligns with this role."
+                      : "There are some gaps in your profile for this role."}
+                  </Txt>
+                </VStack>
+              </HStack>
+
+              {/* Score Breakdown */}
+              <View className="bg-base-100 rounded-xl p-4 mb-4 border border-base-300/30">
+                <Txt
+                  variant="sm"
+                  className="font-bold mb-3 text-base-content/80"
+                >
+                  Score Breakdown
                 </Txt>
-                <Txt variant="caption" className="opacity-70 leading-snug">
-                  {matchScore.feedback?.substring(0, 80)}...
-                </Txt>
-              </VStack>
-            </HStack>
+                <HStack justify="space-between">
+                  <VStack align="center">
+                    <Txt variant="caption" className="opacity-70 mb-1">
+                      Skills
+                    </Txt>
+                    <Txt
+                      variant="base"
+                      className="font-bold"
+                      style={{
+                        color:
+                          matchScore.breakdown?.skills >= 80
+                            ? colors.success
+                            : matchScore.breakdown?.skills >= 60
+                              ? colors.warning
+                              : colors.error,
+                      }}
+                    >
+                      {matchScore.breakdown?.skills ?? 0}%
+                    </Txt>
+                  </VStack>
+                  <VStack align="center">
+                    <Txt variant="caption" className="opacity-70 mb-1">
+                      Experience
+                    </Txt>
+                    <Txt
+                      variant="base"
+                      className="font-bold"
+                      style={{
+                        color:
+                          matchScore.breakdown?.experience >= 80
+                            ? colors.success
+                            : matchScore.breakdown?.experience >= 60
+                              ? colors.warning
+                              : colors.error,
+                      }}
+                    >
+                      {matchScore.breakdown?.experience ?? 0}%
+                    </Txt>
+                  </VStack>
+                  <VStack align="center">
+                    <Txt variant="caption" className="opacity-70 mb-1">
+                      Keywords
+                    </Txt>
+                    <Txt
+                      variant="base"
+                      className="font-bold"
+                      style={{
+                        color:
+                          matchScore.breakdown?.keywords >= 80
+                            ? colors.success
+                            : matchScore.breakdown?.keywords >= 60
+                              ? colors.warning
+                              : colors.error,
+                      }}
+                    >
+                      {matchScore.breakdown?.keywords ?? 0}%
+                    </Txt>
+                  </VStack>
+                </HStack>
+              </View>
+
+              {/* Missing Skills */}
+              {matchScore.missingSkills &&
+                matchScore.missingSkills.length > 0 && (
+                  <VStack className="mb-4">
+                    <Txt
+                      variant="sm"
+                      className="font-bold mb-2 text-base-content/80"
+                    >
+                      Missing Skills
+                    </Txt>
+                    <View
+                      style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}
+                    >
+                      {matchScore.missingSkills.map(
+                        (skillItem: any, index: number) => (
+                          <View
+                            key={index}
+                            className="flex-row items-center bg-base-100 border border-base-300/30 px-3 py-1.5 rounded-full"
+                          >
+                            <Txt variant="caption" className="font-medium mr-2">
+                              {skillItem.skill}
+                            </Txt>
+                            <View
+                              className={`px-1.5 py-0.5 rounded ${skillItem.importance === "Required" ? "bg-error/10" : "bg-warning/10"}`}
+                            >
+                              <Txt
+                                variant="caption"
+                                style={{
+                                  fontSize: 10,
+                                  color:
+                                    skillItem.importance === "Required"
+                                      ? colors.error
+                                      : colors.warning,
+                                }}
+                              >
+                                {skillItem.importance}
+                              </Txt>
+                            </View>
+                          </View>
+                        ),
+                      )}
+                    </View>
+                  </VStack>
+                )}
+
+              {/* Recommendations */}
+              {matchScore.recommendations &&
+                matchScore.recommendations.length > 0 && (
+                  <VStack>
+                    <Txt
+                      variant="sm"
+                      className="font-bold mb-2 text-base-content/80"
+                    >
+                      Recommendations
+                    </Txt>
+                    <VStack spacing={8}>
+                      {matchScore.recommendations.map(
+                        (rec: string, index: number) => (
+                          <HStack key={index} align="flex-start" spacing={8}>
+                            <MaterialIcons
+                              name="lightbulb"
+                              size={16}
+                              color={colors.warning}
+                              style={{ marginTop: 2 }}
+                            />
+                            <Txt
+                              variant="caption"
+                              className="opacity-80 flex-1 leading-snug"
+                            >
+                              {rec}
+                            </Txt>
+                          </HStack>
+                        ),
+                      )}
+                    </VStack>
+                  </VStack>
+                )}
+            </VStack>
           ) : (
             <Txt variant="base" className="opacity-70 mt-1 leading-snug">
               See how well your profile matches this role using AI analysis.
@@ -255,34 +409,34 @@ export default function JobDetail() {
           <Txt variant="xl" className="font-bold mb-4">
             Job Description
           </Txt>
-          <RenderHtml
-            contentWidth={width - 48}
-            source={{ html: job.description || "" }}
-            baseStyle={{
-              color: colors.baseContent,
-              fontSize: 16,
-              lineHeight: 26,
-              opacity: 0.8,
-            }}
-            tagsStyles={{
-              p: { marginBottom: 12 },
-              h1: {
-                fontWeight: "bold",
-                fontSize: 24,
-                marginBottom: 12,
+            <RenderHtml
+              contentWidth={width - 48}
+              source={{ html: job.description || "" }}
+              baseStyle={{
                 color: colors.baseContent,
-                opacity: 1,
-              },
-              h2: {
-                fontWeight: "bold",
-                fontSize: 20,
-                marginBottom: 10,
-                color: colors.baseContent,
-                opacity: 1,
-              },
-              li: { marginBottom: 6 },
-            }}
-          />
+                fontSize: 16,
+                lineHeight: 26,
+                opacity: 0.8,
+              }}
+              tagsStyles={{
+                p: { marginBottom: 12 },
+                h1: {
+                  fontWeight: "bold",
+                  fontSize: 24,
+                  marginBottom: 12,
+                  color: colors.baseContent,
+                  opacity: 1,
+                },
+                h2: {
+                  fontWeight: "bold",
+                  fontSize: 20,
+                  marginBottom: 10,
+                  color: colors.baseContent,
+                  opacity: 1,
+                },
+                li: { marginBottom: 6 },
+              }}
+            />
         </VStack>
 
         {/* Skills */}
@@ -303,7 +457,7 @@ export default function JobDetail() {
             ))}
           </View>
         </VStack>
-      </ScrollView>
+      </ScrollContainer>
 
       {/* Bottom Actions */}
       <View
@@ -313,7 +467,7 @@ export default function JobDetail() {
         <Button
           label={isApplied ? "Applied Successfully" : "Apply Now"}
           variant={isApplied ? "success" : "primary"}
-          leftIcon={isApplied ? "check-circle" : "send"}
+          leftIcon={isApplied ? "checkmark-circle" : "send"}
           onPress={handleApply}
           disabled={isApplied}
         />

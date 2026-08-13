@@ -42,15 +42,39 @@ export const getSavedJobsService = async (userId: string) => {
     .sort({ createdAt: -1 });
 };
 
+import User from "../models/user.model.js";
+import axios from "axios";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const pdfParseModule = require("pdf-parse");
+const PDFParse = pdfParseModule.PDFParse || pdfParseModule;
+
 export const calculateMatchScoreService = async (jobId: string, userId: string) => {
   const job = await Job.findById(jobId);
   if (!job) {
     throw new Error("Job not found");
   }
 
-  const latestAnalysis = await ResumeAnalysis.findOne({ userId }).sort({ createdAt: -1 });
-  if (!latestAnalysis) {
-    throw new Error("No resume analysis found. Please analyze a resume first.");
+  const user = await User.findById(userId);
+  let resumeText = "";
+
+  if (user?.resume?.url) {
+    try {
+      const response = await axios.get(user.resume.url, { responseType: 'arraybuffer' });
+      const pdf = new PDFParse({ data: new Uint8Array(response.data) });
+      const data = await pdf.getText();
+      resumeText = data.text;
+    } catch (error) {
+      console.error("Failed to parse user default resume:", error);
+    }
+  }
+
+  if (!resumeText) {
+    const latestAnalysis = await ResumeAnalysis.findOne({ userId }).sort({ createdAt: -1 });
+    if (!latestAnalysis) {
+      throw new Error("No resume found. Please upload a resume in your profile or analyze one first.");
+    }
+    resumeText = latestAnalysis.resumeText;
   }
 
   const prompt = `
@@ -62,15 +86,15 @@ export const calculateMatchScoreService = async (jobId: string, userId: string) 
   Requirements: ${job.requirements.join(", ")}
   
   Resume Text:
-  ${latestAnalysis.resumeText}
+  ${resumeText}
   
-  Return a JSON object with this exact structure:
+  Return a JSON object with this exact structure (all numbers MUST be integers between 0 and 100):
   {
-    "overallScore": number (0-100),
+    "overallScore": number,
     "breakdown": {
-      "skills": number (0-100),
-      "experience": number (0-100),
-      "keywords": number (0-100)
+      "skills": number,
+      "experience": number,
+      "keywords": number
     },
     "missingSkills": [
       { "skill": "string", "importance": "Required" | "Preferred" }
@@ -80,15 +104,47 @@ export const calculateMatchScoreService = async (jobId: string, userId: string) 
   `;
 
   const messages: ChatMessage[] = [
-    { role: "system", content: "You are an expert ATS and technical recruiter." },
+    { role: "system", content: "You are an expert ATS and technical recruiter. You must ONLY output valid JSON." },
     { role: "user", content: prompt }
   ];
 
   const aiResponse = await generateAiResponse(messages, true, 1000);
-  return JSON.parse(aiResponse);
+  
+  // Safely parse the JSON, stripping markdown if present
+  try {
+    const cleanJson = aiResponse.replace(/```json/gi, '').replace(/```/g, '').trim();
+    const result = JSON.parse(cleanJson);
+    
+    // Ensure numbers are valid integers (AI sometimes outputs strings like "85")
+    result.overallScore = Number(result.overallScore);
+    if (isNaN(result.overallScore)) result.overallScore = 50;
+    
+    if (result.breakdown) {
+      result.breakdown.skills = Number(result.breakdown.skills);
+      if (isNaN(result.breakdown.skills)) result.breakdown.skills = 50;
+      
+      result.breakdown.experience = Number(result.breakdown.experience);
+      if (isNaN(result.breakdown.experience)) result.breakdown.experience = 50;
+      
+      result.breakdown.keywords = Number(result.breakdown.keywords);
+      if (isNaN(result.breakdown.keywords)) result.breakdown.keywords = 50;
+    } else {
+      result.breakdown = { skills: 50, experience: 50, keywords: 50 };
+    }
+    return result;
+  } catch (error) {
+    console.error("Failed to parse AI response:", aiResponse);
+    return {
+      overallScore: 0,
+      breakdown: { skills: 0, experience: 0, keywords: 0 },
+      missingSkills: [],
+      recommendations: ["Error analyzing match score."]
+    };
+  }
 };
 
 import AppliedJob from "../models/appliedJob.model.js";
+import { log } from "console";
 
 export const applyToJobService = async (jobId: string, userId: string) => {
   const job = await Job.findById(jobId);

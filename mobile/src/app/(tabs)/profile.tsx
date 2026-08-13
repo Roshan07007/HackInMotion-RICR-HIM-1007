@@ -1,9 +1,9 @@
 import { View, ScrollView, TouchableOpacity } from "react-native";
 import { useAuthStore } from "../../store/useAuthStore";
 import { useColorScheme } from "nativewind";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { Txt } from "../../components/common/Typography";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Linking } from "react-native";
 import Avatar from "@/components/ui/data-display/Avatar";
 import Button from "@/components/ui/buttons/Button";
 import Switch from "@/components/ui/inputs/Switch";
@@ -15,6 +15,7 @@ import BottomModal from "@/components/ui/BottomModal";
 import { ToastAndroid, Platform } from "react-native";
 import React, { useState } from "react";
 import { toast } from "@/utils/toast";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 const LOCK_DURATIONS = [
   { label: "Immediately", value: 0 },
@@ -66,7 +67,7 @@ export default function Profile() {
               <Avatar
                 url={user?.avatar?.url}
                 size={104}
-                name={user?.name}
+                initials={user?.name?.charAt(0)}
               />
             </View>
             <TouchableOpacity 
@@ -132,6 +133,80 @@ export default function Profile() {
                 </VStack>
               </HStack>
             </VStack>
+          </View>
+
+          {/* Bio & Socials */}
+          {(user?.bio || user?.github || user?.linkedin || user?.website || user?.otherLink) && (
+            <View className="bg-base-200 rounded-2xl p-6 mb-6 shadow-sm">
+              <Txt variant="xl" className="font-bold mb-4">About & Links</Txt>
+              
+              {user.bio && (
+                <VStack className="mb-4">
+                  <Txt variant="caption" className="opacity-60 mb-1 uppercase tracking-wider font-semibold">Bio</Txt>
+                  <Txt variant="base" className="leading-5">{user.bio}</Txt>
+                </VStack>
+              )}
+
+              {(user.github || user.linkedin || user.website || user.otherLink) && (
+                <VStack spacing={12}>
+                  <Txt variant="caption" className="opacity-60 uppercase tracking-wider font-semibold">Social Links</Txt>
+                  <View className="flex-row flex-wrap gap-2">
+                    {user.github && (
+                      <TouchableOpacity onPress={() => Linking.openURL(user.github!)} className="bg-base-100 border border-base-300 px-3 py-2 rounded-xl flex-row items-center gap-2">
+                        <Ionicons name="logo-github" size={16} color={colors.baseContent} />
+                        <Txt variant="sm" className="font-medium">GitHub</Txt>
+                      </TouchableOpacity>
+                    )}
+                    {user.linkedin && (
+                      <TouchableOpacity onPress={() => Linking.openURL(user.linkedin!)} className="bg-base-100 border border-base-300 px-3 py-2 rounded-xl flex-row items-center gap-2">
+                        <Ionicons name="logo-linkedin" size={16} color={colors.baseContent} />
+                        <Txt variant="sm" className="font-medium">LinkedIn</Txt>
+                      </TouchableOpacity>
+                    )}
+                    {user.website && (
+                      <TouchableOpacity onPress={() => Linking.openURL(user.website!)} className="bg-base-100 border border-base-300 px-3 py-2 rounded-xl flex-row items-center gap-2">
+                        <Ionicons name="globe-outline" size={16} color={colors.baseContent} />
+                        <Txt variant="sm" className="font-medium">Website</Txt>
+                      </TouchableOpacity>
+                    )}
+                    {user.otherLink && (
+                      <TouchableOpacity onPress={() => Linking.openURL(user.otherLink!)} className="bg-base-100 border border-base-300 px-3 py-2 rounded-xl flex-row items-center gap-2">
+                        <Ionicons name="link" size={16} color={colors.baseContent} />
+                        <Txt variant="sm" className="font-medium">Link</Txt>
+                      </TouchableOpacity>
+                    )}
+                  </View>
+                </VStack>
+              )}
+            </View>
+          )}
+
+          {/* Resume */}
+          <View className="bg-base-200 rounded-2xl p-6 mb-6 shadow-sm">
+            <Txt variant="xl" className="font-bold mb-4">Default Resume</Txt>
+            {user?.resume?.url ? (
+              <TouchableOpacity 
+                onPress={() => router.push({ pathname: '/doc-viewer', params: { url: user.resume!.url! } })}
+                className="bg-primary/10 border border-primary/20 p-4 rounded-xl flex-row items-center justify-between"
+              >
+                <View className="flex-row items-center gap-3">
+                  <View className="w-10 h-10 rounded-full bg-primary/20 items-center justify-center">
+                    <Ionicons name="document-text" size={20} color={colors.primary} />
+                  </View>
+                  <VStack>
+                    <Txt variant="base" className="font-semibold text-primary">View Current Resume</Txt>
+                    <Txt variant="caption" className="opacity-60 text-primary">PDF Document</Txt>
+                  </VStack>
+                </View>
+                <Ionicons name="open-outline" size={20} color={colors.primary} />
+              </TouchableOpacity>
+            ) : (
+              <View className="items-center py-4 opacity-50">
+                <Ionicons name="document-outline" size={32} color={colors.baseContent} className="mb-2" />
+                <Txt variant="sm">No default resume uploaded</Txt>
+                <Txt variant="xs" className="text-center mt-1">Edit your profile to upload one</Txt>
+              </View>
+            )}
           </View>
 
           {/* Preferences */}
