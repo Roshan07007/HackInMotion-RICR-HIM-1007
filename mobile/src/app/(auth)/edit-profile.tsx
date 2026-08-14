@@ -239,7 +239,7 @@ export default function EditProfileScreen() {
             </View>
           </View>
 
-          <View className="mt-4">
+          <View className="mt-4 mb-8">
             <Button
               label="Save Changes"
               onPress={handleSave}
@@ -255,7 +255,7 @@ export default function EditProfileScreen() {
         onClose={() => setIsImagePickerOpen(false)}
         onImageSelected={(image) => setAvatarUri(image.uri)}
         allowsEditing
-        label="Profile Picture"
+        title="Profile Picture"
         subtitle="Choose a new profile picture"
       />
     </>

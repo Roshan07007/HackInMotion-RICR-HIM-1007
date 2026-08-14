@@ -119,7 +119,7 @@ const VideoInterviewRoom = () => {
 
       recognition.onresult = (event: any) => {
         let currentTranscript = "";
-        for (let i = event.resultIndex; i < event.results.length; i++) {
+        for (let i = 0; i < event.results.length; i++) {
           currentTranscript += event.results[i][0].transcript;
         }
         setTranscript(currentTranscript);
@@ -322,10 +322,10 @@ const VideoInterviewRoom = () => {
       <div className="flex-1 min-h-0 flex flex-col p-4 md:p-6 mx-auto w-full gap-4 md:gap-6">
         
         {/* Split Screen / PiP Video Area */}
-        <div className="relative flex-1 min-h-0 flex md:flex-row gap-4 md:gap-6 w-full">
+        <div className="relative flex-1 min-h-0 w-full flex flex-col md:flex-row gap-4 md:gap-6">
           
           {/* AI Interviewer (Full on Mobile, Left on Desktop) */}
-          <div className="absolute md:relative inset-0 md:inset-auto w-full h-full md:w-auto md:flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden border-2 border-primary/80 shadow-lg shadow-primary/20 flex items-center justify-center z-0">
+          <div className="absolute inset-0 md:relative md:inset-auto w-full h-full md:flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden border-2 border-primary/80 shadow-lg shadow-primary/20 flex items-center justify-center z-0">
             <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-[#3a3a3a]">
               <img 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" 
@@ -339,7 +339,7 @@ const VideoInterviewRoom = () => {
           </div>
 
           {/* Candidate Video (PiP on Mobile, Right on Desktop) */}
-          <div className="absolute md:relative bottom-4 right-4 md:bottom-auto md:right-auto w-1/3 max-w-[120px] sm:max-w-[160px] aspect-[3/4] md:aspect-auto md:w-full md:h-full md:flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-700 shadow-2xl md:shadow-none z-10 transition-all duration-300">
+          <div className="absolute bottom-4 right-4 md:relative md:bottom-auto md:right-auto w-32 sm:w-40 aspect-[3/4] md:aspect-auto md:w-auto md:h-full md:flex-1 bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-700 shadow-2xl md:shadow-none z-10 transition-all duration-300">
             <video 
               ref={videoRef} 
               autoPlay 

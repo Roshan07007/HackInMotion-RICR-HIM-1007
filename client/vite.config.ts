@@ -6,14 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', 'react-hot-toast'],
-          three: ['three', '@react-three/fiber', '@react-three/drei'],
-        },
-      },
-    },
+    // Removed manualChunks to fix react-three-fiber Cannot read properties of null (reading 'useMemo') issue
   },
 })

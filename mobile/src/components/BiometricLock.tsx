@@ -36,8 +36,9 @@ export default function BiometricLock({ children }: { children: React.ReactNode 
       if (appState.current.match(/inactive|background/) && nextAppState === "active") {
         if (isBiometricEnabled && !isAppLocked && backgroundTime.current) {
           const timeInBackground = Date.now() - backgroundTime.current;
-          // lockDuration is in minutes, so multiply by 60000
-          if (timeInBackground > lockDuration * 60000) {
+          // lockDuration is in minutes, so multiply by 60000. Give a 10s grace period for 'Immediately' (0) to allow for permission/native modals.
+          const threshold = lockDuration === 0 ? 10000 : lockDuration * 60000;
+          if (timeInBackground > threshold) {
             setIsAppLocked(true);
             handleAuthentication();
           }
@@ -68,32 +69,33 @@ export default function BiometricLock({ children }: { children: React.ReactNode 
     setIsAuthenticating(false);
   };
 
-  if (isAppLocked) {
-    return (
-      <View style={[styles.container, { backgroundColor: theme.base100 }]}>
-        <View className="items-center justify-center mb-10">
-          <View className="w-24 h-24 rounded-full items-center justify-center mb-6" style={{ backgroundColor: theme.primary + '15' }}>
-            <Ionicons name="lock-closed" size={48} color={theme.primary} />
+  return (
+    <>
+      {children}
+      {isAppLocked && (
+        <View style={[styles.container, { backgroundColor: theme.base100 }]}>
+          <View className="items-center justify-center mb-10">
+            <View className="w-24 h-24 rounded-full items-center justify-center mb-6" style={{ backgroundColor: theme.primary + '15' }}>
+              <Ionicons name="lock-closed" size={48} color={theme.primary} />
+            </View>
+            <Txt variant="3xl" className="font-extrabold tracking-tight mb-2">App Locked</Txt>
+            <Txt variant="base" className="opacity-70 text-center px-8">
+              Please authenticate to continue using HireMe
+            </Txt>
           </View>
-          <Txt variant="3xl" className="font-extrabold tracking-tight mb-2">App Locked</Txt>
-          <Txt variant="base" className="opacity-70 text-center px-8">
-            Please authenticate to continue using HireMe
-          </Txt>
+
+          <Button 
+            label="Unlock App" 
+            variant="primary" 
+            leftIcon="finger-print" 
+            onPress={handleAuthentication} 
+            isLoading={isAuthenticating}
+            style={{ width: '80%', maxWidth: 300 }}
+          />
         </View>
-
-        <Button 
-          label="Unlock App" 
-          variant="primary" 
-          leftIcon="finger-print" 
-          onPress={handleAuthentication} 
-          isLoading={isAuthenticating}
-          style={{ width: '80%', maxWidth: 300 }}
-        />
-      </View>
-    );
-  }
-
-  return <>{children}</>;
+      )}
+    </>
+  );
 }
 
 const styles = StyleSheet.create({

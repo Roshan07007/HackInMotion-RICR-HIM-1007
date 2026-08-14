@@ -160,7 +160,11 @@ export default function MobileInterviewRoomScreen() {
         toast.error("Permission denied", "Microphone access is required.");
         return;
       }
-      await ExpoSpeechRecognitionModule.start({ lang: "en-US", interimResults: true });
+      await ExpoSpeechRecognitionModule.start({ 
+        lang: "en-US", 
+        interimResults: true,
+        requiresOnDeviceRecognition: false
+      });
     } catch (e) {
       console.error("startListening error:", e);
     }
@@ -313,6 +317,7 @@ export default function MobileInterviewRoomScreen() {
         handleSubmitAnswer();
       } else {
         await ExpoSpeechRecognitionModule.stop();
+        toast.error("Empty", "No speech detected. Please try speaking again.");
       }
     } else {
       await startListening();
