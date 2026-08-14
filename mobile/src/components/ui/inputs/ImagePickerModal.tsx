@@ -54,7 +54,7 @@ export default function ImagePickerModal({
             quality: 0.8,
             allowsEditing: !allowsMultipleSelection && allowsEditing, // multi-select cannot have editing on some OS
             allowsMultipleSelection,
-            aspect: allowsEditing ? [16, 9] : undefined, // Assuming a common aspect ratio if cropped
+            aspect: allowsEditing ? [1, 1] : undefined, // Square crop for profile pictures
           });
         } else {
           const perm = await ImagePicker.requestCameraPermissionsAsync();
@@ -64,7 +64,7 @@ export default function ImagePickerModal({
             mediaTypes: ["images"],
             quality: 0.8,
             allowsEditing,
-            aspect: allowsEditing ? [16, 9] : undefined,
+            aspect: allowsEditing ? [1, 1] : undefined,
           });
         }
 
